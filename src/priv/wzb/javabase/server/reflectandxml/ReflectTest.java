@@ -1,4 +1,4 @@
-package priv.wzb.javabase.server.reflect;
+package priv.wzb.javabase.server.reflectandxml;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -20,7 +20,7 @@ public class ReflectTest {
         //2.类.class()
         clz = Iphone.class;
         //3.Class.forName("packageName.className")
-        clz = Class.forName("priv.wzb.javabase.server.reflect.Iphone");
+        clz = Class.forName("priv.wzb.javabase.server.reflectandxml.Iphone");
 
         //创建对象
 //        Iphone iphone = (Iphone) clz.newInstance();

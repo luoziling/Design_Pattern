@@ -16,6 +16,8 @@ public class FileUtils {
             InputStream is = new FileInputStream("G:\\java_project_idea\\Design_Pattern\\src\\priv\\wzb\\javabase\\io\\img\\abc.txt");
             OutputStream os = new FileOutputStream("G:\\java_project_idea\\Design_Pattern\\src\\priv\\wzb\\javabase\\io\\img\\abc01.txt");
             copy(is,os);
+
+
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

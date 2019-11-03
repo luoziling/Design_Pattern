@@ -1,12 +1,13 @@
 package priv.wzb.javabase.server.server02.user;
 
-import com.shsxt.server.core.Request;
-import com.shsxt.server.core.Response;
-import com.shsxt.server.core.Servlet;
+
+import priv.wzb.javabase.server.server02.server.core.Request;
+import priv.wzb.javabase.server.server02.server.core.Response;
+import priv.wzb.javabase.server.server02.server.core.Servlet;
 
 public class LoginServlet implements Servlet {
 	@Override
-	public void  service(Request request,Response response) {
+	public void  service(Request request, Response response) {
 		response.print("<html>"); 
 		response.print("<head>"); 
 		response.print("<meta http-equiv=\"content-type\" content=\"text/html;charset=utf-8\">" ); 

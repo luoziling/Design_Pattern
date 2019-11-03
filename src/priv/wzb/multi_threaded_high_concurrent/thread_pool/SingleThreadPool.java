@@ -15,6 +15,8 @@ public class SingleThreadPool {
             final int j=i;
             service.execute(()->{
                 System.out.println(j+" "+ Thread.currentThread().getName());
+                // 即使出错之后也不会停止运行，会创建一个新的线程来继续执行
+                int x = 1/0;
             });
         }
     }

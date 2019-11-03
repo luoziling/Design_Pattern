@@ -32,7 +32,7 @@ public class MyContainer1<T> {
         while (lists.size()==MAX){
             try {
                 //effective java wait和while结合在一起用
-                //
+                // 为了每次唤醒线程之后的再检查
                 this.wait();
             }catch (InterruptedException e){
                 e.printStackTrace();

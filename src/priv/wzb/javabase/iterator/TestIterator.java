@@ -18,6 +18,8 @@ public class TestIterator {
         list.add("bb");
         list.add("cc");
         Iterator<String> iterator;
+        ListIterator<String> listIterator;
+//        for (listIterator = list.listIterator();listIterator.hasPrevious())
 
         for(iterator=list.iterator();iterator.hasNext();){
             String temp = iterator.next();

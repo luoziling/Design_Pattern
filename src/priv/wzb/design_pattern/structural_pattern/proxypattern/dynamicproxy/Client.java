@@ -15,6 +15,12 @@ public class Client {
         handler = new DAOLogHandler(userDAO);
         AbstractUserDAO proxy=null;
 
+        /**
+         *      * @param   loader the class loader to define the proxy class
+         *      * @param   interfaces the list of interfaces for the proxy class
+         *      *          to implement
+         *      * @param   h the invocation handler to dispatch method invocations to
+         */
         //动态创建代理对象，用于代理一个AbstractUserDAO类型的真实对象
         proxy = (AbstractUserDAO) Proxy.newProxyInstance(AbstractUserDAO.class.getClassLoader()
                 ,new Class[]{AbstractUserDAO.class},handler);

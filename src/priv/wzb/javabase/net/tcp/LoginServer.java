@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.Map;
+import java.util.Set;
 
 /**
  * @author Satsuki
@@ -16,6 +18,8 @@ import java.net.Socket;
  * 4. 释放资源
  */
 public class LoginServer {
+//    Map
+//    Set
     public static void main(String[] args) throws IOException {
 //          1. 指定端口 使用ServerSocket创建服务器
         ServerSocket server = new ServerSocket(8888);
@@ -26,6 +30,7 @@ public class LoginServer {
         DataInputStream dis = new DataInputStream(client.getInputStream());
         //分析
         String datas = dis.readUTF();
+
         String[] dataArray = datas.split("&");
         for (String info:dataArray){
             String[] userInfo = info.split("=");

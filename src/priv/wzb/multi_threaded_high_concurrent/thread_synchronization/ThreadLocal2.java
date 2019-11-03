@@ -1,6 +1,7 @@
 package priv.wzb.multi_threaded_high_concurrent.thread_synchronization;
 
 import java.sql.Time;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -9,7 +10,9 @@ import java.util.concurrent.TimeUnit;
  * @description:
  */
 public class ThreadLocal2 {
+    // ThreadLocal就像每个线程的私有内存空间一样，其他线程无法访问
     static ThreadLocal<Person> tl = new ThreadLocal<>();
+//    CopyOnWriteArrayList
 
     public static void main(String[] args) {
         new Thread(()->{

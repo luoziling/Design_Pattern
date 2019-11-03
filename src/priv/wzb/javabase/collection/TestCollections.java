@@ -3,6 +3,7 @@ package priv.wzb.javabase.collection;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Satsuki
@@ -25,7 +26,6 @@ public class TestCollections {
 
         Collections.sort(list);
         System.out.println(list);
-
         System.out.println(Collections.binarySearch(list,"w:3"));
     }
 }

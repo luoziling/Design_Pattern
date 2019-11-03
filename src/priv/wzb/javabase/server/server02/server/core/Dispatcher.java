@@ -31,7 +31,7 @@ public class Dispatcher implements Runnable {
 		try {
 			if(null== request.getUrl() || request.getUrl().equals("")) {
 				InputStream is =Thread.currentThread().getContextClassLoader().getResourceAsStream("index.html");
-				response.print((new String(is.readAllBytes())));
+//				response.print((new String(is.readAllBytes())));
 				response.pushToBrowser(200);
 				is.close();
 				return ;
@@ -44,7 +44,7 @@ public class Dispatcher implements Runnable {
 			}else {
 				//错误....
 				InputStream is =Thread.currentThread().getContextClassLoader().getResourceAsStream("error.html");
-				response.print((new String(is.readAllBytes())));
+//				response.print((new String(is.readAllBytes())));
 				response.pushToBrowser(404);
 				is.close();
 			}		

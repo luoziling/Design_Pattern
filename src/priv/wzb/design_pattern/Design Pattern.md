@@ -524,6 +524,32 @@ public class client {
 
 ### java代理模式（proxy_parrern)
 
+代理模式：给某一个对象提供一个代理或占位符，并由代理对象来控制对源对象的访问。
+
+Proxy Pattern:Provide a surrogate or placeholder for another object to control access to it.
+
+代理模式分为静态代理和动态代理
+
+动态代理又分为两种实现方法：使用java提供的工具或者导入cglib.jar包
+
+代理模式图示：
+
+![1568538617593](C:\Users\DELL\AppData\Roaming\Typora\typora-user-images\1568538617593.png)
+
+静态代理模式有哪些角色
+
+Subject(抽象主题角色):它声明了真实主题和代理主题的共同接口，这样依赖在任何使用真实主题的地方都可以使用代理主题，客户端通常需要针对抽象主题角色进行编程。
+
+Porxy(代理主题角色):它包含了对真实主题的引用，从而可以在任何时候操作真实主题对象；在代理主题角色中提供了一个与真是主题角色相同的接口，以便在任何时候都可以替代真实主题；代理主题角色还可以控制对真实主题的使用，负责在需要的时候创建和删除真实主题角色，并对真实主题角色加以约束。通常，在代理主题角色中，客户端在调用所引用的真是主题操作之前或之后还需要执行其他操作，而不仅仅是单纯调用真实主题对象中的操作。
+
+RealSubject(真实主题角色)：它定义了代理角色所代表的真实对象，在真实主题角色中实现了真实的业务操作，客户端可以通过代理主题角色简洁调用真实主题角色中定义的操作。
+
+
+
+动态代理和静态代理的关系
+
+与静态代理列对照的是动态代理类，动态代理类的字节码在程序运行时由java反射机制动态生成，无需程序员手工编写它的原代码。动态代理类不仅简化了编程工作而且提高了软件系统的扩展性，因为java反射机制可以生成任意类型的动态代理类。
+
 #### 代理模式一般分为静态代理和动态代理
 
 #### 静态代理
@@ -783,6 +809,99 @@ public class Client {
 }
 
 ```
+
+cglib实现:
+
+```java
+
+/**
+ * @author Satsuki
+ * @time 2019/8/17 17:27
+ * @description:
+ */
+public interface Gongneng {
+    void chifan();
+    void mubiao();
+}
+
+public class Laozong implements Gongneng {
+    @Override
+    public void chifan() {
+        System.out.println("chifan");
+    }
+
+    @Override
+    public void mubiao() {
+        System.out.println("mubiao");
+    }
+}
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+
+/**
+ * @author Satsuki
+ * @time 2019/8/17 17:29
+ * @description:
+ */
+public class Mishu implements InvocationHandler {
+    private Laozong laozong = new Laozong();
+    @Override
+    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+        System.out.println("预约时间");
+        Object result = method.invoke(laozong, args);
+        System.out.println("记录信息");
+        return result;
+    }
+}
+
+import net.sf.cglib.proxy.MethodInterceptor;
+import net.sf.cglib.proxy.MethodProxy;
+
+import java.lang.reflect.Method;
+
+/**
+ * @author Satsuki
+ * @time 2019/8/17 17:40
+ * @description:
+ */
+public class Xiaomi implements MethodInterceptor {
+    @Override
+    public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
+        System.out.println("预约时间");
+//        method.invoke(o,objects);
+        Object result = methodProxy.invokeSuper(o, objects);
+        System.out.println("备注");
+        return result;
+    }
+}
+
+import net.sf.cglib.proxy.Enhancer;
+
+/**
+ * @author Satsuki
+ * @time 2019/8/17 17:32
+ * @description:
+ */
+public class Women {
+    public static void main(String[] args) {
+        //JDK动态代理
+//        Mishu mishu = new Mishu();
+//        Gongneng gongneng = (Gongneng)Proxy.newProxyInstance(Women.class.getClassLoader(), new Class[]{Gongneng.class}, mishu);
+//        gongneng.chifan();
+
+        //CGLIB
+        Enhancer enhancer = new Enhancer();
+        enhancer.setSuperclass(Laozong.class);
+        enhancer.setCallback(new Xiaomi());
+
+        Laozong laozong = (Laozong)enhancer.create();
+        laozong.chifan();
+    }
+}
+```
+
+
 
 ### 桥接模式（Bridge Pattern)
 

@@ -1,8 +1,8 @@
 package priv.wzb.javabase.server.server02.user;
 
-import com.shsxt.server.core.Request;
-import com.shsxt.server.core.Response;
-import com.shsxt.server.core.Servlet;
+import priv.wzb.javabase.server.server02.server.core.Request;
+import priv.wzb.javabase.server.server02.server.core.Response;
+import priv.wzb.javabase.server.server02.server.core.Servlet;
 
 public class RegisterServlet implements Servlet {
 	@Override

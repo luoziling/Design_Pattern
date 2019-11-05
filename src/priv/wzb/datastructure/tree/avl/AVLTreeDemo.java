@@ -8,7 +8,8 @@ package priv.wzb.datastructure.tree.avl;
 public class AVLTreeDemo {
     public static void main(String[] args) {
 //        int[] arr  = {4,3,6,5,7,8};
-        int[] arr  = {10,12,8,9,7,6};
+//        int[] arr  = {10,12,8,9,7,6};
+        int[] arr  = {10,11,7,6,8,9};
         //创建一个AVLTree对象
         AVLTree avlTree = new AVLTree();
         //添加节点
@@ -20,12 +21,15 @@ public class AVLTreeDemo {
         System.out.println("中序遍历");
         avlTree.infixOrder();
 
+
         System.out.println("在没有做平衡处理之前");
         // 树的高度
         System.out.println("树的高度"+avlTree.getRoot().height());
         System.out.println("左子树的高度"+avlTree.getRoot().leftHeight());
         System.out.println("右子树的高度"+avlTree.getRoot().rightHeight());
         System.out.println("当前的根节点="+avlTree.getRoot());
+        System.out.println("根节点左节点="+avlTree.getRoot().left);
+        System.out.println("根节点的右节点="+avlTree.getRoot().right);
 
     }
 }
@@ -292,7 +296,16 @@ class Node{
         // 当添加完一个节点后，如果右子树的高度-左子树的高度>1
         // 左旋转
         if (rightHeight()-leftHeight()>1){
+            // 如果它（根节点）的右子树的左子树高度大于它（根节点的左子树）的右子树高度
+            if (right!=null && right.leftHeight()>right.rightHeight()){
+                // 对当前节点的右子树进行右旋转
+                right.rightRotate();
+                // 再对当前节点进行旋转
+            }
             leftRotate();
+
+            // 处理完之后记得return 以免出错
+            return;
 //            if (right!=null&&right.rightHeight()<right.leftHeight()){
 //                // 先对右子树进行
 //                leftRotate();
@@ -302,7 +315,15 @@ class Node{
         // 当添加完一个节点后，如果左子树的高度-右子树的高度>1
         // 右旋转
         if ((leftHeight()-rightHeight())>1){
+            // 如果它（根节点）的左子树的右子树高度大于它（根节点的左子树）的左子树的高度
+            if (left!=null && left.rightHeight()>left.leftHeight()){
+                // 先对当前节点的左节点（左子树）进行左旋转
+                left.leftRotate();
+                // 再对当前节点进行旋转
+            }
             rightRotate();
+
+            return;
         }
 
     }

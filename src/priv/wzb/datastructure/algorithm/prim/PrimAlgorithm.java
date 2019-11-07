@@ -1,4 +1,4 @@
-package priv.wzb.datastructure.algorithm.prime;
+package priv.wzb.datastructure.algorithm.prim;
 
 import java.util.Arrays;
 

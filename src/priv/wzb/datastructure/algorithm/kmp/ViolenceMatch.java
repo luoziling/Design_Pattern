@@ -10,7 +10,10 @@ public class ViolenceMatch {
         // 尚a硅b谷c你d好e
         String str1 = "bbc abcdab abcdabcdabde";
         String str2 = "abcdabd";
+        long now = System.currentTimeMillis();
         int inddex = violenceMatch(str1,str2);
+        long after = System.currentTimeMillis();
+        System.out.println("耗时：" + (after-now));
         System.out.println("index = " + inddex);
     }
 

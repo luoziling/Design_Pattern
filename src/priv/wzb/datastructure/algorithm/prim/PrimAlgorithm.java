@@ -91,7 +91,9 @@ class MinTree{
             for (int i = 0; i < graph.verx; i++) {
                 // j是未被访问过的节点
                 for (int j = 0; j < graph.verx; j++) {
+                    // 当节点i被访问过且j节点未被访问过且连通ij两个节点的边的权值小于最小权值
                     if (visited[i] == 1 && visited[j] == 0&& graph.weight[i][j]<minWeight){
+                        // 更新最小权值以及这条边的两个顶点
                         // 替换minWeight
                         minWeight = graph.weight[i][j];
                         h1 = i;
@@ -99,6 +101,7 @@ class MinTree{
                     }
                 }
             }
+            // 每次都找一条最短的边进行记录
             // 找到一条最短边
             System.out.println("边<" + graph.data[h1] + "," + graph.data[h2] + "> 权值：" + minWeight);
             // 将当前找到的节点标记为已访问过

@@ -21,6 +21,7 @@ public class Official {
         }
 
         //halfLen应该是中心点位置
+        // halfLen做+1处理是为了让结果保证指向中位数，或者如果是偶数个数指向中位数后面一位
         //iMax是较短数组的长度
         int iMin=0,iMax=m,halfLen = (m+n+1)/2;
         while (iMin<=iMax){
@@ -28,6 +29,7 @@ public class Official {
             int i = (iMin + iMax)/2;
             //j代表较短数组中心点与整体中心点的距离
             int j = halfLen-i;
+            // 使用二分查找
             if(i<iMax&&B[j-1]>A[i]){
                 iMin = i+1;//i is too small
             }else if (i>iMin&&A[i-1 ]>B[j]){

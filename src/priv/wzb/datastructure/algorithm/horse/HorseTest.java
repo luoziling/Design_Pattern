@@ -1,22 +1,21 @@
 package priv.wzb.datastructure.algorithm.horse;
 
-import java.awt.Point;
+import java.awt.*;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 
 /**
  * @author Satsuki
- * @time 2019/11/6 21:53
+ * @time 2019/11/7 22:09
  * @description:
  */
-public class HorseChessboard {
-    private static int X; // 棋盘的列
-    private static int Y; //棋盘的行
-    // 创建一个数组，标记棋盘的各个位置是否被访问过
-    private static boolean visited[];
-    // 使用一个属性标记是否棋盘所有位置都被访问过了
-    private static boolean finished; // true表示成功
-
+public class HorseTest {
+    private static int X;// 棋盘的行
+    private static int Y;// 棋盘的列
+    private static boolean[] visited;// 是否被访问过
+    // 是否全都访问过
+    private static boolean finished;
     public static void main(String[] args) {
         System.out.println("骑士周游算法，开始运行~~");
         //测试骑士周游算法是否正确
@@ -45,21 +44,15 @@ public class HorseChessboard {
             System.out.println();
         }
     }
-    /**
-     * 完成骑士周游问题的算法
-     * @param chessboard 棋盘
-     * @param row 马儿当前的位置的行 从0开始
-     * @param column 马儿当前的位置的列  从0开始
-     * @param step 是第几步 ,初始位置就是第1步
-     */
+
     public static void traversalChessboard1(int[][] chessboard, int row, int column, int step) {
         chessboard[row][column] = step;
         //row = 4 X = 8 column = 4 = 4 * 8 + 4 = 36
         visited[row * X + column] = true; //标记该位置已经访问
         //获取当前位置可以走的下一个位置的集合
-        ArrayList<Point> ps = next1(new Point(row, column));
+        ArrayList<Point> ps = next1(new Point(row,column));
         //对ps进行排序,排序的规则就是对ps的所有的Point对象的下一步的位置的数目，进行非递减排序
-        sort(ps);
+        sort1(ps);
         //遍历 ps
         while(!ps.isEmpty()) {
             Point p = ps.remove(0);//取出下一个可以走的位置
@@ -83,34 +76,42 @@ public class HorseChessboard {
     }
 
     /**
-     * 完成骑士周游问题
+     *
      * @param chessboard 棋盘
-     * @param row 🐎的行
-     * @param column 🐎的列
+     * @param row 🐎从第几行开始
+     * @param col 🐎从第几列开始
      * @param step 是第几步
      */
-    public static void traversalChessboard(int[][] chessboard,int row,int column,int step){
-        chessboard[row][column] = step;
-        visited[row * X + column] = true; //标记该位置已访问
-        // 获取当前位置可以走的位置
-        ArrayList<Point> ps = next(new Point(column, row));
-        while (!ps.isEmpty()){
-            // 取出下一个可以走的位置
-            Point p = ps.remove(0);
-            // 判断是否访问过
-            if (!visited[p.y * X+ p.x]){
-                traversalChessboard(chessboard,p.y,p.x,step+1);
+    public static void traversalChessboard(int[][] chessboard,int row,int col,int step){
+        // 设置访问步数
+        chessboard[row][col] = step;
+        // 设置已访问
+        visited[row*X+ col] = true;
+
+        // 存放🐎接下去可以走的路径
+        ArrayList<Point> ps = next(row,col);
+
+        // 优化
+        sort(ps);
+//        System.out.println(ps.toString());
+
+        for(Point point : ps){
+            // 未被访问过
+            if (!visited[point.x*X+point.y]){
+                traversalChessboard(chessboard,point.x,point.y,step+1);
             }
+
         }
-        // 判断🐎是否走完
-        if (step<X*Y && !finished){
-            chessboard[row][column] = 0;
-            visited[row * X+column] = false;
+
+        if (step < X*Y && finished == false){
+            chessboard[row][col] = 0;
+            visited[row * X + col] = false;
         }else {
             finished = true;
         }
-    }
 
+
+    }
 
     /**
      * 功能： 根据当前位置(Point对象)，计算马儿还能走哪些位置(Point)，并放入到一个集合中(ArrayList), 最多有8个位置
@@ -157,64 +158,128 @@ public class HorseChessboard {
         return ps;
     }
 
-    /**
-     * 根据当前位置，计算🐎能走哪些位置
-     * @param curPoint
-     * @return
-     */
-    public static ArrayList<Point> next(Point curPoint){
-        // 创建一个ArrayList
+    public static ArrayList<Point> next(int row,int col){
         ArrayList<Point> ps = new ArrayList<>();
-        // 创建一个Point
-        Point p1 = new Point();
-        // 判断🐎能不能继续往下走
-        //0代表边缘
-        // 先走x轴
-        if ((p1.x = curPoint.x - 2)>=0&&(p1.y = curPoint.y-1)>=0){
-            ps.add(new Point(p1));
+        int r = row;
+        int c = col;
+        Point p = new Point();
+        // 走一步仍然在棋盘上未跨界则把这一步加入ps
+        if ((row = row-2)>=0&& (col = col-1)>=0){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x - 2)>=0&&(p1.y = curPoint.y+1)<Y){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row-2)>=0&& (col = col+1)<Y){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x + 2)<X&&(p1.y = curPoint.y-1)>=0){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row+2)<X&& (col = col-1)>=0){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x + 2)<X&&(p1.y = curPoint.y+1)<Y){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row+2)<X&& (col = col+1)<Y){
+            ps.add(new Point(row,col));
         }
-
-        // 先走y轴
-        if ((p1.x = curPoint.x - 1)>=0&&(p1.y = curPoint.y-2)>=0){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row-1)>=0&& (col = col+2)<Y){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x + 1)<X&&(p1.y = curPoint.y-2)>=0){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row+1)<X&& (col = col+2)<Y){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x - 1)>=0&&(p1.y = curPoint.y+2)<Y){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row-1)>=0&& (col = col-2)>=0){
+            ps.add(new Point(row,col));
         }
-        if ((p1.x = curPoint.x + 1)<X&&(p1.y = curPoint.y+2)<Y){
-            ps.add(new Point(p1));
+        row = r;
+        col = c;
+        if ((row = row+1)<X&& (col = col-2)>=0){
+            ps.add(new Point(row,col));
         }
+        row = r;
+        col = c;
 
         return ps;
     }
-    // 根据当前这一步的所有的下一步的选择位置，进行非递减排序
+
+    // 排序优化（贪心算法）每次都挑选可以走位置的下一步可以走位置最小的 根据下一步可走位置多少进行排序
     public static void sort(ArrayList<Point> ps){
-        ps.sort(new Comparator<Point>() {
+        Collections.sort(ps, new Comparator<Point>() {
             @Override
             public int compare(Point o1, Point o2) {
-                // 获取到O1的下一步的所有位置个数
-                ArrayList<Point> next = next(o1);
-                ArrayList<Point> next1 = next(o2);
+                ArrayList<Point> next = next(o1.x, o1.y);
+                ArrayList<Point> next1 = next(o2.x, o2.y);
                 if (next.size()<next1.size()){
                     return -1;
-                }else if (next.size() == next.size()){
+                }else if (next.size() == next1.size()){
                     return 0;
                 }else {
-                    return 1;
+                    return -1;
+                }
+            }
+        });
+    }
+    public static void sort1(ArrayList<Point> ps){
+        Collections.sort(ps, new Comparator<Point>() {
+            @Override
+            public int compare(Point o1, Point o2) {
+                ArrayList<Point> next = next1(o1);
+                ArrayList<Point> next1 = next1(o2);
+                if (next.size()<next1.size()){
+                    return -1;
+                }else if (next.size() == next1.size()){
+                    return 0;
+                }else {
+                    return -1;
                 }
             }
         });
     }
 }
+//class Point{
+//    int x;
+//    int y;
+//
+//    public Point() {
+//    }
+//
+//    public Point(Point p) {
+//        this.x = x;
+//        this.y = y;
+//    }
+//
+//    public Point(int x, int y) {
+//        this.x = x;
+//        this.y = y;
+//    }
+//
+//    public int getX() {
+//        return x;
+//    }
+//
+//    public void setX(int x) {
+//        this.x = x;
+//    }
+//
+//    public int getY() {
+//        return y;
+//    }
+//
+//    public void setY(int y) {
+//        this.y = y;
+//    }
+//
+//    @Override
+//    public String toString() {
+//        return "Point{" +
+//                "x=" + x +
+//                ", y=" + y +
+//                '}';
+//    }
+//}

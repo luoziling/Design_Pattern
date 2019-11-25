@@ -63,6 +63,11 @@ public class KruskalCase {
 
     public void kruskal(){
         int index = 0; // 表示最后结果的索引
+        // 用于保存终点，这里十分巧妙的进行终点保存，通过不停的遍历数组中不仅保存着的可能是终点下标或终点的前一个点的下标
+        // 因为终点是与要加入树的点距离最大的点，那么显然
+        // 如果在初次加入时候一定有个点在数组中必定会保持0这个点就是最初加入的边的终点
+        // 这个终点肯定是距离后来加入点距离最大的点或者最大点的前一个顶点
+        // 终点就是在最小生成树树中距离某一点最远的点
         int[] ends = new int[edgeNum]; // 用于保存在最小生成树中保存的每个顶点在最小生成树中的终点的集合
         // 创建结果数组，保存最后的最小生成树
         EData[] rets = new EData[edgeNum];
@@ -72,8 +77,14 @@ public class KruskalCase {
         // 对边根据权值排序
         sortEdges(edges);
         // 遍历edges数组，将边添加到最小生成树时判断准备加入的边是否生成回路
+        // 其实就是一个很简单的过程
+        // 先获取要加入边的头节点和尾节点
+        // 然后寻找这两个节点在树中的end节点（终点）
+        // 如果初次加入那么终点就是自己（在数组中存放的是0）
+        // 否则就跳着遍历数组寻找该顶点的终点即可
         for (int i = 0; i < edgeNum; i++) {
             // 获取到第i条边的起点
+            // getPosition用于返回
             int p1 = getPosition(edges[i].start);
             // 获取终点
             int p2 = getPosition(edges[i].end);
@@ -87,6 +98,13 @@ public class KruskalCase {
                 //构成回路
                 continue;
             }else {
+                // 因为在生成树之前的边的数组其实已经从小到达排序过
+                // 所以每次取的边肯定是最小的边，如果不构成回路即可直接使用
+                // 每次都挑选一条要加入的边，并且将其开始顶点的终点设置为它的终点
+                // 这个终点可能是其他顶点的起点，所以在getEnd中是循环的遍历ends数组的这样就可以找到距离最远的点也就是终点
+                // 一开始的末尾节点就是头节点的末尾节点
+                // 在ends数组中始终存在着一个距离其他顶点最远的顶点
+                // 这个顶点是动态的是会被改变的
                 ends[m] = n; // 设置m在已有最小生成树中的终点
 //                ends[n] = n; // 没有必要写，因为在找寻最终节点的时候其实是while循环，每次顺序加入之后经过循环就可以找到终点
                 //可以加入
@@ -131,6 +149,7 @@ public class KruskalCase {
 //            }
 //        }
         //Java排序
+        // 利用Java自带的Collections工具类排序所有边的长度
         Collections.sort(Arrays.asList(edges));
     }
 
@@ -152,6 +171,8 @@ public class KruskalCase {
 
     /**
      * 获取图中边放到数组中
+     * 其实在这个方法中就表明了代表边的开始顶点和末尾顶点其实是可以调换的只要可以表示这条边即可
+     * 这条边是无向边
      * @return
      */
     private EData[] getEdges(){
@@ -159,6 +180,7 @@ public class KruskalCase {
         EData[] edges = new EData[edgeNum];
         for (int i = 0; i < vertexs.length; i++) {
             // 遍历上三角
+            // 只要遍历代表距离的矩阵的上三角即可找出所有的边（因为顶点A到顶点B与顶点B到顶点A的边是同一条这是无向边）
             for (int j = i+1; j < vertexs.length; j++) {
                 if (matrix[i][j] != INF){
                     edges[index++]  = new EData(vertexs[i],vertexs[j],matrix[i][j]);
@@ -179,6 +201,7 @@ public class KruskalCase {
      */
     private int getEnd(int[] ends,int i){
         // 获取一个点的终点
+        // 在形成终点的过程中其实会遍历ends这个数组
         while (ends[i] != 0){
             i = ends[i];
         }

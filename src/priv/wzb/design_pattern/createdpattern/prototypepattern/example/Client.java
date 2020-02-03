@@ -1,4 +1,4 @@
-package priv.wzb.design_pattern.createdpattern.protoyupepattern.example;
+package priv.wzb.design_pattern.createdpattern.prototypepattern.example;
 
 /**
  * @author Satsuki

@@ -1,13 +1,16 @@
 package priv.wzb.datastructure.algorithm.divideandconquer;
 
+import org.junit.Test;
+
 /**
  * @author Satsuki
  * @time 2019/11/4 20:55
  * @description:
  */
+
 public class Hannoitower {
     public static void main(String[] args) {
-        hanoiTower(5,'A','B','C');
+        hanoiTower(10,'A','B','C');
     }
 
     // 汉诺塔移动方法
@@ -20,6 +23,7 @@ public class Hannoitower {
      * @param b 第二个塔
      * @param c 第三个塔
      */
+    @Test
     public static void hanoiTower(int num,char a,char b,char c){
         // 如果只有一个盘
         if (num == 1){
@@ -29,6 +33,7 @@ public class Hannoitower {
             //上面一个盘
             // 最下面一个盘
             // 先把最上面的所有盘A->B,移动过程中会使用到C
+            String.valueOf(123);
             hanoiTower(num-1,a,c,b);
             // 把最下面的盘A->C
             System.out.println("第" + num + "个盘从 " + a + "->" + c);

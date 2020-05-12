@@ -1,4 +1,4 @@
-package priv.wzb.leet_code.graph_search.trapping_rain_water_two_407;
+package priv.wzb.leet_code.array.trapping_rain_water_two_407;
 
 import java.util.PriorityQueue;
 import java.util.Queue;

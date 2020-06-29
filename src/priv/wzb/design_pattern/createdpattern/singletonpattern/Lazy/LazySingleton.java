@@ -7,6 +7,7 @@ package priv.wzb.design_pattern.createdpattern.singletonpattern.Lazy;
  */
 public class LazySingleton {
     private static LazySingleton instance=null;
+    // volatile用于保证可见性和阻止指令重排否则在初始化时可能因为重排获取null
     private volatile static LazySingleton instance1=null;
     private LazySingleton(){
 

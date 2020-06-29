@@ -1,4 +1,4 @@
-package priv.wzb.leet_code.median_of_two_sorted_arrays;
+package priv.wzb.leet_code.median_of_two_sorted_arrays_04;
 
 /**
  * @author Satsuki

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Stack;
+import java.util.concurrent.CountDownLatch;
 
 /**
  * @author Satsuki
@@ -12,6 +13,9 @@ import java.util.Stack;
  */
 public class Solution {
     public List<List<Integer>> levelOrder(TreeNode root) {
+//        CountDownLatch latch = new CountDownLatch(1);
+//        latch.countDown();
+//        latch.await();
 
         List<List<Integer>> ans = new ArrayList<>();
         // 层次数组

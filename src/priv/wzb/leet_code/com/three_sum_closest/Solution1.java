@@ -1,7 +1,6 @@
-package priv.wzb.leet_code.qianxin.three_sum_closest;
+package priv.wzb.leet_code.com.three_sum_closest;
 
 import java.util.Arrays;
-import java.util.Collections;
 
 /**
  * @author Satsuki

@@ -1,4 +1,4 @@
-package priv.wzb.leet_code.qianxin.remove_boxes.dynamic;
+package priv.wzb.leet_code.com.remove_boxes.dynamic;
 
 /**
  * @author Satsuki

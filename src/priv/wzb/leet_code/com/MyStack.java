@@ -1,4 +1,4 @@
-package priv.wzb.leet_code.qianxin;
+package priv.wzb.leet_code.com;
 
 import java.util.LinkedList;
 

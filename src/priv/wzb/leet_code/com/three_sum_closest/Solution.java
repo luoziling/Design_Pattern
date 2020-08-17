@@ -1,4 +1,4 @@
-package priv.wzb.leet_code.qianxin.three_sum_closest;
+package priv.wzb.leet_code.com.three_sum_closest;
 
 /**
  * @author Satsuki

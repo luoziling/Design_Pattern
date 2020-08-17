@@ -1,9 +1,6 @@
-package priv.wzb.leet_code.qianxin.flipping_an_image;
+package priv.wzb.leet_code.com.flipping_an_image;
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author Satsuki

@@ -1,8 +1,6 @@
-package priv.wzb.leet_code.qianxin.remove_boxes;
+package priv.wzb.leet_code.com.remove_boxes;
 
 //import com.sun.org.apache.regexp.internal.RE;
-
-import java.util.LinkedList;
 
 /**
  * @author Satsuki

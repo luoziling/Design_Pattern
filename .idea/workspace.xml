@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="Merge remote-tracking branch 'origin/com'&#10;&#10;# Conflicts:&#10;#&#9;src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/CtorReference.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Dog.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Make1Arg.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Make2Args.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/MakeNoArgs.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/AA.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/BB.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Bar.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/CC.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/ClassFunctionals.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Closure1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/DBaz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Foo.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FuncSS.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionVariants.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Functional.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionalAnnotation.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionalNoAnn.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/I.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/IBaz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/In1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/In2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/LBaz.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/MethodConversion.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/O.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/ProduceFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/SharedStorage.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TransformFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TriFunction.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TriFunctionTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/ArrayStreams.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/FileToWordsBuilder.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Machine2.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Operations.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/CtorReference.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make1Arg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make2Args.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/MakeNoArgs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/AA.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/BB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Bar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/CC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ClassFunctionals.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Closure1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/DBaz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Foo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionVariants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Functional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalAnnotation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalNoAnn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/IBaz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/In1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/In2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/LBaz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/MethodConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/NotFunctional.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ProduceFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/SharedStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TransformFunction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TriFunctionTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/ArrayStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/FileToWordsBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Machine2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Peeking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Prime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/SortedComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Design_Pattern$Calculator.ic" NAME="Calculator Coverage Results" MODIFIED="1572360433182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>priv.wzb.datastructure.stack.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Design_Pattern$TestStoreData.ic" NAME="TestStoreData Coverage Results" MODIFIED="1567584439757" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>priv.wzb.javabase.collection.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Design_Pattern$HuffmanCode.ic" NAME="HuffmanCode Coverage Results" MODIFIED="1572768924739" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>priv.wzb.datastructure.tree.huffmancode.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="mybatis-config" />
+        <option value="AnnotationType" />
+        <option value="FxmlFile" />
+        <option value="Arquillian JUnit Test Class" />
+        <option value="Tag Library Descriptor" />
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>table</find>
+      <find>Node2</find>
+      <find>oos</find>
+      <find>dis</find>
+      <find>content</find>
+      <find>content.append</find>
+      <find>wait</find>
+      <find>static final class</find>
+      <find>top</find>
+      <find>&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;},{&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;},{&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;},{&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;}};</find>
+      <find>&quot;</find>
+      <find>Pair</find>
+      <find>value</find>
+      <find>ReentrantLock</find>
+      <find>math</find>
+      <find>Node</find>
+      <find>reverseOrder</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>Node3</replace>
+      <replace>ois</replace>
+      <replace>response.print</replace>
+      <replace>'</replace>
+      <replace>MyPair</replace>
+      <replace>map</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>G:\java_project_idea\Design_Pattern\src\priv\wzb\datastructure\algorithm</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597676313295" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="G:/学习/redis/周阳经典版---课件+源码+工具/课程源码/redis1122" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="priv.wzb.interview.meituan" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="priv.wzb.javabook.rf.functional" />
+      <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
+      <recent name="priv.wzb.leet_code.array.maximum_length_of_repeated_subarray_718" />
+      <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
+      <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\tree_and_graph\flatten_binary_tree_to_linked_list_114" />
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\merge_k_sorted_lists_23" />
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\linked_list_cycle_141" />
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\intersection_of_two_linked_lists_160" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.AutoCloseableDetails">
+    <configuration name="ArrayStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.ArrayStreams" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutoCloseableDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.AutoCloseableDetails" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FinTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.FinTest" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoggingExceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.LoggingExceptions" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Machine2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.Machine2" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Machine2" />
+      <item itemvalue="Application.ArrayStreams" />
+      <item itemvalue="Application.LoggingExceptions" />
+      <item itemvalue="Application.FinTest" />
+      <item itemvalue="Application.AutoCloseableDetails" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AutoCloseableDetails" />
+        <item itemvalue="Application.FinTest" />
+        <item itemvalue="Application.LoggingExceptions" />
+        <item itemvalue="Application.ArrayStreams" />
+        <item itemvalue="Application.Machine2" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="" />
+      <created>1554536099429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1554536099429</updated>
+      <workItem from="1554536103261" duration="1429000" />
+      <workItem from="1554616636769" duration="3838000" />
+      <workItem from="1556974137478" duration="28000" />
+      <workItem from="1556974191258" duration="2457000" />
+      <workItem from="1557035080997" duration="702000" />
+      <workItem from="1557129926485" duration="2377000" />
+      <workItem from="1557154043368" duration="2405000" />
+      <workItem from="1557583019667" duration="1318000" />
+      <workItem from="1557652472485" duration="1306000" />
+      <workItem from="1558164671130" duration="4942000" />
+      <workItem from="1558242927103" duration="4325000" />
+      <workItem from="1558272153365" duration="1639000" />
+      <workItem from="1558407583592" duration="1263000" />
+      <workItem from="1558435752129" duration="87000" />
+      <workItem from="1558601333562" duration="2190000" />
+      <workItem from="1558786364634" duration="2903000" />
+      <workItem from="1558861669118" duration="3494000" />
+      <workItem from="1558929545832" duration="328000" />
+      <workItem from="1558969504214" duration="2361000" />
+      <workItem from="1559037450593" duration="2829000" />
+      <workItem from="1559118810138" duration="6751000" />
+      <workItem from="1559365877794" duration="5020000" />
+      <workItem from="1559981450722" duration="4210000" />
+      <workItem from="1560072834644" duration="9335000" />
+      <workItem from="1560237507044" duration="1390000" />
+      <workItem from="1560438769151" duration="3052000" />
+      <workItem from="1560474239093" duration="1643000" />
+      <workItem from="1560494081144" duration="698000" />
+      <workItem from="1560586819629" duration="799000" />
+      <workItem from="1560763967051" duration="3761000" />
+      <workItem from="1560841169246" duration="2429000" />
+      <workItem from="1560848831628" duration="5823000" />
+      <workItem from="1560924174790" duration="5830000" />
+      <workItem from="1561020762711" duration="663000" />
+      <workItem from="1561077425303" duration="625000" />
+      <workItem from="1561433241613" duration="8867000" />
+      <workItem from="1561599396601" duration="3178000" />
+      <workItem from="1561628149189" duration="55000" />
+      <workItem from="1561706751385" duration="2619000" />
+      <workItem from="1561709666381" duration="370000" />
+      <workItem from="1562138334122" duration="4860000" />
+      <workItem from="1562382937775" duration="6561000" />
+      <workItem from="1562473306521" duration="169000" />
+      <workItem from="1562563628369" duration="2523000" />
+      <workItem from="1563175806458" duration="209000" />
+      <workItem from="1563343027873" duration="1000" />
+      <workItem from="1563343069553" duration="16843000" />
+      <workItem from="1563434249544" duration="8685000" />
+      <workItem from="1563519208763" duration="8743000" />
+      <workItem from="1563600845429" duration="2429000" />
+      <workItem from="1563612959948" duration="2015000" />
+      <workItem from="1563687056700" duration="594000" />
+      <workItem from="1563784967121" duration="6135000" />
+      <workItem from="1564213295004" duration="1276000" />
+      <workItem from="1564380360266" duration="2417000" />
+      <workItem from="1564554446283" duration="401000" />
+      <workItem from="1565595446760" duration="5270000" />
+      <workItem from="1565681210478" duration="38000" />
+      <workItem from="1565681324268" duration="90000" />
+      <workItem from="1565681441902" duration="202000" />
+      <workItem from="1565685690109" duration="4610000" />
+      <workItem from="1565761797931" duration="694000" />
+      <workItem from="1566116409840" duration="678000" />
+      <workItem from="1566362651296" duration="2671000" />
+      <workItem from="1566396647491" duration="2860000" />
+      <workItem from="1566452137902" duration="1223000" />
+      <workItem from="1566746237502" duration="1581000" />
+      <workItem from="1566802386849" duration="2456000" />
+      <workItem from="1566889339124" duration="112000" />
+      <workItem from="1567149387878" duration="1560000" />
+      <workItem from="1567397614027" duration="95000" />
+      <workItem from="1567412727497" duration="6031000" />
+      <workItem from="1567515809166" duration="201000" />
+      <workItem from="1567575796067" duration="2231000" />
+      <workItem from="1567582631968" duration="7726000" />
+      <workItem from="1567664552920" duration="12878000" />
+      <workItem from="1567747739670" duration="15727000" />
+      <workItem from="1567846523309" duration="6141000" />
+      <workItem from="1567853139066" duration="4745000" />
+      <workItem from="1567919952301" duration="13040000" />
+      <workItem from="1568028445389" duration="9044000" />
+      <workItem from="1568096988267" duration="456000" />
+      <workItem from="1568114826399" duration="12400000" />
+      <workItem from="1568179338541" duration="9748000" />
+      <workItem from="1568207336925" duration="3233000" />
+      <workItem from="1568267419258" duration="15133000" />
+      <workItem from="1568352368820" duration="10914000" />
+      <workItem from="1568438259195" duration="9049000" />
+      <workItem from="1568537988088" duration="2229000" />
+      <workItem from="1568624646050" duration="601000" />
+      <workItem from="1568718570929" duration="6634000" />
+      <workItem from="1569161666977" duration="1652000" />
+      <workItem from="1569212632735" duration="1405000" />
+      <workItem from="1570546475929" duration="3984000" />
+      <workItem from="1570628051303" duration="13000" />
+      <workItem from="1570697243334" duration="561000" />
+      <workItem from="1570799888978" duration="2028000" />
+      <workItem from="1570865270247" duration="134000" />
+      <workItem from="1570884657327" duration="2390000" />
+      <workItem from="1570950905911" duration="84000" />
+      <workItem from="1570975385160" duration="3014000" />
+      <workItem from="1571034004220" duration="160000" />
+      <workItem from="1571287393510" duration="3604000" />
+      <workItem from="1571401999225" duration="3938000" />
+      <workItem from="1571475638889" duration="8901000" />
+      <workItem from="1571568558227" duration="5403000" />
+      <workItem from="1571649313268" duration="4853000" />
+      <workItem from="1571748021019" duration="814000" />
+      <workItem from="1571808453617" duration="959000" />
+      <workItem from="1571893925301" duration="7507000" />
+      <workItem from="1571916721893" duration="64000" />
+      <workItem from="1571996227479" duration="629000" />
+      <workItem from="1572012455911" duration="795000" />
+      <workItem from="1572076756194" duration="1208000" />
+      <workItem from="1572093501469" duration="4226000" />
+      <workItem from="1572159030813" duration="71000" />
+      <workItem from="1572245179036" duration="14318000" />
+      <workItem from="1572346485571" duration="18420000" />
+      <workItem from="1572413707961" duration="17751000" />
+      <workItem from="1572438111871" duration="607000" />
+      <workItem from="1572514019107" duration="18160000" />
+      <workItem from="1572589506328" duration="12158000" />
+      <workItem from="1572611115091" duration="2634000" />
+      <workItem from="1572679828034" duration="18636000" />
+      <workItem from="1572766287849" duration="12560000" />
+      <workItem from="1572784054793" duration="9599000" />
+      <workItem from="1572857162329" duration="15254000" />
+      <workItem from="1572954286061" duration="12512000" />
+      <workItem from="1573031828679" duration="6285000" />
+      <workItem from="1573045602401" duration="13097000" />
+      <workItem from="1573113291869" duration="9048000" />
+      <workItem from="1573132297555" duration="13332000" />
+      <workItem from="1573199939946" duration="24241000" />
+      <workItem from="1573282280313" duration="20714000" />
+      <workItem from="1573316301356" duration="367000" />
+      <workItem from="1573371048939" duration="22787000" />
+      <workItem from="1573402525766" duration="2756000" />
+      <workItem from="1573453092151" duration="8584000" />
+      <workItem from="1573545574824" duration="5815000" />
+      <workItem from="1573626347923" duration="730000" />
+      <workItem from="1573641113342" duration="19048000" />
+      <workItem from="1573732820430" duration="10889000" />
+      <workItem from="1573810139930" duration="1914000" />
+      <workItem from="1573910847409" duration="7788000" />
+      <workItem from="1574166181121" duration="8378000" />
+      <workItem from="1574226937101" duration="14093000" />
+      <workItem from="1574254265293" duration="4236000" />
+      <workItem from="1574324471383" duration="465000" />
+      <workItem from="1574335297877" duration="45000" />
+      <workItem from="1574341132129" duration="7411000" />
+      <workItem from="1574431394645" duration="2175000" />
+      <workItem from="1574514292224" duration="6471000" />
+      <workItem from="1574524157878" duration="270000" />
+      <workItem from="1574578621809" duration="8877000" />
+      <workItem from="1574596518124" duration="3626000" />
+      <workItem from="1574689682796" duration="4202000" />
+      <workItem from="1574767958202" duration="7289000" />
+      <workItem from="1574778783269" duration="794000" />
+      <workItem from="1574940365305" duration="7111000" />
+      <workItem from="1575003906407" duration="593000" />
+      <workItem from="1575121157417" duration="10127000" />
+      <workItem from="1575186571825" duration="7871000" />
+      <workItem from="1575209931786" duration="4681000" />
+      <workItem from="1575288347606" duration="9143000" />
+      <workItem from="1575374322495" duration="12545000" />
+      <workItem from="1575469783200" duration="2062000" />
+      <workItem from="1575509681761" duration="61000" />
+      <workItem from="1575556972620" duration="2874000" />
+      <workItem from="1575641076107" duration="600000" />
+      <workItem from="1575879734907" duration="711000" />
+      <workItem from="1576422964582" duration="4092000" />
+      <workItem from="1576507729082" duration="2780000" />
+      <workItem from="1576724721855" duration="115000" />
+      <workItem from="1577632495479" duration="714000" />
+      <workItem from="1577893314738" duration="631000" />
+      <workItem from="1578566719314" duration="4140000" />
+      <workItem from="1578637649491" duration="4931000" />
+      <workItem from="1579346789291" duration="4814000" />
+      <workItem from="1579427049176" duration="793000" />
+      <workItem from="1579443481302" duration="5184000" />
+      <workItem from="1580708015574" duration="4919000" />
+      <workItem from="1580885849182" duration="928000" />
+      <workItem from="1580900975171" duration="1242000" />
+      <workItem from="1580994258904" duration="934000" />
+      <workItem from="1580996161459" duration="723000" />
+      <workItem from="1581255014794" duration="948000" />
+      <workItem from="1581443641618" duration="588000" />
+      <workItem from="1581771735898" duration="3607000" />
+      <workItem from="1582561042930" duration="3855000" />
+      <workItem from="1583223924558" duration="1205000" />
+      <workItem from="1584516245559" duration="2607000" />
+      <workItem from="1584597779915" duration="1539000" />
+      <workItem from="1584861203816" duration="3524000" />
+      <workItem from="1584954426437" duration="2153000" />
+      <workItem from="1585035702582" duration="5383000" />
+      <workItem from="1585112630684" duration="2307000" />
+      <workItem from="1585212182334" duration="3629000" />
+      <workItem from="1585312678976" duration="3226000" />
+      <workItem from="1585385509509" duration="3035000" />
+      <workItem from="1585485434920" duration="4801000" />
+      <workItem from="1585559725807" duration="3782000" />
+      <workItem from="1585646314259" duration="7208000" />
+      <workItem from="1585726037830" duration="4221000" />
+      <workItem from="1585822322403" duration="6026000" />
+      <workItem from="1585898246660" duration="2272000" />
+      <workItem from="1585980091712" duration="5531000" />
+      <workItem from="1586073264424" duration="6373000" />
+      <workItem from="1586168617664" duration="2351000" />
+      <workItem from="1586246809654" duration="1818000" />
+      <workItem from="1586343021788" duration="406000" />
+      <workItem from="1586343594016" duration="10000" />
+      <workItem from="1586864677898" duration="910000" />
+      <workItem from="1586951393683" duration="1092000" />
+      <workItem from="1588066548717" duration="1939000" />
+      <workItem from="1588401558074" duration="61000" />
+      <workItem from="1588669990132" duration="2101000" />
+      <workItem from="1588729522406" duration="1794000" />
+      <workItem from="1589030492269" duration="649000" />
+      <workItem from="1589204875319" duration="2236000" />
+      <workItem from="1589302800316" duration="2250000" />
+      <workItem from="1589352489335" duration="2356000" />
+      <workItem from="1589381970556" duration="2871000" />
+      <workItem from="1589472161206" duration="1526000" />
+      <workItem from="1589564543517" duration="2200000" />
+      <workItem from="1589654131003" duration="1657000" />
+      <workItem from="1589735069040" duration="1897000" />
+      <workItem from="1589774918352" duration="1687000" />
+      <workItem from="1589820069649" duration="752000" />
+      <workItem from="1589862744062" duration="2590000" />
+      <workItem from="1589896957787" duration="1049000" />
+      <workItem from="1589944647407" duration="8825000" />
+      <workItem from="1590031980737" duration="3114000" />
+      <workItem from="1590085601700" duration="705000" />
+      <workItem from="1590217170224" duration="1120000" />
+      <workItem from="1590298189665" duration="1399000" />
+      <workItem from="1590320297464" duration="6474000" />
+      <workItem from="1590384430017" duration="2716000" />
+      <workItem from="1590394666959" duration="3103000" />
+      <workItem from="1590481793343" duration="310000" />
+      <workItem from="1592293920132" duration="3925000" />
+      <workItem from="1592661974701" duration="2818000" />
+      <workItem from="1592749054305" duration="646000" />
+      <workItem from="1593405146969" duration="8093000" />
+      <workItem from="1593499747374" duration="6220000" />
+      <workItem from="1593570762772" duration="3094000" />
+      <workItem from="1593588379487" duration="3187000" />
+      <workItem from="1593670686282" duration="136000" />
+      <workItem from="1593771560029" duration="593000" />
+      <workItem from="1593832956709" duration="3066000" />
+      <workItem from="1593958149332" duration="806000" />
+      <workItem from="1594017627724" duration="4440000" />
+      <workItem from="1594106443073" duration="1843000" />
+      <workItem from="1594188099388" duration="1641000" />
+      <workItem from="1594271196477" duration="676000" />
+      <workItem from="1594362312330" duration="691000" />
+      <workItem from="1594864821722" duration="2178000" />
+      <workItem from="1595055272450" duration="1647000" />
+      <workItem from="1595057348862" duration="27000" />
+      <workItem from="1597236198141" duration="8080000" />
+      <workItem from="1597669643373" duration="4590000" />
+    </task>
+    <task id="LOCAL-00001" summary="Test">
+      <created>1568117087835</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568117087835</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Test1">
+      <created>1568210337870</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568210337870</updated>
+    </task>
+    <task id="LOCAL-00003" summary="2019.11.3&#10;tree/HuffmanCodes/AVLTree">
+      <created>1572792630955</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1572792630955</updated>
+    </task>
+    <task id="LOCAL-00004" summary="2019.11.5&#10;Graph/二分非递归/分治算法（汉诺塔问题）/动态规划算法（背包问题）/KMP算法（字符串匹配问题）/贪心算法/prime算法/kruskal算法（最小生成树）">
+      <created>1572965600855</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1572965600855</updated>
+    </task>
+    <task id="LOCAL-00005" summary="2019.11.7&#10;Dijstra迪杰斯特拉算法（图中每个顶点到其他顶点的最短距离）/Floyd（弗洛伊德算法）/马踏棋盘算法">
+      <created>1573119224725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573119224725</updated>
+    </task>
+    <task id="LOCAL-00006" summary="2019.11.25&#10;算法:LeetCode刷题P6二分查找与二叉排序树">
+      <created>1574690691347</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1574690691347</updated>
+    </task>
+    <task id="LOCAL-00007" summary="2020.2.3&#10;设计模式：策略模式，原型模式&#10;leetcode:449,322,174,198,300,53,64,10,120,473,200,407,127,126,49,409,06,76,187,08,290,03,05,09,09">
+      <created>1580713337421</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1580713337421</updated>
+    </task>
+    <task id="LOCAL-00008" summary="2020.2.3">
+      <created>1580713630713</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1580713630713</updated>
+    </task>
+    <task id="LOCAL-00009" summary="2020.5.13 二叉树的层序遍历">
+      <created>1589304857823</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589304857823</updated>
+    </task>
+    <task id="LOCAL-00010" summary="2020.6.29 leetcode215 数组中的第K个最大元素&#10;线程池，如何定义和使用，拒绝策略，如何定制线程池大小(内部设定多少线程数">
+      <created>1593416104686</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1593416104686</updated>
+    </task>
+    <task id="LOCAL-00011" summary="2020.8.17 stream">
+      <created>1597670493670</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1597670493670</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="test10_test2 - 2019.11.11 at 15h 42m 37s.xml">
+      <configuration name="test10.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test2 - 2019.11.11 at 15h 42m 53s.xml">
+      <configuration name="test10.test2" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test3 - 2019.11.11 at 15h 46m 57s.xml">
+      <configuration name="test10.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test3 - 2019.11.11 at 15h 47m 18s.xml">
+      <configuration name="test10.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test4 - 2019.11.11 at 15h 52m 20s.xml">
+      <configuration name="test10.test4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test4 - 2019.11.11 at 15h 52m 30s.xml">
+      <configuration name="test10.test4" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test3 - 2019.11.11 at 15h 56m 37s.xml">
+      <configuration name="test10.test3" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test5 - 2019.11.11 at 15h 56m 37s.xml">
+      <configuration name="test10.test5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test5 - 2019.11.11 at 15h 57m 10s.xml">
+      <configuration name="test10.test5" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test10_test06 - 2019.11.11 at 16h 00m 06s.xml">
+      <configuration name="test10.test06" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test" />
+    <MESSAGE value="Test1" />
+    <MESSAGE value="2019.11.3&#10;tree/HuffmanCodes/AVLTree" />
+    <MESSAGE value="2019.11.5&#10;Graph/二分非递归/分治算法（汉诺塔问题）/动态规划算法（背包问题）/KMP算法（字符串匹配问题）/贪心算法/prime算法/kruskal算法（最小生成树）" />
+    <MESSAGE value="2019.11.7&#10;Dijstra迪杰斯特拉算法（图中每个顶点到其他顶点的最短距离）/Floyd（弗洛伊德算法）/马踏棋盘算法" />
+    <MESSAGE value="2019.11.25&#10;算法:LeetCode刷题P6二分查找与二叉排序树" />
+    <MESSAGE value="2020.2.3&#10;设计模式：原型模式" />
+    <MESSAGE value="2020.2.3&#10;设计模式：策略模式，原型模式&#10;leetcode:449,322,174,198,300,53,64,10,120,473,200,407,127,126,49,409,06,76,187,08,290,03,05,09,09" />
+    <MESSAGE value="2020.2.3" />
+    <MESSAGE value="2020.5.13 二叉树的层序遍历" />
+    <MESSAGE value="2020.6.29 leetcode215 数组中的第K个最大元素&#10;线程池，如何定义和使用，拒绝策略，如何定制线程池大小(内部设定多少线程数" />
+    <MESSAGE value="2020.8.17 stream" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020.8.17 stream" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/hashmap_and_string/longest_substring_without_repeating_characters_06/Optimization.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/collection/TestStoreData.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/net/chat/chat04/Client2.java</url>
+          <line>21</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/server/Server01/Server05.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/stack/ArrayStackDemo.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/recursion/MiGong.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/sort/Insert/InsertSort.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="35" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="44" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/tree/threadedbinarytree/ThreadedBinaryTree.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/dijkstra/DijkstraAlgorithm.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/prim/PrimAlgorithm.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="54" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/kruskal/KruskalCase.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution1.java</url>
+          <line>154</line>
+          <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution1.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution2.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/median_of_two_sorted_arrays_04/Solution1.java</url>
+          <line>215</line>
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/longest_palindromic_Substring_05/Violence.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/longest_palindromic_Substring_05/CenterExpand.java</url>
+          <line>14</line>
+          <option name="timeStamp" value="99" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/stack_queue_heap/basic_calculator_224/Solution.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/longest_increasing_subsequence_300/Solution.java</url>
+          <line>39</line>
+          <option name="timeStamp" value="117" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/dungeon_game_174/Solution1.java</url>
+          <line>59</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/math/palindrome_number_09/Solution1.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/math/palindrome_number_09/Solution1.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="130" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/sort_an_array_912/Solution1.java</url>
+          <line>78</line>
+          <option name="timeStamp" value="131" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/hashmap_and_string/minimum_window_substring_76/Solution2.java</url>
+          <line>76</line>
+          <option name="timeStamp" value="132" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/maximum_length_of_repeated_subarray_718/Solution.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="135" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="res1" />
+        <watch expression="res2.next" />
+        <watch expression="res2.next" />
+        <watch expression="graph" />
+        <watch expression="small.get(2)" />
+        <watch expression="result.get(0)" />
+        <watch expression="result.get(0)" language="JAVA" />
+        <watch expression="item" />
+        <watch expression="mark" />
+        <watch expression="markMirror" />
+        <watch expression="location" />
+        <watch expression="mark" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jQuery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Design_Pattern</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

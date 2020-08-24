@@ -2,89 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="Merge remote-tracking branch 'origin/com'&#10;&#10;# Conflicts:&#10;#&#9;src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/CtorReference.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Dog.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Make1Arg.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/Make2Args.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/cons/MakeNoArgs.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/AA.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/BB.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Bar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/CC.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/ClassFunctionals.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Closure1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/DBaz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Foo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FuncSS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionVariants.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/Functional.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionalAnnotation.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/FunctionalNoAnn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/I.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/IBaz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/In1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/In2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/LBaz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/MethodConversion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/O.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/ProduceFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/SharedStorage.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TransformFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TriFunction.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/functional/TriFunctionTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/ArrayStreams.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/FileToWordsBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Machine2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Operations.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/CtorReference.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make1Arg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make2Args.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/MakeNoArgs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/AA.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/BB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Bar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/CC.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ClassFunctionals.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Closure1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/DBaz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Foo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionVariants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Functional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalAnnotation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalNoAnn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/IBaz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/In1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/In2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/LBaz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/MethodConversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/NotFunctional.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ProduceFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/SharedStorage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TransformFunction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TriFunctionTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/ArrayStreams.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/FileToWordsBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Machine2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Peeking.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Prime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/SortedComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/AlarmPoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Burrito2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/ConstantSpecificMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnuMaps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnumClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnumSets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Enums.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Food.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Mail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/OzWitch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/PostOffice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SecurityCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SpaceShip.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SpicinessEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/TrafficLight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/TypeOfFood.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Bowl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Burrito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Cupboard.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/SimpleEnumUse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Spiciness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/StaticInitialization.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Table.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/flipping_an_image/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Design_Pattern$Calculator.ic" NAME="Calculator Coverage Results" MODIFIED="1572360433182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -119,8 +79,8 @@
         <option value="FxmlFile" />
         <option value="Arquillian JUnit Test Class" />
         <option value="Tag Library Descriptor" />
-        <option value="Enum" />
         <option value="Interface" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -163,10 +123,16 @@
       <GitPushTagMode />
     </option>
   </component>
+  <component name="ProjectId" id="1gJBUiK9fU5kials92vDXFmrVt1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597676313295" />
@@ -174,18 +140,24 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="G:/学习/redis/周阳经典版---课件+源码+工具/课程源码/redis1122" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/javabook/enums" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="priv.wzb.javabook.rf.functional" />
@@ -195,26 +167,20 @@
       <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\tree_and_graph\flatten_binary_tree_to_linked_list_114" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\merge_k_sorted_lists_23" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\linked_list_cycle_141" />
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\intersection_of_two_linked_lists_160" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AutoCloseableDetails">
-    <configuration name="ArrayStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.ArrayStreams" />
+  <component name="RunManager" selected="Application.ConstantSpecificMethod">
+    <configuration name="ConstantSpecificMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.ConstantSpecificMethod" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -222,12 +188,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AutoCloseableDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.AutoCloseableDetails" />
+    <configuration name="EnuMaps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.EnuMaps" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -235,12 +201,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.FinTest" />
+    <configuration name="EnumSets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.EnumSets" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -248,12 +214,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoggingExceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.LoggingExceptions" />
+    <configuration name="Meal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.Meal" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -261,12 +227,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Machine2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.Machine2" />
+    <configuration name="TrafficLight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.TrafficLight" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -275,19 +241,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Machine2" />
-      <item itemvalue="Application.ArrayStreams" />
-      <item itemvalue="Application.LoggingExceptions" />
-      <item itemvalue="Application.FinTest" />
-      <item itemvalue="Application.AutoCloseableDetails" />
+      <item itemvalue="Application.TrafficLight" />
+      <item itemvalue="Application.Meal" />
+      <item itemvalue="Application.EnumSets" />
+      <item itemvalue="Application.EnuMaps" />
+      <item itemvalue="Application.ConstantSpecificMethod" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AutoCloseableDetails" />
-        <item itemvalue="Application.FinTest" />
-        <item itemvalue="Application.LoggingExceptions" />
-        <item itemvalue="Application.ArrayStreams" />
-        <item itemvalue="Application.Machine2" />
+        <item itemvalue="Application.ConstantSpecificMethod" />
+        <item itemvalue="Application.EnuMaps" />
+        <item itemvalue="Application.EnumSets" />
+        <item itemvalue="Application.Meal" />
+        <item itemvalue="Application.TrafficLight" />
       </list>
     </recent_temporary>
   </component>
@@ -561,6 +527,10 @@
       <workItem from="1595057348862" duration="27000" />
       <workItem from="1597236198141" duration="8080000" />
       <workItem from="1597669643373" duration="4590000" />
+      <workItem from="1597822835363" duration="628000" />
+      <workItem from="1597920746693" duration="623000" />
+      <workItem from="1597993298544" duration="1000" />
+      <workItem from="1597993308590" duration="7477000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -700,6 +670,52 @@
     <MESSAGE value="2020.6.29 leetcode215 数组中的第K个最大元素&#10;线程池，如何定义和使用，拒绝策略，如何定制线程池大小(内部设定多少线程数" />
     <MESSAGE value="2020.8.17 stream" />
     <option name="LAST_COMMIT_MESSAGE" value="2020.8.17 stream" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1597998679254">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597998679254" />
+    <state width="1224" height="241" key="GridCell.Tab.0.bottom" timestamp="1598005769177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="241" key="GridCell.Tab.0.center" timestamp="1598005769177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="241" key="GridCell.Tab.0.left" timestamp="1598005769177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="241" key="GridCell.Tab.0.right" timestamp="1598005769177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="241" key="GridCell.Tab.1.bottom" timestamp="1598005769178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
+    <state width="1224" height="241" key="GridCell.Tab.1.center" timestamp="1598005769178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
+    <state width="1224" height="241" key="GridCell.Tab.1.left" timestamp="1598005769177">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="241" key="GridCell.Tab.1.right" timestamp="1598005769178">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="241" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
+    <state x="717" y="193" key="SettingsEditor" timestamp="1597993681850">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597993681850" />
+    <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597995286038" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -844,6 +860,11 @@
           <line>27</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/StaticInitialization.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -862,6 +883,49 @@
         <watch expression="mark" language="JAVA" />
       </configuration>
     </watches-manager>
+  </component>
+  <component name="ideajad">
+    <property name="annotate" value="false" />
+    <property name="annotateFully" value="false" />
+    <property name="braces" value="false" />
+    <property name="clear" value="false" />
+    <property name="confirmNavigationTriggeredDecompile" value="true" />
+    <property name="dead" value="true" />
+    <property name="defaultInitializers" value="false" />
+    <property name="dissassemblerOnly" value="false" />
+    <property name="fieldsFirst" value="true" />
+    <property name="fileExtension" value="java" />
+    <property name="fullyQualifiedNames" value="false" />
+    <property name="indentation" value="4" />
+    <property name="intRadix" value="10" />
+    <property name="lineNumbersAsComments" value="true" />
+    <property name="longRadix" value="10" />
+    <property name="maxStringLength" value="64" />
+    <property name="nocast" value="false" />
+    <property name="noclass" value="false" />
+    <property name="nocode" value="false" />
+    <property name="noconv" value="false" />
+    <property name="noctor" value="false" />
+    <property name="nodos" value="false" />
+    <property name="nofd" value="false" />
+    <property name="noinner" value="false" />
+    <property name="nolvt" value="false" />
+    <property name="nonlb" value="false" />
+    <property name="outputDirectory" value="" />
+    <property name="packFields" value="3" />
+    <property name="packImports" value="7" />
+    <property name="prefixNumericalClasses" value="_cls" />
+    <property name="prefixNumericalFields" value="_fld" />
+    <property name="prefixNumericalLocals" value="_lcl" />
+    <property name="prefixNumericalMethods" value="_mth" />
+    <property name="prefixNumericalParameters" value="_prm" />
+    <property name="prefixUnusedExceptions" value="_ex" />
+    <property name="readonly" value="false" />
+    <property name="safe" value="false" />
+    <property name="sort" value="false" />
+    <property name="spaceAfterKeyword" value="false" />
+    <property name="splitStringsAtNewline" value="false" />
+    <property name="useTabs" value="false" />
   </component>
   <component name="masterDetails">
     <states>

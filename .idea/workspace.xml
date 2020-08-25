@@ -1,42 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="Merge remote-tracking branch 'origin/com'&#10;&#10;# Conflicts:&#10;#&#9;src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/AlarmPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Burrito2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/ConstantSpecificMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnuMaps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnumClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/EnumSets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Enums.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Food.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Mail.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/Meal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/OzWitch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/PostOffice.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SecurityCategory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SpaceShip.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/SpicinessEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/TrafficLight.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/enums/TypeOfFood.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Bowl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Burrito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Cupboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/SimpleEnumUse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Spiciness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/StaticInitialization.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/Table.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Bath.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Beetle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/BlankFinal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/FinalData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Insect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Instrument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Poppet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Soap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Value.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/Wind.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/MyStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/flipping_an_image/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,38 +60,6 @@
         <option value="Class" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>table</find>
-      <find>Node2</find>
-      <find>oos</find>
-      <find>dis</find>
-      <find>content</find>
-      <find>content.append</find>
-      <find>wait</find>
-      <find>static final class</find>
-      <find>top</find>
-      <find>&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;0&quot;},{&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;},{&quot;1&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;},{&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;,&quot;0&quot;}};</find>
-      <find>&quot;</find>
-      <find>Pair</find>
-      <find>value</find>
-      <find>ReentrantLock</find>
-      <find>math</find>
-      <find>Node</find>
-      <find>reverseOrder</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>Node3</replace>
-      <replace>ois</replace>
-      <replace>response.print</replace>
-      <replace>'</replace>
-      <replace>MyPair</replace>
-      <replace>map</replace>
-    </replaceStrings>
-    <dirStrings>
-      <dir>G:\java_project_idea\Design_Pattern\src\priv\wzb\datastructure\algorithm</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,7 +118,46 @@
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\linked_list_cycle_141" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ConstantSpecificMethod">
+  <component name="RunManager" selected="Application.Beetle">
+    <configuration name="Bath" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.Bath" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Beetle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.Beetle" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BlankFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.BlankFinal" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConstantSpecificMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.ConstantSpecificMethod" />
       <module name="Design_Pattern" />
@@ -188,51 +171,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EnuMaps" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.EnuMaps" />
+    <configuration name="FinalData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.FinalData" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EnumSets" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.EnumSets" />
-      <module name="Design_Pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Meal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.Meal" />
-      <module name="Design_Pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrafficLight" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.enums.TrafficLight" />
-      <module name="Design_Pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.enums.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -241,19 +185,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.TrafficLight" />
-      <item itemvalue="Application.Meal" />
-      <item itemvalue="Application.EnumSets" />
-      <item itemvalue="Application.EnuMaps" />
       <item itemvalue="Application.ConstantSpecificMethod" />
+      <item itemvalue="Application.Bath" />
+      <item itemvalue="Application.FinalData" />
+      <item itemvalue="Application.BlankFinal" />
+      <item itemvalue="Application.Beetle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Beetle" />
+        <item itemvalue="Application.BlankFinal" />
+        <item itemvalue="Application.FinalData" />
+        <item itemvalue="Application.Bath" />
         <item itemvalue="Application.ConstantSpecificMethod" />
-        <item itemvalue="Application.EnuMaps" />
-        <item itemvalue="Application.EnumSets" />
-        <item itemvalue="Application.Meal" />
-        <item itemvalue="Application.TrafficLight" />
       </list>
     </recent_temporary>
   </component>
@@ -531,6 +475,8 @@
       <workItem from="1597920746693" duration="623000" />
       <workItem from="1597993298544" duration="1000" />
       <workItem from="1597993308590" duration="7477000" />
+      <workItem from="1598253820448" duration="585000" />
+      <workItem from="1598254418776" duration="4354000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -609,7 +555,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597670493670</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="第六章 初始化和清理&#10;第二十二章 枚举">
+      <created>1598253886846</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1598253886846</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -669,29 +622,34 @@
     <MESSAGE value="2020.5.13 二叉树的层序遍历" />
     <MESSAGE value="2020.6.29 leetcode215 数组中的第K个最大元素&#10;线程池，如何定义和使用，拒绝策略，如何定制线程池大小(内部设定多少线程数" />
     <MESSAGE value="2020.8.17 stream" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020.8.17 stream" />
+    <MESSAGE value="第六章 初始化和清理&#10;第二十二章 枚举" />
+    <option name="LAST_COMMIT_MESSAGE" value="第六章 初始化和清理&#10;第二十二章 枚举" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1597998679254">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1598257201850">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597998679254" />
-    <state width="1224" height="241" key="GridCell.Tab.0.bottom" timestamp="1598005769177">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598257201850" />
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1598253883694">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
-    <state width="1224" height="241" key="GridCell.Tab.0.center" timestamp="1598005769177">
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598253883694" />
+    <state width="1224" height="190" key="GridCell.Tab.0.bottom" timestamp="1598270217218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
-    <state width="1224" height="241" key="GridCell.Tab.0.left" timestamp="1598005769177">
+    <state width="1224" height="190" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598270217218" />
+    <state width="1224" height="190" key="GridCell.Tab.0.center" timestamp="1598270217218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
-    <state width="1224" height="241" key="GridCell.Tab.0.right" timestamp="1598005769177">
+    <state width="1224" height="190" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598270217218" />
+    <state width="1224" height="190" key="GridCell.Tab.0.left" timestamp="1598270217218">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
+    <state width="1224" height="190" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598270217218" />
+    <state width="1224" height="190" key="GridCell.Tab.0.right" timestamp="1598270217218">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1224" height="190" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598270217218" />
     <state width="1224" height="241" key="GridCell.Tab.1.bottom" timestamp="1598005769178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -712,6 +670,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597993681850" />
+    <state x="921" y="282" width="540" height="524" key="StructurePopup" timestamp="1598258528607">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="921" y="282" width="540" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598258528607" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1598253917437">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598253917437" />
     <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

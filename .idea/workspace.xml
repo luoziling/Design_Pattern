@@ -2,102 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/AlarmPoints.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Burrito2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Command.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/ConstantSpecificMethod$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/ConstantSpecificMethod$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/ConstantSpecificMethod$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/ConstantSpecificMethod.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Course.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/EnuMaps.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/EnumClass.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/EnumSets.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Enums.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Food$Appetizer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Food$Coffee.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Food$Dessert.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Food$MainCourse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Food.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$1$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$Address.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$GeneralDelivery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$Readability.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$ReturnAddress.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail$Scannability.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Mail.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Meal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/OzWitch.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$MailHandler$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$MailHandler$2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$MailHandler$3.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$MailHandler$4.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice$MailHandler.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/PostOffice.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SecurityCategory$Security$Bond.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SecurityCategory$Security$Stock.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SecurityCategory$Security.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SecurityCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Shrubbery.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/Signal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SpaceShip.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/SpicinessEnum.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/TrafficLight$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/TrafficLight.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/enums/TypeOfFood.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/AutoCloseableDetails.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/FinTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/First.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/LoggingException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/LoggingExceptions.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/Reporter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/exceptions/Second.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Bowl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Burrito$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Burrito.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Cupboard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/SimpleEnumUse.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Spiciness.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/StaticInitialization.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/housekeeping/Table.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/Derived2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/Glyph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PolyConstructors.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PrivateOverride2.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/RoundGlyph.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/Shape.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Bath.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Beetle.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/BlankFinal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/FinalData.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Insect.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Instrument.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Poppet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Soap.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Value.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/reuse/Wind.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Peeking.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/Prime.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/rf/streams/SortedComparator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/MyStack.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/flipping_an_image/Solution.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/remove_boxes/Solution.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/remove_boxes/Solution1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/remove_boxes/dynamic/SteelCut.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/remove_boxes/dynamic/SteelCut1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/three_sum_closest/Solution.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/com/three_sum_closest/Solution1.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/AdaptedRandomDoubles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Adventure.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Applicator.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/AttemtpToUseBasic.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/BandPass.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Basic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/Derived2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/Glyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/PolyConstructors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/PrivateOverride2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/RoundGlyph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/Shape.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Basic2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Bing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Bob1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Concept.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Crack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Factories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Filter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/FilterAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/FilterProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Games.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/HighPass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Implementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Instrument.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/LowPass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Machine.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Operations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Processor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/RandomDoubles.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/RandomStrings.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/StringProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Twist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Waveform.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PolyConstructors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PolyConstructors.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,8 +78,8 @@
         <option value="FxmlFile" />
         <option value="Arquillian JUnit Test Class" />
         <option value="Tag Library Descriptor" />
-        <option value="Interface" />
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -176,17 +114,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="priv.wzb.javabook.rf.functional" />
@@ -202,14 +134,20 @@
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\merge_k_sorted_lists_23" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\linked_list_cycle_141" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.PolyConstructors">
-    <configuration name="Beetle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.Beetle" />
+  <component name="RunManager" selected="Application.Games">
+    <configuration name="AdaptedRandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.AdaptedRandomDoubles" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -217,12 +155,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BlankFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.reuse.BlankFinal" />
+    <configuration name="Factories" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.Factories" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.reuse.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -230,12 +168,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Derived2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.polymorphism.Derived2" />
+    <configuration name="FilterProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.FilterProcessor" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.polymorphism.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -243,12 +181,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PolyConstructors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.polymorphism.PolyConstructors" />
+    <configuration name="Games" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.Games" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.polymorphism.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -256,12 +194,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrivateOverride2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.polymorphism.PrivateOverride2" />
+    <configuration name="RandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.RandomDoubles" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.polymorphism.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -270,19 +208,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BlankFinal" />
-      <item itemvalue="Application.Beetle" />
-      <item itemvalue="Application.Derived2" />
-      <item itemvalue="Application.PrivateOverride2" />
-      <item itemvalue="Application.PolyConstructors" />
+      <item itemvalue="Application.FilterProcessor" />
+      <item itemvalue="Application.RandomDoubles" />
+      <item itemvalue="Application.AdaptedRandomDoubles" />
+      <item itemvalue="Application.Factories" />
+      <item itemvalue="Application.Games" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.PolyConstructors" />
-        <item itemvalue="Application.PrivateOverride2" />
-        <item itemvalue="Application.Derived2" />
-        <item itemvalue="Application.Beetle" />
-        <item itemvalue="Application.BlankFinal" />
+        <item itemvalue="Application.Games" />
+        <item itemvalue="Application.Factories" />
+        <item itemvalue="Application.AdaptedRandomDoubles" />
+        <item itemvalue="Application.RandomDoubles" />
+        <item itemvalue="Application.FilterProcessor" />
       </list>
     </recent_temporary>
   </component>
@@ -563,7 +501,8 @@
       <workItem from="1598253820448" duration="585000" />
       <workItem from="1598254418776" duration="4354000" />
       <workItem from="1598340938436" duration="3646000" />
-      <workItem from="1598510705269" duration="726000" />
+      <workItem from="1598510705269" duration="8528000" />
+      <workItem from="1598578410267" duration="743000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -656,7 +595,14 @@
       <option name="project" value="LOCAL" />
       <updated>1598340985664</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="第九章 多态">
+      <created>1598511594588</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1598511594588</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -718,37 +664,42 @@
     <MESSAGE value="2020.8.17 stream" />
     <MESSAGE value="第六章 初始化和清理&#10;第二十二章 枚举" />
     <MESSAGE value="第八章 复用" />
-    <option name="LAST_COMMIT_MESSAGE" value="第八章 复用" />
+    <MESSAGE value="第九章 多态" />
+    <option name="LAST_COMMIT_MESSAGE" value="第九章 多态" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1598343303156">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1598518922798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598343303156" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1598340982730">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598518922798" />
+    <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598340982730" />
+    <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1598511591651">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598511591651" />
     <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1226" height="189" key="GridCell.Tab.0.bottom" timestamp="1598353557462">
+    <state width="1224" height="188" key="GridCell.Tab.0.bottom" timestamp="1598519235451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1226" height="189" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598353557462" />
-    <state width="1226" height="189" key="GridCell.Tab.0.center" timestamp="1598353557462">
+    <state width="1224" height="188" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235451" />
+    <state width="1224" height="188" key="GridCell.Tab.0.center" timestamp="1598519235450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1226" height="189" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598353557462" />
-    <state width="1226" height="189" key="GridCell.Tab.0.left" timestamp="1598353557462">
+    <state width="1224" height="188" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235450" />
+    <state width="1224" height="188" key="GridCell.Tab.0.left" timestamp="1598519235450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1226" height="189" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598353557462" />
-    <state width="1226" height="189" key="GridCell.Tab.0.right" timestamp="1598353557462">
+    <state width="1224" height="188" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235450" />
+    <state width="1224" height="188" key="GridCell.Tab.0.right" timestamp="1598519235451">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1226" height="189" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598353557462" />
+    <state width="1224" height="188" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235451" />
     <state width="1224" height="241" key="GridCell.Tab.1.bottom" timestamp="1598005769178">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -765,18 +716,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1224" height="241" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
-    <state x="717" y="193" key="SettingsEditor" timestamp="1597993681850">
+    <state x="717" y="193" key="SettingsEditor" timestamp="1598512972024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597993681850" />
+    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598512972024" />
     <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1598346833787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346833787" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1598511517757">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1598511600691">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598511517757" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598511600691" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598578446847">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598578446847" />
     <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

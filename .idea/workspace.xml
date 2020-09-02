@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/AdaptedRandomDoubles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Adventure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Applicator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/AttemtpToUseBasic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/BandPass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Basic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Basic2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Bing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Bob1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Concept.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Crack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Factories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Filter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/FilterAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/FilterProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Games.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/HighPass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Implementation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Instrument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Jim2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/LowPass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Machine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Operations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Processor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/RandomDoubles.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/RandomStrings.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/StringProcessor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Twist.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/interfaces/Waveform.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="第十章 接口">
+      <change afterPath="$PROJECT_DIR$/lib/guava-29.0-jre.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/AdapterMethodIdiom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/AddingGroups.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/ApplesAndOrangesWithoutGenerics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/EnvironmentVariables.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/IterableClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/PrintingCollections.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/PriorityQueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/QueueDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/ReversibleArrayList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/collections/Statistics.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/AnonymousConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Callbacks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/ClassInInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Contents.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Destination.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/DotThis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/InnerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/MultiImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel10.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel11.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel5.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel6.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel7.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel7b.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcel9.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Parcell.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Selector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/Sequence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/TestBed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/innerclasses/TestParcel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Assert2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CountedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CountedListTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/GuavaAssertions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/LoaderAssertions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PolyConstructors.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/polymorphism/PolyConstructors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Design_Pattern.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Design_Pattern.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,6 +98,11 @@
       <GitPushTagMode />
     </option>
   </component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="JUnit" name="CountedListTest.insert" />
+    </enabled-run-configurations>
+  </component>
   <component name="ProjectId" id="1gJBUiK9fU5kials92vDXFmrVt1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -99,6 +112,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -107,7 +124,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/javabook/enums" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -141,13 +158,13 @@
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Games">
-    <configuration name="AdaptedRandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.AdaptedRandomDoubles" />
+  <component name="RunManager" selected="Application.LoaderAssertions">
+    <configuration name="Assert2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.Assert2" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +172,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Factories" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.Factories" />
+    <configuration name="LoaderAssertions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.LoaderAssertions" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,59 +185,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FilterProcessor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.FilterProcessor" />
+    <configuration name="CountedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="priv.wzb.javabook.validating" />
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.CountedListTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Games" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.Games" />
+    <configuration name="CountedListTest.addAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="priv.wzb.javabook.validating" />
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.CountedListTest" />
+      <option name="METHOD_NAME" value="addAll" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomDoubles" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.interfaces.RandomDoubles" />
+    <configuration name="CountedListTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.interfaces.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="priv.wzb.javabook.validating" />
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.CountedListTest" />
+      <option name="METHOD_NAME" value="insert" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FilterProcessor" />
-      <item itemvalue="Application.RandomDoubles" />
-      <item itemvalue="Application.AdaptedRandomDoubles" />
-      <item itemvalue="Application.Factories" />
-      <item itemvalue="Application.Games" />
+      <item itemvalue="JUnit.CountedListTest.addAll" />
+      <item itemvalue="JUnit.CountedListTest" />
+      <item itemvalue="JUnit.CountedListTest.insert" />
+      <item itemvalue="Application.Assert2" />
+      <item itemvalue="Application.LoaderAssertions" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Games" />
-        <item itemvalue="Application.Factories" />
-        <item itemvalue="Application.AdaptedRandomDoubles" />
-        <item itemvalue="Application.RandomDoubles" />
-        <item itemvalue="Application.FilterProcessor" />
+        <item itemvalue="Application.LoaderAssertions" />
+        <item itemvalue="Application.Assert2" />
+        <item itemvalue="JUnit.CountedListTest.insert" />
+        <item itemvalue="JUnit.CountedListTest" />
+        <item itemvalue="JUnit.CountedListTest.addAll" />
       </list>
     </recent_temporary>
   </component>
@@ -503,6 +528,12 @@
       <workItem from="1598340938436" duration="3646000" />
       <workItem from="1598510705269" duration="8528000" />
       <workItem from="1598578410267" duration="743000" />
+      <workItem from="1598607199481" duration="1372000" />
+      <workItem from="1598665647960" duration="647000" />
+      <workItem from="1598858616971" duration="12458000" />
+      <workItem from="1598923886091" duration="20000" />
+      <workItem from="1598940913943" duration="7187000" />
+      <workItem from="1599035605793" duration="2833000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -602,40 +633,15 @@
       <option name="project" value="LOCAL" />
       <updated>1598511594588</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="第十章 接口">
+      <created>1598607237167</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1598607237167</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="test10_test2 - 2019.11.11 at 15h 42m 37s.xml">
-      <configuration name="test10.test2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test2 - 2019.11.11 at 15h 42m 53s.xml">
-      <configuration name="test10.test2" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test3 - 2019.11.11 at 15h 46m 57s.xml">
-      <configuration name="test10.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test3 - 2019.11.11 at 15h 47m 18s.xml">
-      <configuration name="test10.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test4 - 2019.11.11 at 15h 52m 20s.xml">
-      <configuration name="test10.test4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test4 - 2019.11.11 at 15h 52m 30s.xml">
-      <configuration name="test10.test4" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test3 - 2019.11.11 at 15h 56m 37s.xml">
-      <configuration name="test10.test3" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test5 - 2019.11.11 at 15h 56m 37s.xml">
-      <configuration name="test10.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test5 - 2019.11.11 at 15h 57m 10s.xml">
-      <configuration name="test10.test5" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="test10_test06 - 2019.11.11 at 16h 00m 06s.xml">
-      <configuration name="test10.test06" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -665,57 +671,62 @@
     <MESSAGE value="第六章 初始化和清理&#10;第二十二章 枚举" />
     <MESSAGE value="第八章 复用" />
     <MESSAGE value="第九章 多态" />
-    <option name="LAST_COMMIT_MESSAGE" value="第九章 多态" />
+    <MESSAGE value="第十章 接口" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十章 接口" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1598518922798">
+    <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598518922798" />
+    <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599035799095">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035799095" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1598511591651">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1598858648312">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598511591651" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598858648312" />
     <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1224" height="188" key="GridCell.Tab.0.bottom" timestamp="1598519235451">
+    <state width="1095" height="301" key="GridCell.Tab.0.bottom" timestamp="1599038184003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="188" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235451" />
-    <state width="1224" height="188" key="GridCell.Tab.0.center" timestamp="1598519235450">
+    <state width="1095" height="301" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184003" />
+    <state width="1095" height="301" key="GridCell.Tab.0.center" timestamp="1599038184003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="188" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235450" />
-    <state width="1224" height="188" key="GridCell.Tab.0.left" timestamp="1598519235450">
+    <state width="1095" height="301" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184003" />
+    <state width="1095" height="301" key="GridCell.Tab.0.left" timestamp="1599038184002">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="188" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235450" />
-    <state width="1224" height="188" key="GridCell.Tab.0.right" timestamp="1598519235451">
+    <state width="1095" height="301" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184002" />
+    <state width="1095" height="301" key="GridCell.Tab.0.right" timestamp="1599038184003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="188" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598519235451" />
-    <state width="1224" height="241" key="GridCell.Tab.1.bottom" timestamp="1598005769178">
+    <state width="1095" height="301" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184003" />
+    <state width="1095" height="301" key="GridCell.Tab.1.bottom" timestamp="1599038184004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
-    <state width="1224" height="241" key="GridCell.Tab.1.center" timestamp="1598005769178">
+    <state width="1095" height="301" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184004" />
+    <state width="1095" height="301" key="GridCell.Tab.1.center" timestamp="1599038184004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
-    <state width="1224" height="241" key="GridCell.Tab.1.left" timestamp="1598005769177">
+    <state width="1095" height="301" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184004" />
+    <state width="1095" height="301" key="GridCell.Tab.1.left" timestamp="1599038184003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769177" />
-    <state width="1224" height="241" key="GridCell.Tab.1.right" timestamp="1598005769178">
+    <state width="1095" height="301" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184003" />
+    <state width="1095" height="301" key="GridCell.Tab.1.right" timestamp="1599038184004">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1224" height="241" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598005769178" />
+    <state width="1095" height="301" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038184004" />
     <state x="717" y="193" key="SettingsEditor" timestamp="1598512972024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -724,22 +735,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346833787" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1598511600691">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1598607247207">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598511600691" />
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598578446847">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598607247207" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598923888177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598578446847" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598923888177" />
+    <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599035942537">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035942537" />
     <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597995286038" />
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1598346880813">
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1598947016891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346880813" />
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598947016891" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -888,6 +903,11 @@
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/StaticInitialization.java</url>
           <line>19</line>
           <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/collections/AddingGroups.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="137" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

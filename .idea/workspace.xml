@@ -1,22 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="第十章 接口">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Assert2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CircularQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CircularQueueException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CircularQueueTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CountedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/CountedListTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/DynamicStringInverterTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/GuavaAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Inverter1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Inverter2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Inverter3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/Inverter4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/LoaderAssertions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/validating/StringInverter.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/AddAndSubtractPaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/Directories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/FileSystemDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/Find.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/ListOfLines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PartsOfPaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PathAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PathInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/txt/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/a.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,13 +126,13 @@
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\merge_k_sorted_lists_23" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CircularQueueTest">
-    <configuration name="Assert2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.Assert2" />
+  <component name="RunManager" selected="Application.ListOfLines">
+    <configuration name="AddAndSubtractPaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.AddAndSubtractPaths" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -145,12 +140,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GuavaAssertions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.GuavaAssertions" />
+    <configuration name="Directories" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.Directories" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -158,12 +153,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoaderAssertions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.LoaderAssertions" />
+    <configuration name="FileSystemDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.FileSystemDemo" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -171,51 +166,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CircularQueueTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ListOfLines" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.ListOfLines" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="priv.wzb.javabook.validating" />
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.CircularQueueTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CountedListTest.insert" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PathAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.PathAnalysis" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.validating.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="priv.wzb.javabook.validating" />
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.validating.CountedListTest" />
-      <option name="METHOD_NAME" value="insert" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Assert2" />
-      <item itemvalue="Application.LoaderAssertions" />
-      <item itemvalue="Application.GuavaAssertions" />
-      <item itemvalue="JUnit.CountedListTest.insert" />
-      <item itemvalue="JUnit.CircularQueueTest" />
+      <item itemvalue="Application.PathAnalysis" />
+      <item itemvalue="Application.AddAndSubtractPaths" />
+      <item itemvalue="Application.Directories" />
+      <item itemvalue="Application.FileSystemDemo" />
+      <item itemvalue="Application.ListOfLines" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CircularQueueTest" />
-        <item itemvalue="Application.GuavaAssertions" />
-        <item itemvalue="Application.LoaderAssertions" />
-        <item itemvalue="Application.Assert2" />
-        <item itemvalue="JUnit.CountedListTest.insert" />
+        <item itemvalue="Application.ListOfLines" />
+        <item itemvalue="Application.FileSystemDemo" />
+        <item itemvalue="Application.Directories" />
+        <item itemvalue="Application.AddAndSubtractPaths" />
+        <item itemvalue="Application.PathAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -504,6 +494,8 @@
       <workItem from="1598923886091" duration="20000" />
       <workItem from="1598940913943" duration="7187000" />
       <workItem from="1599035605793" duration="7636000" />
+      <workItem from="1599104634497" duration="7044000" />
+      <workItem from="1599206017692" duration="714000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -617,7 +609,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599038493210</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="第十六章 数据校验">
+      <created>1599104689312</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1599104689312</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView">
@@ -650,7 +649,8 @@
     <MESSAGE value="第九章 多态" />
     <MESSAGE value="第十章 接口" />
     <MESSAGE value="容器&#10;内部类" />
-    <option name="LAST_COMMIT_MESSAGE" value="容器&#10;内部类" />
+    <MESSAGE value="第十六章 数据校验" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十六章 数据校验" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
@@ -673,38 +673,38 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1095" height="301" key="GridCell.Tab.0.bottom" timestamp="1599046131890">
+    <state width="1093" height="232" key="GridCell.Tab.0.bottom" timestamp="1599126583101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131890" />
-    <state width="1095" height="301" key="GridCell.Tab.0.center" timestamp="1599046131890">
+    <state width="1093" height="232" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
+    <state width="1093" height="232" key="GridCell.Tab.0.center" timestamp="1599126583101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131890" />
-    <state width="1095" height="301" key="GridCell.Tab.0.left" timestamp="1599046131890">
+    <state width="1093" height="232" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
+    <state width="1093" height="232" key="GridCell.Tab.0.left" timestamp="1599126583101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131890" />
-    <state width="1095" height="301" key="GridCell.Tab.0.right" timestamp="1599046131890">
+    <state width="1093" height="232" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
+    <state width="1093" height="232" key="GridCell.Tab.0.right" timestamp="1599126583101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131890" />
-    <state width="1095" height="301" key="GridCell.Tab.1.bottom" timestamp="1599046131891">
+    <state width="1093" height="232" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
+    <state width="1095" height="300" key="GridCell.Tab.1.bottom" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131891" />
-    <state width="1095" height="301" key="GridCell.Tab.1.center" timestamp="1599046131891">
+    <state width="1095" height="300" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
+    <state width="1095" height="300" key="GridCell.Tab.1.center" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131891" />
-    <state width="1095" height="301" key="GridCell.Tab.1.left" timestamp="1599046131890">
+    <state width="1095" height="300" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
+    <state width="1095" height="300" key="GridCell.Tab.1.left" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131890" />
-    <state width="1095" height="301" key="GridCell.Tab.1.right" timestamp="1599046131891">
+    <state width="1095" height="300" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
+    <state width="1095" height="300" key="GridCell.Tab.1.right" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="301" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599046131891" />
+    <state width="1095" height="300" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
     <state x="717" y="193" key="SettingsEditor" timestamp="1598512972024">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -713,10 +713,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346833787" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599038502499">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599104699376">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599038502499" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599104699376" />
     <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598923888177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -725,6 +725,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035942537" />
+    <state x="669" y="219" key="new project wizard" timestamp="1599206050401">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="669" y="219" key="new project wizard/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599206050401" />
     <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -886,6 +890,11 @@
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/collections/AddingGroups.java</url>
           <line>13</line>
           <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/files/Directories.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

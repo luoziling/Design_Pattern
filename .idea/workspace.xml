@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/AddAndSubtractPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/Directories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/FileSystemDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/Find.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/ListOfLines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PartsOfPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PathAnalysis.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/files/PathInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Bottom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Framework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Tire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Bottom.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Car.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Framework.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Tire.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/MTest1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/MulExtends.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/math/permutation_sequence_60/Solution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/txt/a.txt" beforeDir="false" afterPath="$PROJECT_DIR$/txt/a.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +70,6 @@
       <GitPushTagMode />
     </option>
   </component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="JUnit" name="CountedListTest.insert" />
-    </enabled-run-configurations>
-  </component>
   <component name="ProjectId" id="1gJBUiK9fU5kials92vDXFmrVt1" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -92,7 +91,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -105,12 +104,6 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="priv.wzb.javabook.rf.functional" />
       <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
@@ -119,14 +112,20 @@
       <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\design_pattern\dependency_inversion\weak" />
       <recent name="D:\Learning\Design_Pattern\lib" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\tree_and_graph\flatten_binary_tree_to_linked_list_114" />
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\list\merge_k_sorted_lists_23" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ListOfLines">
+  <component name="RunManager" selected="JUnit.MTest1.casting">
     <configuration name="AddAndSubtractPaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.AddAndSubtractPaths" />
       <module name="Design_Pattern" />
@@ -179,33 +178,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PathAnalysis" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.PathAnalysis" />
+    <configuration name="MTest1.casting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.polymorphism.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="priv.wzb.javabook.polymorphism" />
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.polymorphism.MTest1" />
+      <option name="METHOD_NAME" value="casting" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.PathAnalysis" />
       <item itemvalue="Application.AddAndSubtractPaths" />
       <item itemvalue="Application.Directories" />
       <item itemvalue="Application.FileSystemDemo" />
       <item itemvalue="Application.ListOfLines" />
+      <item itemvalue="JUnit.MTest1.casting" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MTest1.casting" />
         <item itemvalue="Application.ListOfLines" />
         <item itemvalue="Application.FileSystemDemo" />
         <item itemvalue="Application.Directories" />
         <item itemvalue="Application.AddAndSubtractPaths" />
-        <item itemvalue="Application.PathAnalysis" />
       </list>
     </recent_temporary>
   </component>
@@ -495,7 +497,8 @@
       <workItem from="1598940913943" duration="7187000" />
       <workItem from="1599035605793" duration="7636000" />
       <workItem from="1599104634497" duration="7044000" />
-      <workItem from="1599206017692" duration="714000" />
+      <workItem from="1599206017692" duration="3338000" />
+      <workItem from="1599285854694" duration="5883000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -616,7 +619,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599104689312</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="第十七章 文件">
+      <created>1599209600848</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1599209600848</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TodoView">
@@ -650,45 +660,46 @@
     <MESSAGE value="第十章 接口" />
     <MESSAGE value="容器&#10;内部类" />
     <MESSAGE value="第十六章 数据校验" />
-    <option name="LAST_COMMIT_MESSAGE" value="第十六章 数据校验" />
+    <MESSAGE value="第十七章 文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十七章 文件" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599041763466">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599210012459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599041763466" />
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599210012459" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599104679322">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599209594421">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599104679322" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599209594421" />
     <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1093" height="232" key="GridCell.Tab.0.bottom" timestamp="1599126583101">
+    <state width="1095" height="231" key="GridCell.Tab.0.bottom" timestamp="1599292547838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="232" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
-    <state width="1093" height="232" key="GridCell.Tab.0.center" timestamp="1599126583101">
+    <state width="1095" height="231" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
+    <state width="1095" height="231" key="GridCell.Tab.0.center" timestamp="1599292547838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="232" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
-    <state width="1093" height="232" key="GridCell.Tab.0.left" timestamp="1599126583101">
+    <state width="1095" height="231" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
+    <state width="1095" height="231" key="GridCell.Tab.0.left" timestamp="1599292547838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="232" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
-    <state width="1093" height="232" key="GridCell.Tab.0.right" timestamp="1599126583101">
+    <state width="1095" height="231" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
+    <state width="1095" height="231" key="GridCell.Tab.0.right" timestamp="1599292547838">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="232" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599126583101" />
+    <state width="1095" height="231" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
     <state width="1095" height="300" key="GridCell.Tab.1.bottom" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -705,18 +716,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1095" height="300" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
-    <state x="717" y="193" key="SettingsEditor" timestamp="1598512972024">
+    <state x="717" y="193" key="SettingsEditor" timestamp="1599289338097">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598512972024" />
+    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599289338097" />
     <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1598346833787">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346833787" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599104699376">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599292565519">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599104699376" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292565519" />
     <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598923888177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -729,10 +740,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="219" key="new project wizard/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599206050401" />
-    <state x="872" y="258" key="run.anything.popup" timestamp="1597995286038">
+    <state x="872" y="258" key="run.anything.popup" timestamp="1599212094212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1597995286038" />
+    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599212094212" />
     <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1598947016891">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

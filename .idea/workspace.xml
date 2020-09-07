@@ -2,19 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Bottom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Framework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/strong/Tire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Bottom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Framework.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Test.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak/Tire.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/polymorphism/MTest1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/reuse/MulExtends.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/math/permutation_sequence_60/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ArrayListDisplay.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Concatenation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Immutable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/InfiniteRecursion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/IntegerMatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ReceiptBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Rudolph.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Splitting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/StartEnd.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/TestRegularExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ThreatAnalyzer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/WitherStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,13 +125,13 @@
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MTest1.casting">
-    <configuration name="AddAndSubtractPaths" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.AddAndSubtractPaths" />
+  <component name="RunManager" selected="Application.ThreatAnalyzer">
+    <configuration name="IntegerMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.IntegerMatch" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,12 +139,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Directories" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.Directories" />
+    <configuration name="ReceiptBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.ReceiptBuilder" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,12 +152,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSystemDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.FileSystemDemo" />
+    <configuration name="Splitting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.Splitting" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,12 +165,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListOfLines" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.files.ListOfLines" />
+    <configuration name="ThreatAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.ThreatAnalyzer" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.files.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,36 +178,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MTest1.casting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Splitting.tSplit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.polymorphism.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="priv.wzb.javabook.polymorphism" />
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.polymorphism.MTest1" />
-      <option name="METHOD_NAME" value="casting" />
+      <option name="PACKAGE_NAME" value="priv.wzb.javabook.strings" />
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.Splitting" />
+      <option name="METHOD_NAME" value="tSplit" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.AddAndSubtractPaths" />
-      <item itemvalue="Application.Directories" />
-      <item itemvalue="Application.FileSystemDemo" />
-      <item itemvalue="Application.ListOfLines" />
-      <item itemvalue="JUnit.MTest1.casting" />
+      <item itemvalue="Application.ReceiptBuilder" />
+      <item itemvalue="Application.IntegerMatch" />
+      <item itemvalue="Application.Splitting" />
+      <item itemvalue="JUnit.Splitting.tSplit" />
+      <item itemvalue="Application.ThreatAnalyzer" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MTest1.casting" />
-        <item itemvalue="Application.ListOfLines" />
-        <item itemvalue="Application.FileSystemDemo" />
-        <item itemvalue="Application.Directories" />
-        <item itemvalue="Application.AddAndSubtractPaths" />
+        <item itemvalue="Application.ThreatAnalyzer" />
+        <item itemvalue="JUnit.Splitting.tSplit" />
+        <item itemvalue="Application.Splitting" />
+        <item itemvalue="Application.IntegerMatch" />
+        <item itemvalue="Application.ReceiptBuilder" />
       </list>
     </recent_temporary>
   </component>
@@ -499,6 +499,8 @@
       <workItem from="1599104634497" duration="7044000" />
       <workItem from="1599206017692" duration="3338000" />
       <workItem from="1599285854694" duration="5883000" />
+      <workItem from="1599292556693" duration="136000" />
+      <workItem from="1599462181970" duration="8016000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -626,7 +628,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599209600848</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝">
+      <created>1599292628642</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1599292628642</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -661,45 +670,46 @@
     <MESSAGE value="容器&#10;内部类" />
     <MESSAGE value="第十六章 数据校验" />
     <MESSAGE value="第十七章 文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="第十七章 文件" />
+    <MESSAGE value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
+    <option name="LAST_COMMIT_MESSAGE" value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
   </component>
   <component name="WindowStateProjectService">
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599210012459">
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599464702922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599210012459" />
+    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599464702922" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599209594421">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599292623507">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599209594421" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292623507" />
     <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1095" height="231" key="GridCell.Tab.0.bottom" timestamp="1599292547838">
+    <state width="1093" height="230" key="GridCell.Tab.0.bottom" timestamp="1599471423003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="231" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
-    <state width="1095" height="231" key="GridCell.Tab.0.center" timestamp="1599292547838">
+    <state width="1093" height="230" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
+    <state width="1093" height="230" key="GridCell.Tab.0.center" timestamp="1599471423003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="231" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
-    <state width="1095" height="231" key="GridCell.Tab.0.left" timestamp="1599292547838">
+    <state width="1093" height="230" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
+    <state width="1093" height="230" key="GridCell.Tab.0.left" timestamp="1599471423003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="231" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
-    <state width="1095" height="231" key="GridCell.Tab.0.right" timestamp="1599292547838">
+    <state width="1093" height="230" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
+    <state width="1093" height="230" key="GridCell.Tab.0.right" timestamp="1599471423003">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="231" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292547838" />
+    <state width="1093" height="230" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
     <state width="1095" height="300" key="GridCell.Tab.1.bottom" timestamp="1599125588153">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -720,14 +730,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599289338097" />
-    <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1598346833787">
+    <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1599465147972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598346833787" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599292565519">
+    <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599465147972" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599292635842">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292565519" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292635842" />
     <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598923888177">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -744,10 +754,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599212094212" />
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1598947016891">
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1599465115653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598947016891" />
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599465115653" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

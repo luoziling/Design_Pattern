@@ -1,20 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ArrayListDisplay.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Concatenation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Immutable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/InfiniteRecursion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/IntegerMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ReceiptBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Rudolph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/Splitting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/StartEnd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/TestRegularExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/ThreatAnalyzer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/strings/WitherStringBuilder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="第十八章 字符串">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/FamilyVsExactType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Null.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/NullRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Robot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/ShowMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SimpleDynamicProxy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SimpleProxyDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SnowRemovalRobot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/TypeCounter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Cymric.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/EgyptianMau.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/ForNameCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Hamster.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Individual.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/LiteralPetCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Manx.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Mouse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Mutt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PerCount3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PetCount4.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PetCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pets.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pug.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Rat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/RegisteredFactories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Rodent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/ClassCasts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/DynamicSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/GenericClassReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/GenericToyTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/Shapes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/SweetShop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/toys/ToyTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,18 +118,24 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/design_pattern/dependency_inversion/weak" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/javabook/rtti" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="fileTemplates" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="priv.wzb.javabook.rf.functional" />
@@ -112,26 +145,20 @@
       <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\rtti" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\design_pattern\dependency_inversion\weak" />
       <recent name="D:\Learning\Design_Pattern\lib" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\tree_and_graph\flatten_binary_tree_to_linked_list_114" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ThreatAnalyzer">
-    <configuration name="IntegerMatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.IntegerMatch" />
+  <component name="RunManager" selected="Application.NullRobot">
+    <configuration name="NullRobot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.NullRobot" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -139,12 +166,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReceiptBuilder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.ReceiptBuilder" />
+    <configuration name="Person" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.Person" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -152,12 +179,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Splitting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.Splitting" />
+    <configuration name="Position" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.Position" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,12 +192,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ThreatAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.ThreatAnalyzer" />
+    <configuration name="SimpleDynamicProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.SimpleDynamicProxy" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -178,36 +205,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Splitting.tSplit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SnowRemovalRobot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.SnowRemovalRobot" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.strings.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="priv.wzb.javabook.strings" />
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.strings.Splitting" />
-      <option name="METHOD_NAME" value="tSplit" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ReceiptBuilder" />
-      <item itemvalue="Application.IntegerMatch" />
-      <item itemvalue="Application.Splitting" />
-      <item itemvalue="JUnit.Splitting.tSplit" />
-      <item itemvalue="Application.ThreatAnalyzer" />
+      <item itemvalue="Application.SimpleDynamicProxy" />
+      <item itemvalue="Application.Person" />
+      <item itemvalue="Application.Position" />
+      <item itemvalue="Application.SnowRemovalRobot" />
+      <item itemvalue="Application.NullRobot" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ThreatAnalyzer" />
-        <item itemvalue="JUnit.Splitting.tSplit" />
-        <item itemvalue="Application.Splitting" />
-        <item itemvalue="Application.IntegerMatch" />
-        <item itemvalue="Application.ReceiptBuilder" />
+        <item itemvalue="Application.NullRobot" />
+        <item itemvalue="Application.SnowRemovalRobot" />
+        <item itemvalue="Application.Position" />
+        <item itemvalue="Application.Person" />
+        <item itemvalue="Application.SimpleDynamicProxy" />
       </list>
     </recent_temporary>
   </component>
@@ -500,7 +524,13 @@
       <workItem from="1599206017692" duration="3338000" />
       <workItem from="1599285854694" duration="5883000" />
       <workItem from="1599292556693" duration="136000" />
-      <workItem from="1599462181970" duration="8016000" />
+      <workItem from="1599462181970" duration="9716000" />
+      <workItem from="1599558013181" duration="5426000" />
+      <workItem from="1599616327007" duration="626000" />
+      <workItem from="1599732737961" duration="3605000" />
+      <workItem from="1599788562490" duration="2819000" />
+      <workItem from="1599807900981" duration="7848000" />
+      <workItem from="1600047777869" duration="1271000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -635,7 +665,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599292628642</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="第十八章 字符串">
+      <created>1599471576360</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1599471576360</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -671,89 +708,102 @@
     <MESSAGE value="第十六章 数据校验" />
     <MESSAGE value="第十七章 文件" />
     <MESSAGE value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
-    <option name="LAST_COMMIT_MESSAGE" value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
+    <MESSAGE value="第十八章 字符串" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十八章 字符串" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="769" y="221" key="#HTTP_Proxy" timestamp="1599810016611">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="221" key="#HTTP_Proxy/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599810016611" />
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser" timestamp="1599464702922">
+    <state x="710" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1599815028821">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1021" y="260" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599464702922" />
+    <state x="710" y="409" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599815028821" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599292623507">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599558563984">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292623507" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599558563984" />
+    <state x="937" y="264" key="FileChooserDialogImpl" timestamp="1599733595148">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="937" y="264" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599733595148" />
     <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1093" height="230" key="GridCell.Tab.0.bottom" timestamp="1599471423003">
+    <state width="1383" height="261" key="GridCell.Tab.0.bottom" timestamp="1599823238641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="230" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
-    <state width="1093" height="230" key="GridCell.Tab.0.center" timestamp="1599471423003">
+    <state width="1383" height="261" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
+    <state width="1383" height="261" key="GridCell.Tab.0.center" timestamp="1599823238641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="230" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
-    <state width="1093" height="230" key="GridCell.Tab.0.left" timestamp="1599471423003">
+    <state width="1383" height="261" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
+    <state width="1383" height="261" key="GridCell.Tab.0.left" timestamp="1599823238641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="230" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
-    <state width="1093" height="230" key="GridCell.Tab.0.right" timestamp="1599471423003">
+    <state width="1383" height="261" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
+    <state width="1383" height="261" key="GridCell.Tab.0.right" timestamp="1599823238641">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1093" height="230" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599471423003" />
-    <state width="1095" height="300" key="GridCell.Tab.1.bottom" timestamp="1599125588153">
+    <state width="1383" height="261" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
+    <state width="1384" height="339" key="GridCell.Tab.1.bottom" timestamp="1599807880901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="300" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
-    <state width="1095" height="300" key="GridCell.Tab.1.center" timestamp="1599125588153">
+    <state width="1384" height="339" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880901" />
+    <state width="1384" height="339" key="GridCell.Tab.1.center" timestamp="1599807880900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="300" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
-    <state width="1095" height="300" key="GridCell.Tab.1.left" timestamp="1599125588153">
+    <state width="1384" height="339" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880900" />
+    <state width="1384" height="339" key="GridCell.Tab.1.left" timestamp="1599807880900">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="300" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
-    <state width="1095" height="300" key="GridCell.Tab.1.right" timestamp="1599125588153">
+    <state width="1384" height="339" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880900" />
+    <state width="1384" height="339" key="GridCell.Tab.1.right" timestamp="1599807880901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1095" height="300" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599125588153" />
-    <state x="717" y="193" key="SettingsEditor" timestamp="1599289338097">
+    <state width="1384" height="339" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880901" />
+    <state x="875" y="299" key="IDE.errors.dialog" timestamp="1599560521162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="717" y="193" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599289338097" />
+    <state x="875" y="299" key="IDE.errors.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599560521162" />
+    <state x="678" y="205" key="SettingsEditor" timestamp="1599810083760">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="678" y="205" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599810083760" />
     <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1599465147972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599465147972" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599292635842">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599558556273">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599292635842" />
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1598923888177">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599558556273" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600047829742">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598923888177" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600047829742" />
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599035942537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035942537" />
-    <state x="669" y="219" key="new project wizard" timestamp="1599206050401">
+    <state x="532" y="218" key="new project wizard" timestamp="1599474241359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="669" y="219" key="new project wizard/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599206050401" />
-    <state x="872" y="258" key="run.anything.popup" timestamp="1599212094212">
+    <state x="532" y="218" key="new project wizard/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599474241359" />
+    <state x="872" y="258" key="run.anything.popup" timestamp="1599737229706">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599212094212" />
+    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599737229706" />
     <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1599465115653">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -916,6 +966,21 @@
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/files/Directories.java</url>
           <line>33</line>
           <option name="timeStamp" value="138" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/RegisteredFactories.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="139" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/jdk_1.8/src.zip!/java/util/stream/StreamSpliterators.java</url>
+          <line>1347</line>
+          <option name="timeStamp" value="141" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://D:/jdk_1.8/src.zip!/java/util/stream/SliceOps.java</url>
+          <line>115</line>
+          <option name="timeStamp" value="142" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

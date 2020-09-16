@@ -1,47 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="第十八章 字符串">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/FamilyVsExactType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Null.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/NullRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/Robot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/ShowMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SimpleDynamicProxy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SimpleProxyDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/SnowRemovalRobot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/TypeCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Cat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Cymric.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Dog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/EgyptianMau.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/ForNameCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Hamster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Individual.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/LiteralPetCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Manx.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Mouse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Mutt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PerCount3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PetCount4.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/PetCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pets.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Pug.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Rat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/RegisteredFactories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/Rodent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/ClassCasts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/DynamicSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/GenericClassReferences.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/GenericToyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/Shapes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/SweetShop.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/typeinfo/toys/ToyTest.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/BasicSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericMethods.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericReading.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericVarargs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericsAndCovariance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/HasF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Holder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/LinkedStack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Manipulation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Manipulator2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/RandomList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/ReturnGenericType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/SuperTypeWildcards.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Tuple2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Tuple3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/TupleList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/UnboundedWildcards1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Americano.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Breve.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Cappuccino.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Coffee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/CoffeeSupplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Latte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Mocha.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,12 +116,6 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="priv.wzb.javabook.rf.functional" />
       <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
@@ -151,14 +130,20 @@
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.NullRobot">
-    <configuration name="NullRobot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.NullRobot" />
+  <component name="RunManager" selected="Application.GenericVarargs">
+    <configuration name="CoffeeSupplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.coffee.CoffeeSupplier" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.generics.coffee.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -166,12 +151,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Person" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.Person" />
+    <configuration name="GenericMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.GenericMethods" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -179,12 +164,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Position" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.Position" />
+    <configuration name="GenericVarargs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.GenericVarargs" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -192,12 +177,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleDynamicProxy" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.SimpleDynamicProxy" />
+    <configuration name="LinkedStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.LinkedStack" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -205,12 +190,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SnowRemovalRobot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rtti.SnowRemovalRobot" />
+    <configuration name="RandomList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.RandomList" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rtti.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -219,19 +204,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.SimpleDynamicProxy" />
-      <item itemvalue="Application.Person" />
-      <item itemvalue="Application.Position" />
-      <item itemvalue="Application.SnowRemovalRobot" />
-      <item itemvalue="Application.NullRobot" />
+      <item itemvalue="Application.LinkedStack" />
+      <item itemvalue="Application.RandomList" />
+      <item itemvalue="Application.CoffeeSupplier" />
+      <item itemvalue="Application.GenericMethods" />
+      <item itemvalue="Application.GenericVarargs" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NullRobot" />
-        <item itemvalue="Application.SnowRemovalRobot" />
-        <item itemvalue="Application.Position" />
-        <item itemvalue="Application.Person" />
-        <item itemvalue="Application.SimpleDynamicProxy" />
+        <item itemvalue="Application.GenericVarargs" />
+        <item itemvalue="Application.GenericMethods" />
+        <item itemvalue="Application.CoffeeSupplier" />
+        <item itemvalue="Application.RandomList" />
+        <item itemvalue="Application.LinkedStack" />
       </list>
     </recent_temporary>
   </component>
@@ -530,7 +515,9 @@
       <workItem from="1599732737961" duration="3605000" />
       <workItem from="1599788562490" duration="2819000" />
       <workItem from="1599807900981" duration="7848000" />
-      <workItem from="1600047777869" duration="1271000" />
+      <workItem from="1600047777869" duration="5078000" />
+      <workItem from="1600162761708" duration="7233000" />
+      <workItem from="1600220213709" duration="4417000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -672,7 +659,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599471576360</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="第十九章 类型信息 运行时类型信息反射，RTTI AND REFLECT">
+      <created>1600081424065</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1600081424065</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView">
@@ -709,7 +703,8 @@
     <MESSAGE value="第十七章 文件" />
     <MESSAGE value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
     <MESSAGE value="第十八章 字符串" />
-    <option name="LAST_COMMIT_MESSAGE" value="第十八章 字符串" />
+    <MESSAGE value="第十九章 类型信息 运行时类型信息反射，RTTI AND REFLECT" />
+    <option name="LAST_COMMIT_MESSAGE" value="第十九章 类型信息 运行时类型信息反射，RTTI AND REFLECT" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="221" key="#HTTP_Proxy" timestamp="1599810016611">
@@ -720,18 +715,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="710" y="409" key="#com.intellij.ide.util.MemberChooser" timestamp="1599815028821">
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser" timestamp="1600169134922">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="409" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599815028821" />
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600169134922" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1599558563984">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1600081420686">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599558563984" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600081420686" />
     <state x="937" y="264" key="FileChooserDialogImpl" timestamp="1599733595148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -740,22 +735,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1383" height="261" key="GridCell.Tab.0.bottom" timestamp="1599823238641">
+    <state width="1383" height="259" key="GridCell.Tab.0.bottom" timestamp="1600170841215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="261" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
-    <state width="1383" height="261" key="GridCell.Tab.0.center" timestamp="1599823238641">
+    <state width="1383" height="259" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
+    <state width="1383" height="259" key="GridCell.Tab.0.center" timestamp="1600170841215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="261" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
-    <state width="1383" height="261" key="GridCell.Tab.0.left" timestamp="1599823238641">
+    <state width="1383" height="259" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
+    <state width="1383" height="259" key="GridCell.Tab.0.left" timestamp="1600170841214">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="261" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
-    <state width="1383" height="261" key="GridCell.Tab.0.right" timestamp="1599823238641">
+    <state width="1383" height="259" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841214" />
+    <state width="1383" height="259" key="GridCell.Tab.0.right" timestamp="1600170841215">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="261" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599823238641" />
+    <state width="1383" height="259" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
     <state width="1384" height="339" key="GridCell.Tab.1.bottom" timestamp="1599807880901">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -788,14 +783,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599558556273" />
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600047829742">
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600220581216">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600047829742" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600220581216" />
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599035942537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035942537" />
+    <state x="1105" y="257" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600242381085">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1105" y="257" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600242381085" />
     <state x="532" y="218" key="new project wizard" timestamp="1599474241359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -804,10 +803,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599737229706" />
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1599465115653">
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1600084047222">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599465115653" />
+    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600084047222" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

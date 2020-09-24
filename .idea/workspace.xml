@@ -2,32 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/BasicSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericReading.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericVarargs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/GenericsAndCovariance.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/HasF.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Holder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/LinkedStack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Manipulation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Manipulator2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/RandomList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/ReturnGenericType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/SuperTypeWildcards.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Tuple2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/Tuple3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/TupleList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/UnboundedWildcards1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Americano.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Breve.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Cappuccino.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Coffee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/CoffeeSupplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Latte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/generics/coffee/Mocha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabase/times/TimeTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CachedThreadPool.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CachedThreadPool2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CachedThreadPool3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CompletableApply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CompletedMachina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CountingStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/CountingTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/DiningPhilosophers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Futures.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/GuardedIDField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/HasID.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/IDChecker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/InterferingTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/LambdasAndMethodReferences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Machina.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Nap.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/NapTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/OnePizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/ParallelPrime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/ParallelStreamPuzzle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/ParallelStreamPuzzle2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/ParallelStreamPuzzle3.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Philosopher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Pizza.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/PizzaStreams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/QuittableTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/QuittingCompletable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/QuittingTasks.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/SingleThreadExecutor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/StaticIDField.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/StickHolder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/Summing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/concurrent/SyncConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/binary_search_and_binary_search_tree/convert_BST_to_greater_tree_538/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/binary_search_and_binary_search_tree/convert_BST_to_greater_tree_538/Solution1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/tree_and_graph/merge_two_binart_trees_617/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/tree_and_graph/merge_two_binart_trees_617/Solution2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/trap/TernaryOperatorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/design_pattern/createdpattern/singletonpattern/sxt/SingleTon.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/design_pattern/createdpattern/singletonpattern/sxt/SingleTon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/design_pattern/createdpattern/singletonpattern/sxt/SingleTon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/createdpattern/singletonpattern/sxt/SingleTon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,11 +83,11 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="mybatis-config" />
-        <option value="AnnotationType" />
         <option value="FxmlFile" />
         <option value="Arquillian JUnit Test Class" />
         <option value="Tag Library Descriptor" />
         <option value="Enum" />
+        <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
       </list>
@@ -96,13 +113,14 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1597676313295" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="extract.method.default.visibility" value="private" />
+    <property name="extract.method.default.visibility" value="public" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/javabook/rtti" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -110,18 +128,24 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="priv.wzb.javabook.concurrent" />
       <recent name="priv.wzb.javabook.rf.functional" />
       <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
       <recent name="priv.wzb.leet_code.array.maximum_length_of_repeated_subarray_718" />
       <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
-      <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\rtti" />
@@ -130,20 +154,14 @@
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
     </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
-    </key>
   </component>
-  <component name="RunManager" selected="Application.GenericVarargs">
-    <configuration name="CoffeeSupplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.coffee.CoffeeSupplier" />
+  <component name="RunManager" selected="Application.PizzaStreams">
+    <configuration name="DiningPhilosophers" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.concurrent.DiningPhilosophers" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.generics.coffee.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -151,12 +169,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericMethods" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.GenericMethods" />
+    <configuration name="GuardedIDField" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.concurrent.GuardedIDField" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -164,12 +182,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GenericVarargs" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.GenericVarargs" />
+    <configuration name="IDChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.concurrent.IDChecker" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,12 +195,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LinkedStack" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.LinkedStack" />
+    <configuration name="OnePizza" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.concurrent.OnePizza" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -190,12 +208,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RandomList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.generics.RandomList" />
+    <configuration name="PizzaStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.concurrent.PizzaStreams" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.generics.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.concurrent.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -204,19 +222,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.LinkedStack" />
-      <item itemvalue="Application.RandomList" />
-      <item itemvalue="Application.CoffeeSupplier" />
-      <item itemvalue="Application.GenericMethods" />
-      <item itemvalue="Application.GenericVarargs" />
+      <item itemvalue="Application.DiningPhilosophers" />
+      <item itemvalue="Application.IDChecker" />
+      <item itemvalue="Application.GuardedIDField" />
+      <item itemvalue="Application.OnePizza" />
+      <item itemvalue="Application.PizzaStreams" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.GenericVarargs" />
-        <item itemvalue="Application.GenericMethods" />
-        <item itemvalue="Application.CoffeeSupplier" />
-        <item itemvalue="Application.RandomList" />
-        <item itemvalue="Application.LinkedStack" />
+        <item itemvalue="Application.PizzaStreams" />
+        <item itemvalue="Application.OnePizza" />
+        <item itemvalue="Application.GuardedIDField" />
+        <item itemvalue="Application.IDChecker" />
+        <item itemvalue="Application.DiningPhilosophers" />
       </list>
     </recent_temporary>
   </component>
@@ -517,7 +535,14 @@
       <workItem from="1599807900981" duration="7848000" />
       <workItem from="1600047777869" duration="5078000" />
       <workItem from="1600162761708" duration="7233000" />
-      <workItem from="1600220213709" duration="4417000" />
+      <workItem from="1600220213709" duration="7537000" />
+      <workItem from="1600308347104" duration="6166000" />
+      <workItem from="1600393222892" duration="3299000" />
+      <workItem from="1600480361638" duration="3547000" />
+      <workItem from="1600657786132" duration="9977000" />
+      <workItem from="1600754530872" duration="7151000" />
+      <workItem from="1600825266044" duration="11409000" />
+      <workItem from="1600911966327" duration="825000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -666,7 +691,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600081424065</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="第20章 泛型 泛型T 通配符? 泛型擦除，super extends">
+      <created>1600252937677</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1600252937677</updated>
+    </task>
+    <task id="LOCAL-00023" summary="第23章 注解，反射处理注解信息">
+      <created>1600687426106</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1600687426106</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView">
@@ -704,7 +743,9 @@
     <MESSAGE value="依赖注入与解耦&#10;60-第k个排列数组&#10;全排序+剪枝" />
     <MESSAGE value="第十八章 字符串" />
     <MESSAGE value="第十九章 类型信息 运行时类型信息反射，RTTI AND REFLECT" />
-    <option name="LAST_COMMIT_MESSAGE" value="第十九章 类型信息 运行时类型信息反射，RTTI AND REFLECT" />
+    <MESSAGE value="第20章 泛型 泛型T 通配符? 泛型擦除，super extends" />
+    <MESSAGE value="第23章 注解，反射处理注解信息" />
+    <option name="LAST_COMMIT_MESSAGE" value="第23章 注解，反射处理注解信息" />
   </component>
   <component name="WindowStateProjectService">
     <state x="769" y="221" key="#HTTP_Proxy" timestamp="1599810016611">
@@ -715,18 +756,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser" timestamp="1600169134922">
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser" timestamp="1600853072328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600169134922" />
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600853072328" />
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1600081420686">
+    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1600687422453">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600081420686" />
+    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600687422453" />
     <state x="937" y="264" key="FileChooserDialogImpl" timestamp="1599733595148">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -735,58 +776,58 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1383" height="259" key="GridCell.Tab.0.bottom" timestamp="1600170841215">
+    <state width="910" height="249" key="GridCell.Tab.0.bottom" timestamp="1600862622186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="259" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
-    <state width="1383" height="259" key="GridCell.Tab.0.center" timestamp="1600170841215">
+    <state width="910" height="249" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862622186" />
+    <state width="910" height="249" key="GridCell.Tab.0.center" timestamp="1600862622186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="259" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
-    <state width="1383" height="259" key="GridCell.Tab.0.left" timestamp="1600170841214">
+    <state width="910" height="249" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862622186" />
+    <state width="910" height="249" key="GridCell.Tab.0.left" timestamp="1600862622186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="259" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841214" />
-    <state width="1383" height="259" key="GridCell.Tab.0.right" timestamp="1600170841215">
+    <state width="910" height="249" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862622186" />
+    <state width="910" height="249" key="GridCell.Tab.0.right" timestamp="1600862622186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1383" height="259" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600170841215" />
-    <state width="1384" height="339" key="GridCell.Tab.1.bottom" timestamp="1599807880901">
+    <state width="910" height="249" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862622186" />
+    <state width="1385" height="338" key="GridCell.Tab.1.bottom" timestamp="1600342913855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1384" height="339" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880901" />
-    <state width="1384" height="339" key="GridCell.Tab.1.center" timestamp="1599807880900">
+    <state width="1385" height="338" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913855" />
+    <state width="1385" height="338" key="GridCell.Tab.1.center" timestamp="1600342913854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1384" height="339" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880900" />
-    <state width="1384" height="339" key="GridCell.Tab.1.left" timestamp="1599807880900">
+    <state width="1385" height="338" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913854" />
+    <state width="1385" height="338" key="GridCell.Tab.1.left" timestamp="1600342913854">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1384" height="339" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880900" />
-    <state width="1384" height="339" key="GridCell.Tab.1.right" timestamp="1599807880901">
+    <state width="1385" height="338" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913854" />
+    <state width="1385" height="338" key="GridCell.Tab.1.right" timestamp="1600342913855">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1384" height="339" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599807880901" />
+    <state width="1385" height="338" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913855" />
     <state x="875" y="299" key="IDE.errors.dialog" timestamp="1599560521162">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="875" y="299" key="IDE.errors.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599560521162" />
-    <state x="678" y="205" key="SettingsEditor" timestamp="1599810083760">
+    <state x="678" y="205" key="SettingsEditor" timestamp="1600684516423">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="678" y="205" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599810083760" />
-    <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1599465147972">
+    <state x="678" y="205" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600684516423" />
+    <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1600862112450">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599465147972" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1599558556273">
+    <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862112450" />
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1600252943366">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599558556273" />
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600220581216">
+    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600252943366" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600481441160">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600220581216" />
+    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600481441159" />
     <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599035942537">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -795,6 +836,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1105" y="257" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600242381085" />
+    <state x="909" y="406" key="extract.method.dialog" timestamp="1600394637361">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="909" y="406" key="extract.method.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600394637361" />
     <state x="532" y="218" key="new project wizard" timestamp="1599474241359">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

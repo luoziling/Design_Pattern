@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.java" line="11" />
     <bookmark url="file://$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_synchronization/pvmodel/PVTest02.java" line="15" />
@@ -7,29 +10,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="Merge remote-tracking branch 'origin/com'&#10;&#10;# Conflicts:&#10;#&#9;src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/monotonic_array_896/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/toeplitz_matrix/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/transpose_matrix_876/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/range_sum_query_immutable_303/NumArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/range_sum_query_immutable_303/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/flipping_an_image_832/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/grumpy_bookstore_owner/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438/Solution1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_substring_with_at_least_k_repeating_characters_395/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_turbulent_subarray/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/max_consecutive_ones_iii/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/minimum_number_of_k_consecutive_bit_flips/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/minimum_number_of_k_consecutive_bit_flips/Solution1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/MyStack.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/flipping_an_image/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/Design_Pattern$Calculator.ic" NAME="Calculator Coverage Results" MODIFIED="1572360433182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
@@ -55,111 +59,6 @@
     </option>
     <expand />
     <select />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/AA.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/SimpleException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/MyException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FullConstructors.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="506">
-              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-              <folding>
-                <element signature="e#425#426#0" expanded="true" />
-                <element signature="e#458#459#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
-              <folding>
-                <element signature="e#226#227#0" expanded="true" />
-                <element signature="e#277#278#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -212,6 +111,9 @@
     <option name="PUSH_TAGS">
       <GitPushTagMode />
     </option>
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -276,6 +178,7 @@
     <option name="width" value="1153" />
     <option name="height" value="1005" />
   </component>
+  <component name="ProjectId" id="1oCOczeG1JSTRtfPZujRLsfXp3M" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -346,6 +249,10 @@
       </pane>
     </panes>
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -354,26 +261,16 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="G:/学习/redis/周阳经典版---课件+源码+工具/课程源码/redis1122" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../.." />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="terminal" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="priv.wzb.interview.meituan" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="priv.wzb.javabook.rf.functional" />
-      <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
-      <recent name="priv.wzb.leet_code.array.maximum_length_of_repeated_subarray_718" />
-      <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
-      <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\leet_code\tree_and_graph\flatten_binary_tree_to_linked_list_114" />
@@ -387,33 +284,18 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="priv.wzb.interview.meituan" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="priv.wzb.leet_code.slidingwindow.longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438" />
+      <recent name="priv.wzb.javabook.rf.functional" />
+      <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
+      <recent name="priv.wzb.leet_code.array.maximum_length_of_repeated_subarray_718" />
+      <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
+    </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.AutoCloseableDetails">
-    <configuration name="ArrayStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.ArrayStreams" />
-      <module name="Design_Pattern" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Solution (1)">
     <configuration name="AutoCloseableDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.AutoCloseableDetails" />
       <module name="Design_Pattern" />
@@ -453,12 +335,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Machine2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.Machine2" />
+    <configuration name="Solution (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.leet_code.array.monotonic_array_896.Solution" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
+          <option name="PATTERN" value="priv.wzb.leet_code.array.monotonic_array_896.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -466,23 +348,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.leet_code.slidingwindow.longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438.Solution" />
+      <module name="Design_Pattern" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.wzb.leet_code.slidingwindow.longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Machine2" />
-      <item itemvalue="Application.ArrayStreams" />
       <item itemvalue="Application.LoggingExceptions" />
       <item itemvalue="Application.FinTest" />
       <item itemvalue="Application.AutoCloseableDetails" />
+      <item itemvalue="Application.Solution" />
+      <item itemvalue="Application.Solution (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Solution (1)" />
+        <item itemvalue="Application.Solution" />
         <item itemvalue="Application.AutoCloseableDetails" />
         <item itemvalue="Application.FinTest" />
         <item itemvalue="Application.LoggingExceptions" />
-        <item itemvalue="Application.ArrayStreams" />
-        <item itemvalue="Application.Machine2" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -753,6 +660,25 @@
       <workItem from="1595057348862" duration="27000" />
       <workItem from="1597236198141" duration="8080000" />
       <workItem from="1597669643373" duration="4590000" />
+      <workItem from="1612787193498" duration="479000" />
+      <workItem from="1612788514739" duration="668000" />
+      <workItem from="1612789239538" duration="1879000" />
+      <workItem from="1613057393582" duration="2000" />
+      <workItem from="1613057403880" duration="3000" />
+      <workItem from="1613370427532" duration="1761000" />
+      <workItem from="1613463249098" duration="619000" />
+      <workItem from="1613652934462" duration="1255000" />
+      <workItem from="1613743949062" duration="949000" />
+      <workItem from="1613890450050" duration="3193000" />
+      <workItem from="1613995997615" duration="991000" />
+      <workItem from="1614087836046" duration="1421000" />
+      <workItem from="1614171906267" duration="1224000" />
+      <workItem from="1614259821910" duration="1321000" />
+      <workItem from="1614404369129" duration="1145000" />
+      <workItem from="1614427892508" duration="1283000" />
+      <workItem from="1614491966171" duration="1611000" />
+      <workItem from="1614499271427" duration="2205000" />
+      <workItem from="1614604345546" duration="353000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -949,7 +875,19 @@
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Test" />
@@ -972,170 +910,157 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/hashmap_and_string/longest_substring_without_repeating_characters_06/Optimization.java</url>
           <line>53</line>
-          <properties />
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/collection/TestStoreData.java</url>
           <line>36</line>
-          <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/net/chat/chat04/Client2.java</url>
           <line>21</line>
-          <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/javabase/server/Server01/Server05.java</url>
           <line>36</line>
-          <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/stack/ArrayStackDemo.java</url>
           <line>40</line>
-          <properties />
           <option name="timeStamp" value="32" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/recursion/MiGong.java</url>
           <line>38</line>
-          <properties />
           <option name="timeStamp" value="33" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/sort/Insert/InsertSort.java</url>
           <line>37</line>
-          <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/tree/threadedbinarytree/ThreadedBinaryTreeDemo.java</url>
           <line>36</line>
-          <properties />
           <option name="timeStamp" value="44" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/tree/threadedbinarytree/ThreadedBinaryTree.java</url>
           <line>108</line>
-          <properties />
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/dijkstra/DijkstraAlgorithm.java</url>
           <line>73</line>
-          <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/prim/PrimAlgorithm.java</url>
           <line>105</line>
-          <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/datastructure/algorithm/kruskal/KruskalCase.java</url>
           <line>110</line>
-          <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution1.java</url>
           <line>154</line>
-          <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution1.java</url>
           <line>73</line>
-          <properties />
           <option name="timeStamp" value="72" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/addtwonumbers/Solution2.java</url>
           <line>46</line>
-          <properties />
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/median_of_two_sorted_arrays_04/Solution1.java</url>
           <line>215</line>
-          <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/longest_palindromic_Substring_05/Violence.java</url>
           <line>36</line>
-          <properties />
           <option name="timeStamp" value="98" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/longest_palindromic_Substring_05/CenterExpand.java</url>
           <line>14</line>
-          <properties />
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.java</url>
           <line>31</line>
-          <properties />
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/stack_queue_heap/basic_calculator_224/Solution.java</url>
           <line>58</line>
-          <properties />
           <option name="timeStamp" value="113" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/longest_increasing_subsequence_300/Solution.java</url>
           <line>39</line>
-          <properties />
           <option name="timeStamp" value="117" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/dungeon_game_174/Solution1.java</url>
           <line>59</line>
-          <properties />
           <option name="timeStamp" value="119" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/math/palindrome_number_09/Solution1.java</url>
           <line>45</line>
-          <properties />
           <option name="timeStamp" value="129" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/math/palindrome_number_09/Solution1.java</url>
           <line>53</line>
-          <properties />
           <option name="timeStamp" value="130" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/sort_an_array_912/Solution1.java</url>
           <line>78</line>
-          <properties />
           <option name="timeStamp" value="131" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/hashmap_and_string/minimum_window_substring_76/Solution2.java</url>
           <line>76</line>
-          <properties />
           <option name="timeStamp" value="132" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/maximum_length_of_repeated_subarray_718/Solution.java</url>
           <line>35</line>
-          <properties />
           <option name="timeStamp" value="134" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution.java</url>
           <line>27</line>
-          <properties />
           <option name="timeStamp" value="135" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438/Solution.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="136" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/slidingwindow/longest_continuous_subarray_with_absolute_diff_less_than_or_equal_to_limit_1438/Solution.java</url>
+          <line>25</line>
+          <option name="timeStamp" value="137" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/monotonic_array_896/Solution.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="138" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -1156,6 +1081,10 @@
       </configuration>
     </watches-manager>
   </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -1172,28 +1101,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Thread.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="14564">
           <caret line="717" column="19" selection-start-line="717" selection-start-column="12" selection-end-line="717" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Error.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/lang/Error.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Throwable.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/lang/Throwable.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1958">
           <caret line="113" column="22" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/lang/Exception.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/lang/Exception.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="594">
           <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
@@ -1431,7 +1360,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/util/stream/Stream.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/util/stream/Stream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="183" column="18" selection-start-line="183" selection-start-column="18" selection-end-line="183" selection-end-column="18" />
@@ -1448,7 +1377,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/util/Comparator.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/util/Comparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
           <caret line="184" column="39" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="39" />
@@ -1462,7 +1391,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/jdk/src.zip!/java/util/stream/LongStream.java">
+    <entry file="jar://$PROJECT_DIR$/../../../jdk/src.zip!/java/util/stream/LongStream.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16808">
           <caret line="819" column="29" selection-start-line="819" selection-start-column="29" selection-end-line="819" selection-end-column="29" />

@@ -1,17 +1,16 @@
 package priv.wzb.multi_threaded_high_concurrent.thread_pool;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.concurrent.*;
 
 /**
  * @author Satsuki
  * @time 2019/6/8 16:26
  * @description:
  */
-public class T05_ThreadPool {
+public class T05_FixedThreadPool {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService service = Executors.newFixedThreadPool(5);
+
         for (int i = 0; i < 6; i++) {
             service.execute(()->{
                 try {

@@ -15,8 +15,8 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantLock2 {
     Lock lock = new ReentrantLock();
     void m1(){
+        lock.lock();
         try {
-            lock.lock();
             for(int i = 0;i< 10 ;i++){
                 TimeUnit.SECONDS.sleep(1);
                 System.out.println(i);
@@ -30,7 +30,12 @@ public class ReentrantLock2 {
 
     void m2(){
 
-        boolean locked = lock.tryLock();
+        boolean locked = false;
+        try {
+            locked = lock.tryLock(1000, TimeUnit.MILLISECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println("m2..." + locked);
         if (locked) lock.unlock();
 //        lock.lock();

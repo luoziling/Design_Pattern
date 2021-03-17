@@ -8,6 +8,11 @@ package priv.wzb.javabook.fp;
  **/
 
 public class Soft implements Strategy {
+    /**
+     * 接口的实现 参数/返回值 一致
+     * @param msg
+     * @return
+     */
     @Override
     public String approach(String msg) {
         return msg.toLowerCase() + "?";

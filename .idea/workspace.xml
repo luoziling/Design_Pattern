@@ -1,30 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/CommandPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/ProxyDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/SingletonPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/StateDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/TemplateMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/abstractfactory/BigTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/abstractfactory/GameEnvironment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/chain/ChainOfResponsibility.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/BadShapeCreation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/Circle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/FactoryMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/FactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/Shape.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/ShapeFactory1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/ShapeFactory2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/ShapeFactory3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/shapes/Triangle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/state/StateMachineDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/patterns/strategy/StrategyPattern.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/tree_and_graph/find_mode_in_binary_search_tree_501/Solution.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="第25章 设计模式 leetcode 501">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/Test/Test111.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/createdpattern/singletonpattern/Lazy/SingletonTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/lsp/Father.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/lsp/Sub.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/streams/FileToWords.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/streams/Peeking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/gc/FinalizeEscapeGC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/gc/ReferenceCountingGC.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/book/DirectMemoryOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/book/HeapOOM.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/book/JavaVMStackSOF.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/binary_search_and_binary_search_tree/intersection_of_two_arrays_349/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/distinct_subsequences_115/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/graph_search/number_of_operations_to_make_network_connected_1319/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/greedy/partition_labels/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/list/reorder_list_143/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/list/reorder_list_143/Solution2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/tree_and_graph/populating_next_right_pointers_in_each_node_116/Solution.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/volatile1/ReOrderDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/volatile1/ReorderingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/volatile1/SortSeqDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Strategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Strategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/META-INF/Design_Pattern.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/design_pattern/createdpattern/singletonpattern/Lazy/LazySingleton.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/design_pattern/createdpattern/singletonpattern/Lazy/LazySingleton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/fp/Soft.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/fp/Soft.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/fp/Unrelated.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/fp/Unrelated.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/streams/Randoms.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/javabook/streams/Randoms.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/jvm/oom/JavaHeapSpaceDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/jvm/oom/JavaHeapSpaceDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/jvm/oom/UnableCreateNewThreadDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/jvm/oom/UnableCreateNewThreadDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/atomic_test/ABADemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/atomic_test/ABADemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/block/BolckingQueueDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/block/BolckingQueueDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/container_safe/ContainerNotSafeDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/container_safe/ContainerNotSafeDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/read_write_lock/MyCache.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/read_write_lock/MyCache.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/read_write_lock/ReadWriteLockDemo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/read_write_lock/ReadWriteLockDemo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/thread_pool/T05_ThreadPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/volatile1/TestVolatile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/multi_threaded_high_concurrent/volatile1/TestVolatile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/design_pattern/createdpattern/singletonpattern/Lazy/LazySingleton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/createdpattern/singletonpattern/Lazy/LazySingleton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Soft.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Soft.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Unrelated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/fp/Unrelated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/javabook/streams/Randoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/streams/Randoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/JavaHeapSpaceDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/JavaHeapSpaceDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/UnableCreateNewThreadDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/jvm/oom/UnableCreateNewThreadDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/atomic_test/ABADemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/atomic_test/ABADemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/block/BolckingQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/block/BolckingQueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/container_safe/ContainerNotSafeDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/container_safe/ContainerNotSafeDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/read_write_lock/ReadWriteLockDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/read_write_lock/ReadWriteLockDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T05_ThreadPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T05_FixedThreadPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_reentrantlock/ReentrantLock3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/volatile1/TestVolatile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/volatile1/TestVolatile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,20 +133,24 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/javabook/rtti" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/leet_code/list/reorder_list_143" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\mysql" />
       <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -128,20 +164,20 @@
       <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\leet_code\list\reorder_list_143" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\rtti" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\design_pattern\dependency_inversion\weak" />
       <recent name="D:\Learning\Design_Pattern\lib" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\design_pattern\createdpattern\protoyupepattern" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ChainOfResponsibility">
-    <configuration name="ChainOfResponsibility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.patterns.chain.ChainOfResponsibility" />
+  <component name="RunManager" selected="Application.Sub">
+    <configuration name="DirectMemoryOOM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.oom.book.DirectMemoryOOM" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.patterns.chain.*" />
+          <option name="PATTERN" value="priv.wzb.jvm.oom.book.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -149,12 +185,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommandPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.patterns.CommandPattern" />
+    <configuration name="FinalizeEscapeGC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.gc.FinalizeEscapeGC" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.patterns.*" />
+          <option name="PATTERN" value="priv.wzb.jvm.gc.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -162,12 +198,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameEnvironment" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.patterns.abstractfactory.GameEnvironment" />
+    <configuration name="HeapOOM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.oom.book.HeapOOM" />
       <module name="Design_Pattern" />
+      <option name="VM_PARAMETERS" value="-Xms20m -Xmx20m -XX:+HeapDumpOnOutOfMemoryError" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.patterns.abstractfactory.*" />
+          <option name="PATTERN" value="priv.wzb.jvm.oom.book.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -175,12 +212,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StrategyPattern" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.patterns.strategy.StrategyPattern" />
+    <configuration name="Sub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.design_pattern.lsp.Sub" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.patterns.strategy.*" />
+          <option name="PATTERN" value="priv.wzb.design_pattern.lsp.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -188,36 +225,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BigTest.divideTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UnableCreateNewThreadDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.oom.UnableCreateNewThreadDemo" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.javabook.patterns.abstractfactory.*" />
+          <option name="PATTERN" value="priv.wzb.jvm.oom.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="priv.wzb.javabook.patterns.abstractfactory" />
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.patterns.abstractfactory.BigTest" />
-      <option name="METHOD_NAME" value="divideTest" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GameEnvironment" />
-      <item itemvalue="Application.CommandPattern" />
-      <item itemvalue="Application.StrategyPattern" />
-      <item itemvalue="Application.ChainOfResponsibility" />
-      <item itemvalue="JUnit.BigTest.divideTest" />
+      <item itemvalue="Application.HeapOOM" />
+      <item itemvalue="Application.DirectMemoryOOM" />
+      <item itemvalue="Application.UnableCreateNewThreadDemo" />
+      <item itemvalue="Application.FinalizeEscapeGC" />
+      <item itemvalue="Application.Sub" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ChainOfResponsibility" />
-        <item itemvalue="Application.StrategyPattern" />
-        <item itemvalue="Application.CommandPattern" />
-        <item itemvalue="JUnit.BigTest.divideTest" />
-        <item itemvalue="Application.GameEnvironment" />
+        <item itemvalue="Application.Sub" />
+        <item itemvalue="Application.FinalizeEscapeGC" />
+        <item itemvalue="Application.DirectMemoryOOM" />
+        <item itemvalue="Application.UnableCreateNewThreadDemo" />
+        <item itemvalue="Application.HeapOOM" />
       </list>
     </recent_temporary>
   </component>
@@ -527,7 +561,36 @@
       <workItem from="1600825266044" duration="11409000" />
       <workItem from="1600911966327" duration="13928000" />
       <workItem from="1601198919739" duration="3834000" />
-      <workItem from="1601606068320" duration="61000" />
+      <workItem from="1601606068320" duration="2687000" />
+      <workItem from="1602677966715" duration="58000" />
+      <workItem from="1602725570769" duration="1940000" />
+      <workItem from="1602759880056" duration="987000" />
+      <workItem from="1603000778225" duration="703000" />
+      <workItem from="1603073303082" duration="599000" />
+      <workItem from="1603195483314" duration="252000" />
+      <workItem from="1603195766887" duration="2332000" />
+      <workItem from="1603244209262" duration="29000" />
+      <workItem from="1603367236547" duration="986000" />
+      <workItem from="1603517956796" duration="8397000" />
+      <workItem from="1603701133060" duration="6941000" />
+      <workItem from="1603801108965" duration="1998000" />
+      <workItem from="1603851994227" duration="13203000" />
+      <workItem from="1603936296944" duration="603000" />
+      <workItem from="1604286248487" duration="388000" />
+      <workItem from="1604321047601" duration="1516000" />
+      <workItem from="1604570618744" duration="3647000" />
+      <workItem from="1604626565635" duration="1876000" />
+      <workItem from="1605008204507" duration="2061000" />
+      <workItem from="1605065750524" duration="648000" />
+      <workItem from="1605162885090" duration="1213000" />
+      <workItem from="1606028097966" duration="2043000" />
+      <workItem from="1606097076311" duration="682000" />
+      <workItem from="1610437580383" duration="1590000" />
+      <workItem from="1611392577242" duration="2312000" />
+      <workItem from="1611538566170" duration="241000" />
+      <workItem from="1614230752435" duration="868000" />
+      <workItem from="1615450943783" duration="1565000" />
+      <workItem from="1615982696999" duration="1923000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -697,7 +760,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600913052314</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="第25章 设计模式 leetcode 501">
+      <created>1601606173867</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1601606173867</updated>
+    </task>
+    <task id="LOCAL-00026" summary="MySQL总结.md">
+      <created>1603000856404</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1603000856405</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView">
@@ -713,8 +790,6 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test" />
-    <MESSAGE value="Test1" />
     <MESSAGE value="2019.11.3&#10;tree/HuffmanCodes/AVLTree" />
     <MESSAGE value="2019.11.5&#10;Graph/二分非递归/分治算法（汉诺塔问题）/动态规划算法（背包问题）/KMP算法（字符串匹配问题）/贪心算法/prime算法/kruskal算法（最小生成树）" />
     <MESSAGE value="2019.11.7&#10;Dijstra迪杰斯特拉算法（图中每个顶点到其他顶点的最短距离）/Floyd（弗洛伊德算法）/马踏棋盘算法" />
@@ -738,117 +813,39 @@
     <MESSAGE value="第20章 泛型 泛型T 通配符? 泛型擦除，super extends" />
     <MESSAGE value="第23章 注解，反射处理注解信息" />
     <MESSAGE value="第24章 并发 leetcode 538 617" />
-    <option name="LAST_COMMIT_MESSAGE" value="第24章 并发 leetcode 538 617" />
+    <MESSAGE value="第25章 设计模式 leetcode 501" />
+    <MESSAGE value="MySQL总结.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="MySQL总结.md" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="769" y="221" key="#HTTP_Proxy" timestamp="1599810016611">
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser" timestamp="1610438373617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="221" key="#HTTP_Proxy/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599810016611" />
-    <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1599037080227">
+    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610438373617" />
+    <state x="781" y="90" key="CommitChangelistDialog2" timestamp="1615984679905">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="721" y="165" width="955" height="737" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599037080227" />
-    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser" timestamp="1601201376201">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="781" y="90" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1615984679905" />
+    <state width="1877" height="438" key="GridCell.Tab.0.bottom" timestamp="1610440571424">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="710" y="408" key="#com.intellij.ide.util.MemberChooser/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601201376201" />
-    <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1598516357892">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="438" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610438556477" />
+    <state width="1877" height="438" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1610440571424" />
+    <state width="1877" height="438" key="GridCell.Tab.0.center" timestamp="1610440571423">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="733" y="309" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598516357892" />
-    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1600948145275">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="438" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610438556477" />
+    <state width="1877" height="438" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1610440571423" />
+    <state width="1877" height="438" key="GridCell.Tab.0.left" timestamp="1610440571423">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="690" y="266" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600948145275" />
-    <state x="615" y="95" key="CommitChangelistDialog2" timestamp="1600913048943">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1877" height="438" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610438556477" />
+    <state width="1877" height="438" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1610440571423" />
+    <state width="1877" height="438" key="GridCell.Tab.0.right" timestamp="1610440571424">
+      <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="615" y="95" key="CommitChangelistDialog2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600913048943" />
-    <state x="937" y="264" key="FileChooserDialogImpl" timestamp="1599733595148">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="937" y="264" key="FileChooserDialogImpl/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599733595148" />
-    <state width="195" height="294" key="Git.Branch.Popup" timestamp="1598341005499">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="195" height="294" key="Git.Branch.Popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1598341005499" />
-    <state width="1052" height="269" key="GridCell.Tab.0.bottom" timestamp="1601205641042">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1052" height="269" key="GridCell.Tab.0.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601205641042" />
-    <state width="1052" height="269" key="GridCell.Tab.0.center" timestamp="1601205641041">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1052" height="269" key="GridCell.Tab.0.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601205641041" />
-    <state width="1052" height="269" key="GridCell.Tab.0.left" timestamp="1601205641041">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1052" height="269" key="GridCell.Tab.0.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601205641041" />
-    <state width="1052" height="269" key="GridCell.Tab.0.right" timestamp="1601205641041">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1052" height="269" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1601205641041" />
-    <state width="1385" height="338" key="GridCell.Tab.1.bottom" timestamp="1600342913855">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1385" height="338" key="GridCell.Tab.1.bottom/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913855" />
-    <state width="1385" height="338" key="GridCell.Tab.1.center" timestamp="1600342913854">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1385" height="338" key="GridCell.Tab.1.center/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913854" />
-    <state width="1385" height="338" key="GridCell.Tab.1.left" timestamp="1600342913854">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1385" height="338" key="GridCell.Tab.1.left/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913854" />
-    <state width="1385" height="338" key="GridCell.Tab.1.right" timestamp="1600342913855">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1385" height="338" key="GridCell.Tab.1.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600342913855" />
-    <state x="875" y="299" key="IDE.errors.dialog" timestamp="1599560521162">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="875" y="299" key="IDE.errors.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599560521162" />
-    <state x="678" y="205" key="SettingsEditor" timestamp="1600684516423">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="678" y="205" key="SettingsEditor/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600684516423" />
-    <state x="921" y="282" width="582" height="524" key="StructurePopup" timestamp="1600862112450">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="921" y="282" width="582" height="524" key="StructurePopup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600862112450" />
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2" timestamp="1600252943366">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="792" y="270" key="Vcs.Push.Dialog.v2/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600252943366" />
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog" timestamp="1600481441160">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="683" y="387" key="com.intellij.ide.util.TipDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600481441159" />
-    <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1599035942537">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="897" y="427" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599035942537" />
-    <state x="1105" y="257" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1600242381085">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="1105" y="257" key="com.intellij.testIntegration.createTest.CreateTestDialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600242381085" />
-    <state x="909" y="406" key="extract.method.dialog" timestamp="1600394637361">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="909" y="406" key="extract.method.dialog/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600394637361" />
-    <state x="532" y="218" key="new project wizard" timestamp="1599474241359">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="532" y="218" key="new project wizard/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599474241359" />
-    <state x="872" y="258" key="run.anything.popup" timestamp="1599737229706">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="872" y="258" key="run.anything.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1599737229706" />
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup" timestamp="1600084047222">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="863" y="310" width="672" height="678" key="search.everywhere.popup/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1600084047222" />
+    <state width="1877" height="438" key="GridCell.Tab.0.right/-1920.0.1536.832/0.0.1920.1040@0.0.1920.1040" timestamp="1610438556477" />
+    <state width="1877" height="438" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1610440571424" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1084,82 +1081,5 @@
     <property name="spaceAfterKeyword" value="false" />
     <property name="splitStringsAtNewline" value="false" />
     <property name="useTabs" value="false" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>jQuery</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Design_Pattern</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>lib</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

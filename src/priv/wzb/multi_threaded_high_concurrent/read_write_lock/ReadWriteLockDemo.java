@@ -2,11 +2,8 @@ package priv.wzb.multi_threaded_high_concurrent.read_write_lock;
 
 
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
 import java.util.concurrent.locks.ReentrantReadWriteLock;
 
 // 资源类
@@ -74,7 +71,7 @@ class MyCache{
 //        System.out.println(Thread.currentThread().getName() + "\t 读取完成:" + result);
     }
 
-    // 缓存三大操作，读、写、清楚
+    // 缓存三大操作，读、写、清除
     public void clearMap(){
         map.clear();
     }

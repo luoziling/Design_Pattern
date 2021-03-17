@@ -1,6 +1,5 @@
 package priv.wzb.multi_threaded_high_concurrent.volatile1;
 
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -9,8 +8,8 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @description:
  */
 public class TestVolatile {
-     int num = 0;
-//    volatile int num = 0;
+//     int num = 0;
+    volatile int num = 0;
     // 使用Atomic数据类型保证++操作的原子性
     AtomicInteger numAtom = new AtomicInteger();
 
@@ -23,9 +22,6 @@ public class TestVolatile {
 //        }
         num++;
         numAtom.incrementAndGet();
-        synchronized (this){
-
-        }
 
     }
 
@@ -35,7 +31,7 @@ public class TestVolatile {
 
 //        new Thread(()->{
 //            try {
-//                TimeUnit.SECONDS.sleep(3);
+//                TimeUnit.SECONDS.sleep(2);
 //            } catch (InterruptedException e) {
 //                e.printStackTrace();
 //            }
@@ -51,7 +47,7 @@ public class TestVolatile {
 //        }
 //        System.out.println(Thread.currentThread().getName() + "over");
 
-        // 不保证原子性
+//        // 不保证原子性
         for (int i = 0; i < 20; i++) {
             new Thread(()->{
                 for (int j = 0; j < 1000; j++) {

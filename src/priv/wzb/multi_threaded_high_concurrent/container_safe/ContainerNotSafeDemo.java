@@ -2,9 +2,7 @@ package priv.wzb.multi_threaded_high_concurrent.container_safe;
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
-import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author Satsuki
@@ -32,7 +30,8 @@ public class ContainerNotSafeDemo {
         // 使用synchronzed
         // final Object mutex;     // Object on which to synchronize
         // mutex是线程锁定对象
-//        List<String> list = Collections.synchronizedList(new ArrayList<>());
+        List<String> list = Collections.synchronizedList(new ArrayList<>());
+//        list.add("11");
 
 
         // 解决方案3 ： CopyOnWriteArrayList
@@ -42,7 +41,7 @@ public class ContainerNotSafeDemo {
         //    /** The array, accessed only via getArray/setArray. */
         //    private transient volatile Object[] array;
         // 使用reentrantlock可重入锁
-        // 数组采用volatile修饰，组织指令重排，保证可见性，操作原子性由lock保证
+        // 数组采用volatile修饰，阻止指令重排，保证可见性，操作原子性由lock保证
         // /**
         //     * Appends the specified element to the end of this list.
         //     *
@@ -69,7 +68,7 @@ public class ContainerNotSafeDemo {
         // 将要加入的值放入新数组
         // 将数组指向新数组
         // 解锁
-        List<String> list = new CopyOnWriteArrayList<>();
+//        List<String> list = new CopyOnWriteArrayList<>();
 
 
 

@@ -6,6 +6,8 @@ import java.util.Random;
  * @author Satsuki
  * @time 2020/7/5 22:17
  * @description:
+ * -XX:PermSize=6M -XX:MaxPermSize=6M
+ *
  */
 public class JavaHeapSpaceDemo {
     public static void main(String[] args) {

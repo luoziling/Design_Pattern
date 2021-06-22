@@ -1,28 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_pool/T08_CachedPool.java" line="11" />
+    <bookmark url="file://$PROJECT_DIR$/src/priv/wzb/multi_threaded_high_concurrent/thread_synchronization/pvmodel/PVTest02.java" line="15" />
+    <bookmark url="file://$PROJECT_DIR$/src/priv/wzb/leet_code/tree_and_graph/binary_tree_right_side_view_199/Solution1.java" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/charroom/ChatRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/charroom/MediatorPatternDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/charroom/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/AbstractColleague.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/AbstractMediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/Mediator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/Purchase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/Sale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/sale/Stock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/design_pattern/behavioralpattern/mediatorpattern/中介者模式.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/offer_03/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/offer_04/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/array/reverse_linked_list_ii_92/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/bit/reverse_bits/Solution.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/priv/wzb/leet_code/stack_queue_heap/pattern_132_456/Solution.java" afterDir="false" />
+    <list default="true" id="4c48b65d-3517-4dbb-9ad2-a3f264f78181" name="Default Changelist" comment="Merge remote-tracking branch 'origin/com'&#10;&#10;# Conflicts:&#10;#&#9;src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" beforeDir="false" afterPath="$PROJECT_DIR$/Learning/java/第十五章 异常.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/MyStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/flipping_an_image/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/Solution1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/remove_boxes/dynamic/SteelCut1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Design_Pattern/priv/wzb/leet_code/qianxin/three_sum_closest/Solution1.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
@@ -72,12 +80,78 @@
       <GitPushTagMode />
     </option>
   </component>
-  <component name="ProjectId" id="1gJBUiK9fU5kials92vDXFmrVt1" />
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/priv/wzb/leet_code/array/maximum_length_of_repeated_subarray_718/Solution1.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/StrongReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/WeakReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/SoftReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/WeakHashMapDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/ReferenceQueueDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/ref/PhantomReferenceDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/StackOverFlowErrorDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/JavaHeapSpaceDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/GCOverheadDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/DirectBufferMemoryDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/UnableCreateNewThreadDemo.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/oom/MetaspaceOOMTest.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/gc/HelloGC.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/jvm/LoopTest.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/leet_code/graph_search/is_graph_bipartite_785/Solution.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Dog.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/MakeNoArgs.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make1Arg.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make2Args.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/CtorReference.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Functional.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalNoAnn.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/NotFunctional.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalAnnotation.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Bar.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/IBaz.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/LBaz.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/DBaz.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionVariants.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/MethodConversion.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ClassFunctionals.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TriFunctionTest.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ProduceFunction.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TransformFunction.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Closure1.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/SharedStorage.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/FileToWordsBuilder.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Operations.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Machine2.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/ArrayStreams.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Peeking.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/SortedComparator.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Prime.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java" />
+        <option value="$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="792" />
+    <option name="y" value="19" />
+    <option name="width" value="1153" />
+    <option name="height" value="1005" />
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -94,36 +168,26 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="extract.method.default.visibility" value="public" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/priv/wzb/leet_code/list/reorder_list_143" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="G:/学习/redis/周阳经典版---课件+源码+工具/课程源码/redis1122" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
-  </component>
-  <component name="RebelAgentSelection">
-    <selection>jr</selection>
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
       <recent name="priv.wzb.interview.meituan" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Learning\Design_Pattern\src\priv\wzb\mysql" />
-      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="priv.wzb.javabook.concurrent" />
       <recent name="priv.wzb.javabook.rf.functional" />
       <recent name="priv.wzb.leet_code.dynamic_programming.interleaving_string_97" />
       <recent name="priv.wzb.leet_code.array.maximum_length_of_repeated_subarray_718" />
       <recent name="priv.wzb.multi_threaded_high_concurrent.countdown_latch" />
+      <recent name="priv.wzb.leet_code.hashmap_and_string.minimum_window_substring_76" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\leet_code\list\reorder_list_143" />
@@ -132,14 +196,29 @@
       <recent name="D:\Learning\Design_Pattern\lib" />
       <recent name="D:\Learning\Design_Pattern\src\priv\wzb\javabook\enums" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\java_project_idea\Design_Pattern\src\priv\wzb\sort" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.MediatorPatternDemo">
-    <configuration name="DirectMemoryOOM" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.oom.book.DirectMemoryOOM" />
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.AutoCloseableDetails">
+    <configuration name="ArrayStreams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.ArrayStreams" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.jvm.oom.book.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -147,8 +226,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinalizeEscapeGC" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.jvm.gc.FinalizeEscapeGC" />
+    <configuration name="AutoCloseableDetails" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.AutoCloseableDetails" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
@@ -160,8 +239,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MediatorPatternDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.design_pattern.behavioralpattern.mediatorpattern.charroom.MediatorPatternDemo" />
+    <configuration name="FinTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.FinTest" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
@@ -173,12 +252,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.leet_code.array.offer_04.Solution" />
+    <configuration name="LoggingExceptions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.exceptions.LoggingExceptions" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.leet_code.array.offer_04.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.exceptions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -186,36 +265,48 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Sub" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.wzb.design_pattern.lsp.Sub" />
+    <configuration name="Machine2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.wzb.javabook.rf.streams.Machine2" />
       <module name="Design_Pattern" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.wzb.design_pattern.lsp.*" />
+          <option name="PATTERN" value="priv.wzb.javabook.rf.streams.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DirectMemoryOOM" />
-      <item itemvalue="Application.FinalizeEscapeGC" />
-      <item itemvalue="Application.Sub" />
-      <item itemvalue="Application.Solution" />
-      <item itemvalue="Application.MediatorPatternDemo" />
+      <item itemvalue="Application.Machine2" />
+      <item itemvalue="Application.ArrayStreams" />
+      <item itemvalue="Application.LoggingExceptions" />
+      <item itemvalue="Application.FinTest" />
+      <item itemvalue="Application.AutoCloseableDetails" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MediatorPatternDemo" />
-        <item itemvalue="Application.Solution" />
-        <item itemvalue="Application.Sub" />
-        <item itemvalue="Application.FinalizeEscapeGC" />
-        <item itemvalue="Application.DirectMemoryOOM" />
+        <item itemvalue="Application.AutoCloseableDetails" />
+        <item itemvalue="Application.FinTest" />
+        <item itemvalue="Application.LoggingExceptions" />
+        <item itemvalue="Application.ArrayStreams" />
+        <item itemvalue="Application.Machine2" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -486,80 +577,6 @@
       <workItem from="1595057348862" duration="27000" />
       <workItem from="1597236198141" duration="8080000" />
       <workItem from="1597669643373" duration="4590000" />
-      <workItem from="1597822835363" duration="628000" />
-      <workItem from="1597920746693" duration="623000" />
-      <workItem from="1597993298544" duration="1000" />
-      <workItem from="1597993308590" duration="7477000" />
-      <workItem from="1598253820448" duration="585000" />
-      <workItem from="1598254418776" duration="4354000" />
-      <workItem from="1598340938436" duration="3646000" />
-      <workItem from="1598510705269" duration="8528000" />
-      <workItem from="1598578410267" duration="743000" />
-      <workItem from="1598607199481" duration="1372000" />
-      <workItem from="1598665647960" duration="647000" />
-      <workItem from="1598858616971" duration="12458000" />
-      <workItem from="1598923886091" duration="20000" />
-      <workItem from="1598940913943" duration="7187000" />
-      <workItem from="1599035605793" duration="7636000" />
-      <workItem from="1599104634497" duration="7044000" />
-      <workItem from="1599206017692" duration="3338000" />
-      <workItem from="1599285854694" duration="5883000" />
-      <workItem from="1599292556693" duration="136000" />
-      <workItem from="1599462181970" duration="9716000" />
-      <workItem from="1599558013181" duration="5426000" />
-      <workItem from="1599616327007" duration="626000" />
-      <workItem from="1599732737961" duration="3605000" />
-      <workItem from="1599788562490" duration="2819000" />
-      <workItem from="1599807900981" duration="7848000" />
-      <workItem from="1600047777869" duration="5078000" />
-      <workItem from="1600162761708" duration="7233000" />
-      <workItem from="1600220213709" duration="7537000" />
-      <workItem from="1600308347104" duration="6166000" />
-      <workItem from="1600393222892" duration="3299000" />
-      <workItem from="1600480361638" duration="3547000" />
-      <workItem from="1600657786132" duration="9977000" />
-      <workItem from="1600754530872" duration="7151000" />
-      <workItem from="1600825266044" duration="11409000" />
-      <workItem from="1600911966327" duration="13928000" />
-      <workItem from="1601198919739" duration="3834000" />
-      <workItem from="1601606068320" duration="2687000" />
-      <workItem from="1602677966715" duration="58000" />
-      <workItem from="1602725570769" duration="1940000" />
-      <workItem from="1602759880056" duration="987000" />
-      <workItem from="1603000778225" duration="703000" />
-      <workItem from="1603073303082" duration="599000" />
-      <workItem from="1603195483314" duration="252000" />
-      <workItem from="1603195766887" duration="2332000" />
-      <workItem from="1603244209262" duration="29000" />
-      <workItem from="1603367236547" duration="986000" />
-      <workItem from="1603517956796" duration="8397000" />
-      <workItem from="1603701133060" duration="6941000" />
-      <workItem from="1603801108965" duration="1998000" />
-      <workItem from="1603851994227" duration="13203000" />
-      <workItem from="1603936296944" duration="603000" />
-      <workItem from="1604286248487" duration="388000" />
-      <workItem from="1604321047601" duration="1516000" />
-      <workItem from="1604570618744" duration="3647000" />
-      <workItem from="1604626565635" duration="1876000" />
-      <workItem from="1605008204507" duration="2061000" />
-      <workItem from="1605065750524" duration="648000" />
-      <workItem from="1605162885090" duration="1213000" />
-      <workItem from="1606028097966" duration="2043000" />
-      <workItem from="1606097076311" duration="682000" />
-      <workItem from="1610437580383" duration="1590000" />
-      <workItem from="1611392577242" duration="2312000" />
-      <workItem from="1611538566170" duration="241000" />
-      <workItem from="1614230752435" duration="868000" />
-      <workItem from="1615450943783" duration="1565000" />
-      <workItem from="1615982696999" duration="2025000" />
-      <workItem from="1616073016181" duration="1171000" />
-      <workItem from="1616416601043" duration="934000" />
-      <workItem from="1616590849276" duration="830000" />
-      <workItem from="1617021654464" duration="1010000" />
-      <workItem from="1617799005191" duration="1122000" />
-      <workItem from="1617847165745" duration="5000" />
-      <workItem from="1617880808265" duration="2442000" />
-      <workItem from="1618794102609" duration="5146000" />
     </task>
     <task id="LOCAL-00001" summary="Test">
       <created>1568117087835</created>
@@ -763,7 +780,19 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -992,46 +1021,6 @@
           <line>27</line>
           <option name="timeStamp" value="135" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/housekeeping/StaticInitialization.java</url>
-          <line>19</line>
-          <option name="timeStamp" value="136" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/collections/AddingGroups.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="137" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/files/Directories.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="138" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/javabook/rtti/pets/RegisteredFactories.java</url>
-          <line>98</line>
-          <option name="timeStamp" value="139" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://D:/jdk_1.8/src.zip!/java/util/stream/StreamSpliterators.java</url>
-          <line>1347</line>
-          <option name="timeStamp" value="141" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://D:/jdk_1.8/src.zip!/java/util/stream/SliceOps.java</url>
-          <line>115</line>
-          <option name="timeStamp" value="142" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/offer_04/Solution.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="144" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/priv/wzb/leet_code/array/offer_04/Solution.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="145" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -1051,47 +1040,500 @@
       </configuration>
     </watches-manager>
   </component>
-  <component name="ideajad">
-    <property name="annotate" value="false" />
-    <property name="annotateFully" value="false" />
-    <property name="braces" value="false" />
-    <property name="clear" value="false" />
-    <property name="confirmNavigationTriggeredDecompile" value="true" />
-    <property name="dead" value="true" />
-    <property name="defaultInitializers" value="false" />
-    <property name="dissassemblerOnly" value="false" />
-    <property name="fieldsFirst" value="true" />
-    <property name="fileExtension" value="java" />
-    <property name="fullyQualifiedNames" value="false" />
-    <property name="indentation" value="4" />
-    <property name="intRadix" value="10" />
-    <property name="lineNumbersAsComments" value="true" />
-    <property name="longRadix" value="10" />
-    <property name="maxStringLength" value="64" />
-    <property name="nocast" value="false" />
-    <property name="noclass" value="false" />
-    <property name="nocode" value="false" />
-    <property name="noconv" value="false" />
-    <property name="noctor" value="false" />
-    <property name="nodos" value="false" />
-    <property name="nofd" value="false" />
-    <property name="noinner" value="false" />
-    <property name="nolvt" value="false" />
-    <property name="nonlb" value="false" />
-    <property name="outputDirectory" value="" />
-    <property name="packFields" value="3" />
-    <property name="packImports" value="7" />
-    <property name="prefixNumericalClasses" value="_cls" />
-    <property name="prefixNumericalFields" value="_fld" />
-    <property name="prefixNumericalLocals" value="_lcl" />
-    <property name="prefixNumericalMethods" value="_mth" />
-    <property name="prefixNumericalParameters" value="_prm" />
-    <property name="prefixUnusedExceptions" value="_ex" />
-    <property name="readonly" value="false" />
-    <property name="safe" value="false" />
-    <property name="sort" value="false" />
-    <property name="spaceAfterKeyword" value="false" />
-    <property name="splitStringsAtNewline" value="false" />
-    <property name="useTabs" value="false" />
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="638">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabase/reflection/java反射.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14564">
+          <caret line="717" column="19" selection-start-line="717" selection-start-column="12" selection-end-line="717" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/lang/Error.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1958">
+          <caret line="113" column="22" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="50" column="34" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/MakeNoArgs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make2Args.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Make1Arg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/Dog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="53" lean-forward="true" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/cons/CtorReference.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/NotFunctional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="2" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Functional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalNoAnn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionalAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="44" lean-forward="true" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
+          <folding>
+            <element signature="e#185#186#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/DBaz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <element signature="e#164#165#0" expanded="true" />
+            <element signature="e#190#191#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Foo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/IBaz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#158#159#0" expanded="true" />
+            <element signature="e#184#185#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/LBaz.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+          <folding>
+            <element signature="e#160#161#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/FunctionVariants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/In1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="16" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/MethodConversion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          <folding>
+            <element signature="e#182#183#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/CC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ClassFunctionals.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="58" column="1" lean-forward="true" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TriFunctionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/ProduceFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="29" lean-forward="true" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#220#221#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/TransformFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="22" column="11" lean-forward="true" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Closure1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" selection-end-column="7" />
+          <folding>
+            <element signature="e#177#178#0" expanded="true" />
+            <element signature="e#213#214#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/SharedStorage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="28" lean-forward="true" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/FileToWordsBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#593#594#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Operations.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#304#305#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Machine2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/ArrayStreams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/util/stream/Stream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="183" column="18" selection-start-line="183" selection-start-column="18" selection-end-line="183" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/SortedComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/util/Comparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="184" column="39" selection-start-line="184" selection-start-column="27" selection-end-line="184" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Peeking.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/jdk/src.zip!/java/util/stream/LongStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16808">
+          <caret line="819" column="29" selection-start-line="819" selection-start-column="29" selection-end-line="819" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/streams/Prime.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/BB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/rf/functional/AA.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/leet_code/dynamic_programming/interleaving_string_97/Solution1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="63" column="9" selection-start-line="63" selection-start-column="9" selection-end-line="63" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/SimpleException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/MyException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FullConstructors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/LoggingExceptions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="440">
+          <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/FinTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+          <folding>
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/Reporter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#226#227#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/priv/wzb/javabook/exceptions/AutoCloseableDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>jQuery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Design_Pattern</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>lib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -23,6 +23,7 @@ public class UnableCreateNewThreadDemo {
             System.out.println("******************i=" + i);
             new Thread(()->{
                 try {
+                    System.out.println("Thread.currentThread().getName() = " + Thread.currentThread().getName());
                     Thread.sleep(Integer.MAX_VALUE);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

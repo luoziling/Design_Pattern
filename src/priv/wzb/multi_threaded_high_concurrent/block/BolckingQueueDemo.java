@@ -1,6 +1,5 @@
 package priv.wzb.multi_threaded_high_concurrent.block;
 
-import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.TimeUnit;
@@ -54,26 +53,46 @@ public class BolckingQueueDemo {
 
 
         // put,如果队满，并不会直接丢掉，而是放到一个等待区，当队列有未知进入队列
+        new Thread(()->{
+            try {
+                TimeUnit.MILLISECONDS.sleep(1000);
+                // 拿出一个元素
+                System.out.println(blockingQueue.take());
+                System.out.println("blockingQueue = " + blockingQueue);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-//        blockingQueue.put("a");
-//        blockingQueue.put("a");
-//        blockingQueue.put("a");
-//        System.out.println("=====================");
-//        blockingQueue.put("x");// put 队列满会一直阻塞直到put数据或者中断退出
+        },"获取线程").start();
+
+        blockingQueue.put("a");
+        System.out.println("blockingQueue = " + blockingQueue);
+        blockingQueue.put("a");
+        System.out.println("blockingQueue = " + blockingQueue);
+        blockingQueue.put("a");
+        System.out.println("blockingQueue = " + blockingQueue);
+        System.out.println("=====================");
+        blockingQueue.put("x");// put 队列满会一直阻塞直到put数据或者中断退出
+        System.out.println("blockingQueue = " + blockingQueue);
 
 
         // 设置插入时长，超时退出
-        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
-        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
-        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
-        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+//        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+//        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+//        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+//        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+
+//        TimeUnit.MILLISECONDS.sleep(1000);
+
 
         System.out.println(blockingQueue.take());
+        System.out.println("blockingQueue = " + blockingQueue);
         System.out.println(blockingQueue.take());
+        System.out.println("blockingQueue = " + blockingQueue);
         System.out.println(blockingQueue.take());
-        System.out.println(blockingQueue.take());
+        System.out.println("blockingQueue = " + blockingQueue);
 
-        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
+//        System.out.println(blockingQueue.offer("a", 2L, TimeUnit.SECONDS));
 
     }
 

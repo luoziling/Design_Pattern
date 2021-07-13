@@ -1,6 +1,6 @@
 package priv.wzb.multi_threaded_high_concurrent.thread_reentrantlock;
 
-import java.beans.IntrospectionException;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;

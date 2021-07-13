@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicStampedReference;
  */
 public class ABADemo {
     static AtomicReference<Integer> atomicReference = new AtomicReference<>(100);
+    // 使用AtomicStampedReference加上版本号限制ABA问题
     static AtomicStampedReference<Integer> atomicStampedReference = new AtomicStampedReference<>(100,1);
     public static void main(String[] args) {
         // ABA问题的演示

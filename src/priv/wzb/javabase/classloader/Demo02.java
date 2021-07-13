@@ -22,5 +22,10 @@ public class Demo02 {
         String a = "adasf";
         System.out.println(a.getClass().getClassLoader());
         System.out.println(a);
+
+        /**
+         * new String 与 = “”是一致的
+         */
+        String s = new String("123");
     }
 }

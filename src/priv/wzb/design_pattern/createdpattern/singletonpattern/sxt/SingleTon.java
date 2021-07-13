@@ -16,13 +16,12 @@ public class SingleTon {
     }
 
     //对外提供访问入口
-    public static SingleTon getInstance(){
-        if(singleTon==null){
+    public static SingleTon getInstance() {
+        if (singleTon == null) {
             //多线程可以同时出现if成立，添加锁
-            synchronized (SingleTon.class){
-
+            synchronized (SingleTon.class) {
                 //双重验证
-                if(singleTon==null){
+                if (singleTon == null) {
                     singleTon = new SingleTon();
                 }
 

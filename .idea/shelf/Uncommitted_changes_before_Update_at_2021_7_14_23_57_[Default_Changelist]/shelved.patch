@@ -1,0 +1,9 @@
+diff --git a/src/priv/wzb/multi_threaded_high_concurrent/Multi b/threaded
+rename from src/priv/wzb/multi_threaded_high_concurrent/Multi
+rename to threaded
+diff --git a/src/priv/wzb/javabase/net/java b/网络编程踩坑.md
+rename from src/priv/wzb/javabase/net/java
+rename to 网络编程踩坑.md
+diff --git a/src/priv/wzb/design_pattern/Design b/Pattern.md
+rename from src/priv/wzb/design_pattern/Design
+rename to Pattern.md

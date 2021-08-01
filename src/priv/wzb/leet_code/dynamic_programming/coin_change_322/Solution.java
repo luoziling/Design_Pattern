@@ -65,4 +65,8 @@ public class Solution {
         // 由于dp[amount]的初始值为amount+1所以如果答案都由1组成那么dp[amount]必然大于amount此时的结果是错误的
         return dp[amount]>amount?-1:dp[amount];
     }
+
+    public static void main(String[] args) {
+        System.out.println("Solution.main");
+    }
 }

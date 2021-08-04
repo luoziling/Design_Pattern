@@ -13,6 +13,7 @@ public class Demo1 {
         String path = "priv.wzb.javabase.reflection.RUser";
         try {
             Class clazz = Class.forName(path);
+            System.out.println("clazz.getCanonicalName() = " + clazz.getCanonicalName());
             //对象表示一些数据
             System.out.println(clazz.hashCode());
 

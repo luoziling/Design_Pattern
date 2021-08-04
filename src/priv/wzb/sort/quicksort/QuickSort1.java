@@ -4,6 +4,10 @@ package priv.wzb.sort.quicksort;
  * @author Satsuki
  * @time 2019/5/6 16:39
  * @description:
+ * 快速排序是特殊的归并排序
+ * 归并与快排的区别在于归并强调middle的中间值，然后根据中间值不断切割，先分割
+ * 后汇总，汇总过程根据middle将数组分为两部分，两部分遍历有序合并到同一数组中
+ * 基数排序则是空间换时间，去最大数字的位数开辟相应数量的桶，将数字有序放入桶中，最后合并
  */
 public class QuickSort1 {
     public static void quickSort(int[] arr){

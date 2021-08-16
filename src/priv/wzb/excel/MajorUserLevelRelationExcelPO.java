@@ -12,9 +12,9 @@ import lombok.Data;
 @Data
 public class MajorUserLevelRelationExcelPO {
 	@Excel(name = "大用户id",fixedIndex = 0)
-	private Integer majorCustomerId;
+	private Integer majorUserId;
 	@Excel(name = "大用户上级用户ID（没有就填0",fixedIndex = 5)
 	private Integer parentId;
 	@Excel(name = "类型",fixedIndex = 4)
-	private String majorCustomerType;
+	private String majorUserType;
 }

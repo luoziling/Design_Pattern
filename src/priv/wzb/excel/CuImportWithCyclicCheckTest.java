@@ -35,9 +35,9 @@ public class CuImportWithCyclicCheckTest {
 		List<MajorUserLevelRelationPO> saveList = new ArrayList<>();
 		for (MajorUserLevelRelationExcelPO excel : excelList) {
 			MajorUserLevelRelationPO po = new MajorUserLevelRelationPO();
-			po.setMajorCustomerId(excel.getMajorCustomerId());
+			po.setMajorUserId(excel.getMajorUserId());
 			po.setParentId(Objects.isNull(excel.getParentId())?0:excel.getParentId());
-			po.setMajorCustomerType(Strings.isNullOrEmpty(excel.getMajorCustomerType())?
+			po.setMajorUserType(Strings.isNullOrEmpty(excel.getMajorUserType())?
 					5 : 1);
 			saveList.add(po);
 		}
@@ -45,12 +45,12 @@ public class CuImportWithCyclicCheckTest {
 		Map<Integer,Integer> loopMap = new HashMap<>();
 		// 死循环判断
 		for (MajorUserLevelRelationPO po : saveList) {
-			if (Objects.isNull(po) || Objects.isNull(po.getMajorCustomerId())){
+			if (Objects.isNull(po) || Objects.isNull(po.getMajorUserId())){
 				continue;
 			}
 			List<Integer> upperNodeList = new ArrayList<>();
 //			upperNodeList = saveList.stream().filter(e->e.getParentId().equals(0)).map(MajorUserLevelRelationPO::getMajorCustomerId).collect(Collectors.toList());
-			upperNodeList.add(po.getMajorCustomerId());
+			upperNodeList.add(po.getMajorUserId());
 			// 记录遍历过的子节点
 			List<Integer> lowerNodeList = new ArrayList<>();
 			List<Integer> temporaryLowerNodeList = new ArrayList<>();
@@ -58,7 +58,7 @@ public class CuImportWithCyclicCheckTest {
 				// 查询下一级
 				for (MajorUserLevelRelationPO node : saveList) {
 					if (upperNodeList.contains(node.getParentId())){
-						temporaryLowerNodeList.add(node.getMajorCustomerId());
+						temporaryLowerNodeList.add(node.getMajorUserId());
 					}
 				}
 				// 清空upperNodeList 将当前遍历出的作为下一次遍历的父节点

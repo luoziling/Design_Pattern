@@ -29,35 +29,27 @@ public class MajorUserLevelRelationPO implements Serializable {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
-    //大用户id
-    @TableField("major_customer_id")
-    private Integer majorCustomerId;
+    @TableField("major_user_id")
+    private Integer majorUserId;
 
-    //大用户上级id
     @TableField("parent_id")
     private Integer parentId;
 
-    //大用户类别，枚举：1.头部用户 2.二级用户 3.三级用户 4.四级用户 5.五级用户
-    @TableField("major_customer_type")
-    private Integer majorCustomerType;
+    @TableField("major_user_type")
+    private Integer majorUserType;
 
-    //逻辑删除状态：1，有效；-1，无效
     @TableField("status_code")
     private Boolean statusCode;
 
-    //创建人
     @TableField("create_user")
     private String createUser;
 
-    //创建时间
     @TableField("create_time")
     private String createTime;
 
-    //修改人
     @TableField("update_user")
     private String updateUser;
 
-    //修改时间
     @TableField("update_time")
     private String updateTime;
 }

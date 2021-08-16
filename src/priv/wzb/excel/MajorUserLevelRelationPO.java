@@ -21,7 +21,7 @@ import java.io.Serializable;
 @Data
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
-@TableName("major_customer_level_relation")
+@TableName("major_user_level_relation")
 public class MajorUserLevelRelationPO implements Serializable {
 
     private static final long serialVersionUID = 1L;

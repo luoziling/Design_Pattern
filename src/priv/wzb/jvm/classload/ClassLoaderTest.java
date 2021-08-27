@@ -31,6 +31,7 @@ public class ClassLoaderTest {
 				}
 			}
 		};
+		ClassLoader systemClassLoader = ClassLoader.getSystemClassLoader();
 		// 自定义类加载器加载类并生成实例对象
 //		Object obj = classLoader.loadClass("priv.wzb.jvm.classload.ClassLoaderTest").newInstance();
 		// class priv.wzb.jvm.classload.ClassLoaderTest 类文件没问题

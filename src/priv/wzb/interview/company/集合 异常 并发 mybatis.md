@@ -762,6 +762,519 @@ cache标签用于声明这个namespace使用二级缓存，并且可以自定义
 
 
 
+### Redis
+
+## 持久化
+
+### Redis持久化
+
+内存数据刷回磁盘，防止宕机导致数据丢失
+
+两种机制
+
+- RDB
+
+  - 内存快照
+
+  - 使用 修改配置文件，配置x秒内有x个key变更触发rdb操作
+
+    - ```redis
+      save 900 1  
+      save 300 10  
+      save 60 10000  
+      ```
+
+    - 手动调用save/bgsave命令 直接手动备份
+
+  - 原理
+
+    - fork一个子进程 备份内存数据
+
+    - 生成dump文件
+
+    - 每隔每次备份dump已存在则覆盖
+
+    - 一个紧凑的文件
+
+    - 恢复时将dump文件移动到安装目录下启动就自动恢复
+
+      - ```REDIS
+        CONFIG GET dir
+        ```
+
+      - 获取安装目录
+
+      - 
+
+    - 可能丢失数据，dump每隔一段时间执行，会丢失一定的数据 fork也会耗时
+
+  - 
+
+- AOF
+
+  - 命令记录，每次update命令都被记录
+
+  - 配置
+
+    - ```redis
+      # 是否开启AOF，默认关闭（no）
+      appendonly yes
+      
+      # 指定 AOF 文件名
+      appendfilename appendonly.aof
+      
+      # Redis支持三种不同的刷写模式：
+      # appendfsync always #每次收到写命令就立即强制写入磁盘，是最有保证的完全的持久化，但速度也是最慢的，一般不推荐使用。
+      appendfsync everysec #每秒钟强制写入磁盘一次，在性能和持久化方面做了很好的折中，是受推荐的方式。
+      # appendfsync no     #完全依赖OS的写入，一般为30秒左右一次，性能最好但是持久化最没有保证，不被推荐。
+      ```
+
+    - 恢复时同样将aof文件放到安装目录
+
+  - 优势
+
+    - 数据安全 可以做到每次数据变更都记录日志
+    - 宕机也可采用redis-check-aof解决数据一致性问题
+    - 在恢复前可更改AOF文件，可删除其中某些命令
+
+  - 缺点
+
+    - 文件大
+    - 回复慢
+
+- 小结
+
+  - RDB性能好，丢失部分数据
+  - AOF占用空间大 回复慢，数据完整
+  - 两者都开优先AOF
+
+### Redis持久化数据和缓存做扩容
+
+- 缓存使用可借助hash来映射到不同redis服务器来扩容
+- 持久化存储则需要redis集群
+
+## 过期键的删除策略
+
+### Redis的过期键的删除策略
+
+- 定时过期 
+  - 到期立即清除 内存友好 但是占用CPU资源多
+- 惰性过期
+  - 访问key发现过期才清除，CPU友好，但是可能占用大量内存
+- 定期过期
+  - 一段时间扫描一次清空过期数据
+- 默认开启惰性+定期
+
+
+
+### Redis key的过期时间和永久有效分别怎么设置
+
+expire/persist [key] [date]
+
+```redis
+redis> SET mykey "Hello"
+OK
+
+redis> EXPIRE mykey 10  # 为 key 设置生存时间
+(integer) 1
+
+redis> TTL mykey
+(integer) 10
+
+redis> PERSIST mykey    # 移除 key 的生存时间
+(integer) 1
+
+redis> TTL mykey
+(integer) -1
+```
+
+## 内存相关
+
+### MySQL里有2000w数据，redis中只存20w的数据，如何保证redis中的数据都是热点数据
+
+- 内存淘汰策略
+
+### Redis的内存淘汰策略有哪些
+
+- 写命令失败
+  - noeviction
+- 设置了淘汰策略
+  - volatile-lru
+  - volatile-random
+  - volatile-ttl 过期时间最早
+- 未设置淘汰策略
+  - allkeys-lru
+  - allkeys-random
+
+- 过期策略用于过期key的处理
+
+- 内存淘汰策略在与内存占满如何处理
+
+- ```redis
+  #最大内存
+  maxmemory 100mb
+  #策略选择
+  maxmemory-policy 
+  ```
+
+- 
+
+### Redis的内存用完了会发生什么
+
+- 未设置内存淘汰策略
+  - 写命令出错
+  - 读命令照常
+- 设置了内存淘汰策略 根据策略处理
+
+### Redis如何做内存优化
+
+- 使用合适的数据结构
+- 例如一个对象就用hash而不是多个string
+
+## 线程模型
+
+### Redis线程模型
+
+![](https://img2020.cnblogs.com/blog/2136379/202008/2136379-20200830233359116-1537526582.png)
+
+基于reactor模型的网络事件处理器=》文件事件处理器（file event handler）=>单Reactor单线程的Reactor模型
+
+- 组件
+  - 多个socket
+  - IO多路复用 selector
+  - 文件事件分发器 dispatch
+  - 事件处理器handler
+- IO多路复用
+  - 客户端创建连接请求
+    - 服务端serverSocket接收连接请求
+    - 由selectorIO多路复用处理其来处理不同请求
+    - 放入任务队列，由文件事件分派器交给事件处理器
+    - 事件处理器根据事件类型交给连接处理器建立连接
+  - 客户端执行请求
+    - 客户端发起请求socket接到产生事件，selector放入队列
+    - 事件分发器 dispatch 分发给具体handler
+    - handle（请求命令处理）处理命令 读处理器读取命令处理
+    - handle（回复命令处理）命令处理完成后要返回客户端产生一个写命令
+    - 返回数据
+
+#### 小结
+
+- 使用多路复用的IO模型来增加并发量的处理
+- 之后都是单线程处理，省去多线程带来的并发问题和线程上下文切换导致的性能问题
+
+
+
+## 事务
+
+### 什么是事务？
+
+- ACID，原子性，一个事务不可拆分要么都成功要么都失败
+- 命令的集合，命令串行有序执行，不会因为另一个客户端在事务执行过程中执行其他而导致问题，保证命令的原子独立执行，一次性，顺序，拍他执行一串命令
+- 同样的ACID
+- AID保证C
+  - A要么都成功要么都失败
+  - D redis持久化机制
+  - I 隔离
+- 
+
+### Redis事务的概念
+
+- redis事务 一致、顺序、排他的执行一串命令 通过MULTI DISCARD WATCH构成
+
+### Redis事务的三个阶段
+
+- MULTI开启
+- 命令入队
+  - 除 MULTI EXEC DISCARD WATCH之外的命令集合
+- EXEC执行事务
+
+
+
+### Redis事务的三个特性
+
+- 隔离性，都会被序列化顺序执行 不可分隔
+- 没有隔离级别，由于单线程特性
+- 不保证原子性，若运行过程中redis错误则成功的不会被回滚，只有一条命令并非因为语法错误则跳过继续执行其他正确的
+
+
+
+### Redis事务相关命令
+
+通过四个原语实现
+
+- MULTI
+- EXEC
+- DISCARD
+- WATCH
+
+
+
+- redis命令序列化后顺序执行，特性
+  - 不支持回滚，失败继续执行保证简单快速
+  - 事务的命令错误，都不执行
+  - 事务执行过程中运行错误 正确的执行
+- watch 乐观锁 监视一个或多个key 若数据在监视过程中事务执行前被篡改则事务不执行 返回nil
+- MULTI开启事务 总是返回OK，MULTI之后客户端发起多个命令进入一个队列，只有EXEC被调用才执行
+- EXEC 执行队列内的所有命令，首先校验语法问题，语法错误返回error，语法校验后正常执行，失败某个命令返回nil
+- DISCARD 清空队列放弃事务
+- UNWATCH取消key的监控
+
+### 事务管理（ACID）概述
+
+- redis具有C和I通过单线程保证隔离，D在aof+always下可保证D
+- 不保证原子性
+
+### Redis事务支持隔离性吗
+
+- 单线程=>总是带着隔离性
+
+### Redis事务保证原子性吗，支持回滚吗
+
+- 不保证原子性
+  - EXEC后若语法检测通过，失败了某条命令失败不影响其他任务执行
+- 不支持回滚
+  - 失败不会回滚 继续执行
+
+### Redis事务其他实现
+
+- 基于LUA脚本，同样不支持原子性
+- 基于中间标记变量，代码逻辑执行事务，更繁杂
+
+## 集群方案
+
+### 哨兵模式
+
+![](https://img-blog.csdnimg.cn/20200115174006561.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+**哨兵**
+
+- 集群监控 心跳检测  master/slave 是否正常工作
+- 消息通知redis实例故障通知管理员
+- 故障转移 master node宕机 自动转移到slave node
+- 配置中心 宕机后slave成为新的master，通知其他slave
+  - 监控节点健康状况，master宕机后 通知管理员、转移、通知slave
+
+- 哨兵自身也是集群，增加redis集群高可用
+- 核心知识
+  - 至少三个实例保证健壮性
+  - 哨兵+redis主从 不保证数据丢失，只保证可用性
+  - 架构复杂，需充分测试
+
+### 官方Redis Cluster 方案(服务端路由查询)
+
+![](https://img-blog.csdnimg.cn/20200115173621637.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+redis 集群模式的工作原理能说一下么？在集群模式下，redis 的 key 是如何寻址的？分布式寻址都有哪些算法？了解一致性 hash 算法吗？
+
+- 一组互为主从的redis实例构成
+- 额外开启16379开实现sentinel的功能
+- 通过hash slot数据分布
+- hash 一致性hash hash slot
+- 一致性hash就是通过hash环+hash最近距离计算来分桶 由于预置hash数量庞大实现动态扩容
+
+
+
+**简介**
+
+> Redis Cluster是一种服务端Sharding技术，3.0版本开始正式提供。Redis Cluster并没有使用一致性hash，而是采用slot(槽)的概念，一共分成16384个槽。将请求发送到任意节点，接收到请求的节点会将查询请求发送到正确的节点上执行
+
+- 服务端水平分区
+
+- 并没有一致性hash
+
+- 通过slot概念分发，由任意一个节点接收
+
+- 细节
+
+  - hash分片，每隔节点存储一定hash槽（hash值），默认分配16384个槽
+  - 每份数据存储在多个互为主从的节点上
+  - 数据写入先写主节点再同步到从节点
+  - 同一分片节点数据不保证一致性
+  - 读取随机发送，若key不再某个分片上则转发
+  - 扩容需数据迁移
+
+- 默认开启6379+16379
+
+- 16379用于节点通信，实现类似sentinel 健康检测 配置更新 故障转移
+
+- gossip协议
+
+- **节点间的内部通信机制**
+
+  - 基本通信原理
+
+    集群元数据的维护有两种方式：集中式、Gossip 协议。redis cluster 节点间采用 gossip 协议进行通信。
+
+- 
+
+**分布式寻址算法**
+
+- hash算法（大量缓存重建)
+  - shard=hash(ip)%(NUMS_HANDLER)
+  - 由于桶数量固定，在扩容时需重新计算hash分桶
+- 一致性hash算法（自动缓存迁移）+虚拟节点（自动负载均衡）
+  - shard=hash(ip)%2 ^32
+  - 每隔节点占有一个hash值，hash(ip)后寻找值最接近的桶
+  - 支持桶动态扩容
+  - 缺点：无法确定分布均匀
+- redis cluster的hash slot
+  - 抽取中间虚拟桶，虚拟桶可以设置为扩容上限
+  - shard=CRC16(key)%16384
+  - 通过预置实现扩容
+- 
+
+
+
+优缺点
+
+- 优点
+  - 无中心架构动态扩容 业务透明
+  - 具有sentinel监控和自动Failover（故障转移）功能
+  - 客户端不需要连接所有节点，连接一个节点即可
+  - 高性能，直连redis，省区proxy
+- 缺点
+  - 运维复杂，数据迁移需要人工干预
+  - 只能使用0号数据库
+  - 不支持批量操作（pipeline）
+  - 分布式逻辑和存储模块耦合等
+
+### 基于客户端分配
+
+![](https://img-blog.csdnimg.cn/20200115173640248.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+- redis sharding是redis cluster出现之前的集群配置，通过hash进行key的分散存储和获取
+- 实现简单，redis实例独立 易线性扩展， 适合缓存场景
+-  不支持动态增加节点，hash算法，扩容时每隔节点数据都要变化
+- jedis ShardedJedis
+
+
+
+### 基于代理服务器分片
+
+![](https://img-blog.csdnimg.cn/20200115173630730.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+
+
+- 通过proxy隔离客户端使用redis集群的复杂度,增加一次代理
+- Twtter开源的Twemproxy 
+- 豌豆荚开源的Codis
+
+### Redis 主从架构
+
+> 单机的 redis，能够承载的 QPS 大概就在上万到几万不等。对于缓存来说，一般都是用来支撑读高并发的。因此架构做成主从(master-slave)架构，一主多从，主负责写，并且将数据复制到其它的 slave 节点，从节点负责读。所有的读请求全部走从节点。这样也可以很轻松实现水平扩容，支撑读高并发。
+
+- 一主二从 读写分离
+- 支持水平扩容+高并发
+
+![](https://img-blog.csdnimg.cn/20200115180329317.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+**redis replication 的核心机制**
+
+![](https://img-blog.csdnimg.cn/20200115180337645.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly90aGlua3dvbi5ibG9nLmNzZG4ubmV0,size_16,color_FFFFFF,t_70)
+
+- 第一次全量
+- masterfork子进程RDB备份，生成RDB文件
+- slave拉取RDB存入磁盘
+- 从磁盘读到内存 进行数据同步
+- 重连仅增量同步
+
+### 说说Redis哈希槽的概念？
+
+redis cluster采用hash slot ，预置了一批hash slot，通过hash算法确定数据到哪个slot 每隔节点负责一部分hash slot
+
+## 分区
+
+### Redis是单线程的，如何提高多核CPU的利用率？
+
+- 分片提高CPU利用率，开启多个redis进程使用redis cluster ,多个互为主从的实例构成集群 开启16379端开 用于集群监听，故障转移
+
+### 你知道有哪些Redis分区实现方案？
+
+- 客户端分区 jedis
+- 代理分区 codis
+- redis cluster
+
+### Redis分区有什么缺点
+
+- 不支持多个key操作
+- 分布式事务
+- 数据处理复杂  都需要开启备份
+- 动态扩容/缩容 复杂，预分片技术可解决该问题
+
+## 分布式问题
+
+### Redis实现分布式锁
+
+- 单进程单线程避免多线程带来的复杂性，通过单线程单reactor模型将请求从并发转为队列
+- 通过SETNX命令 key不存在设置KV KEY存在不做任何动作
+- 设置成功返回1 失败返回0，分布式锁，分布式多线程竞争
+- DEL删除key 释放锁
+
+### 如何解决 Redis 的并发竞争 Key 问题
+
+- 采用zookeeper
+
+### 分布式Redis是前期做还是后期规模上来了再做好？为什么？
+
+- 一开始就设置较多redis实例较好
+- 方便后续扩容只是实例迁移而不需要重新分区
+
+### 什么是 RedLock
+
+Redis 官方站提出了一种权威的基于 Redis 实现分布式锁的方式名叫 *Redlock*，此种方式比原先的单节点的方法更安全。它可以保证以下特性：
+
+- 安全，互斥访问
+- 避免死锁
+- 容错 redis集群
+
+
+
+## 缓存异常
+
+### 缓存雪崩
+
+同一时间大面积缓存失效，避免key的expire时间一致，加上random函数设置
+
+### 缓存穿透
+
+redis和数据库都没有想要的数据 导致数据库短时间无用查询导致崩溃
+
+- 接口层校验，请求参数校验，去掉无效请求
+- 不存在正常ID则可设置一个30s的缓存 ID-null防止同一个ID攻击
+- 布隆过滤器，基于多个hash函数解决hash碰撞导致的误判，多个全部命中才能确定数据存在
+
+### 缓存击穿
+
+- 单记录的缓存雪崩，单记录失效，大量访问
+- 热点数据永不失效
+- 加锁
+
+### 缓存预热
+
+- 系统上线后热点数据直接入redis 防止运行时大量请求造成类似雪崩
+- 单页面刷新
+- 手动加载
+
+### 缓存降级
+
+保证核心服务可用
+
+redis出错直接返回
+
+### 热点数据和冷数据
+
+淘汰机制
+
+### 缓存热点key
+
+redis无法命中加锁访问
+
+
+
+
+
+
+
 ### 系统
 
 #### command

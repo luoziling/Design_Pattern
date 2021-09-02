@@ -1281,16 +1281,46 @@ redis无法命中加锁访问
 
 - 本体
   - 活动管理
+    - 数据字典+多对多结构中间表设计
+    - 省市区 行政规划编码，序列化+反序列化
   - 攻击队项目管理
     - 文件管理
+    - S3服务器的使用
+      - Java侧代码上传，雪花算法生成key防止重名
+      - 同一文件管理表设计
   - 云安全事件管理
+    - 反馈问卷数据库设计
+      - 问卷
+      - 问题
+      - 问题类型
+      - 答案 列转行
   - 区域和接口人配置
-  - shiro框架优化
+    - 树形结构的设计
+  - 登录
+    - shiro登录流程
+      - SecurityManager
+      - Authoricator
+      - redis session缓存
+      - realm 重写realm数据库数据查询 生成token
+      - matcher对比 校验是否能登录
+      - 返回加密过的sessionId
+      - 重写sessionManager获取并节码sessionId继续访问
 - 定时任务
   - 数据同步 平台上下游关系
+    - 同步设备数据
+    - 同步大客户数据
+    - 为数据组提供活动基础信息
   - 基于redis stream特性的简要消息队列开发
+    - redis的消息队列 blpush blpop 阻塞 缺乏ACK 缺乏群发 Pub/sub缺乏ack  缺乏 持久化
+    - stream基于RDB+AOF实现持久化，内部自带ack机制，
+    - 以用户组作为方式，每隔用户组可根据不同策略进行访问
+    - 往spring注入自定义的ThreadPoolTaskExecutor防止与自带的冲突
+    - 实现ApplicationContextAware接口获取IOC容器
+    - 基于中介+策略+工厂+redis stream实现异步消息发送机制
+    - 带自动缩容策略 防止将redis内存占满，带重试机制，每隔consumerGroup内都维护未消费完成的队列方便重试
 - 大屏
-  - 数据查询
+  - 数据查询 聚合展示
+  - 中间表加快数据查询
   - 经纬度偏移，省市区基础数据，数据字典
 
 
@@ -1299,7 +1329,22 @@ redis无法命中加锁访问
 
 - 自身
   - 多系统校验机制
+    - 数据库设计
+    - OAuth2.0流程
+      - 资源(认证)服务器A 用户B 第三方应用C
+      - C=>A请求资源 防止非法用户需验证C的身份
+      - C需要先通过A的认证获取token
+      - C带着token获取A的数据 则通过
+      - 但C不能随意获取A的用户数据
+      - 需要用户确认
+      - C请求A的token
+      - A要求用户确认
+      - 用户确认
+      - 返回token
+      - C拿着token访问A获取数据
   - 多系统基础RBAC功能支持
+    - APP_ID标注系统
+    - 权限系统自身支持通过USE_ROLE_APP_ID来判断使用角色的系统从而方便的数据隔离
   - 
 - 对外
   - 菜单及功能权限

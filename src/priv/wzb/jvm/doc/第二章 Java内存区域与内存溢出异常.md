@@ -60,7 +60,7 @@ JVM的多线程是线程切换的并发实现的，一个处理器某个时刻�
 
 《Java虚拟机规范》对本地方法栈中方法使用的语言、使用方式与数据结构并没有任何强制规 定，因此具体的虚拟机可以根据需要自由实现它，甚至有的Java虚拟机（譬如Hot-Spot虚拟机）直接 就把本地方法栈和虚拟机栈合二为一。与虚拟机栈一样，本地方法栈也会在栈深度溢出或者栈扩展失 败时分别抛出StackOverflowError和OutOfMemoryError异常。
 
-**Java虚拟机栈和本地方法栈功能相同，都是用于存储方法调用产生的栈帧、基本数据类型/对象引用，两者服务的对象不同一者Java方法一者本地方法**
+**Java虚拟机栈 和本地方法栈功能相同，都是用于存储方法调用产生的栈帧、基本数据类型/对象引用，两者服务的对象不同一者Java方法一者本地方法**
 
 ### Java堆
 
@@ -564,3 +564,18 @@ java.lang.OutOfMemoryError: Java heap space （不断创建新对象导致堆空
 java.lang.OutOfMemoryError: unable to create new native thread（不断创建线程导致OOM
 
 java.lang.OutOfMemoryError （直接使用Unsafe去分配内存导致内存不足，常见NIO，直接内存不足
+
+
+
+
+
+## [常量池](https://blog.csdn.net/xiaojin21cen/article/details/105300521)
+
+- class常量池
+  - class对象包含的各类信息，版本号、常量池、全限定名、接口、字段、方法等
+  - 在元空间，编译阶段
+- 字符串常量池
+  - JVM中所有字符串的常量
+  - 在堆中
+- 运行时常量池
+  - 类对象加载后 将class常量池的对象放到运行时常量池中 在解析阶段符号引用替换为直接引用 与字符串常量池中的内容相同

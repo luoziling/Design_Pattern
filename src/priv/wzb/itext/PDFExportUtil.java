@@ -1,4 +1,4 @@
-
+package priv.wzb.itext;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
@@ -14,7 +14,7 @@ import java.util.*;
 
 /**
  * @program: command
- * @author: wangzibai01
+ * @author: yuzuki
  * @create: 2021-10-11 16:47
  * @description: yuzuki
  **/

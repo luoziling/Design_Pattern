@@ -1,4 +1,4 @@
-package com.qianxin.command.util.tool;
+
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
@@ -28,7 +28,7 @@ public class PDFExportUtil {
 		String templatePath = "D:\\Learning\\export\\test3.pdf";
 		// 生成的新文件路径
 		String newPDFPath = "D:\\Learning\\export\\test32.pdf";
-		FileOutputStream out = new FileOutputStream(newPDFPath);;
+		FileOutputStream out = new FileOutputStream(newPDFPath );;
 //		TemplateExportParams
 //		PdfExportUtil.exportPdf(templatePath,o,out);
 	}

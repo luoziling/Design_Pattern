@@ -975,7 +975,7 @@
           <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url />
+          <url></url>
           <line>31</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>

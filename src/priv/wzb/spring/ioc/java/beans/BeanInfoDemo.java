@@ -1,11 +1,14 @@
 package priv.wzb.spring.ioc.java.beans;
 
 import org.junit.Test;
+import org.openjdk.jol.info.ClassLayout;
 
 import java.beans.BeanInfo;
 import java.beans.IntrospectionException;
 import java.beans.Introspector;
 import java.beans.PropertyEditorSupport;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 /**
@@ -21,8 +24,19 @@ public class BeanInfoDemo {
 	public void testArrayTest(){
 //		Object[] objects = new Object[10];
 //		ClassLayout classLayout = ClassLayout.parseInstance(new Person[1]);
-//		ClassLayout classLayout = ClassLayout.parseInstance(new Person());
-//		System.out.println(classLayout.toPrintable());
+		List<ProductTreePO> t1List = new ArrayList<>();
+		List<CustomerExportVO> t2List = new ArrayList<>();
+		for (int i = 0; i < 100000; i++) {
+//			SimpleKeyValue s
+//			ProductTreePO po = new ProductTreePO();
+//			po.setSourceId(i);
+//			po.setName(i+"test");
+//			t1List.add(po);
+			CustomerExportVO vo = new CustomerExportVO();
+			t2List.add(vo);
+		}
+		ClassLayout classLayout = ClassLayout.parseInstance(t2List);
+		System.out.println(classLayout.toPrintable());
 	}
 	public static void main(String[] args) throws IntrospectionException {
 		// 防止Object 的class带来的影响

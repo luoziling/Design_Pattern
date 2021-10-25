@@ -3,11 +3,17 @@ package priv.wzb.itext;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import com.itextpdf.tool.xml.XMLWorkerHelper;
+import org.apache.pdfbox.pdmodel.PDDocument;
+import org.apache.pdfbox.rendering.ImageType;
+import org.apache.pdfbox.rendering.PDFRenderer;
+import org.icepdf.core.exceptions.PDFException;
+import org.icepdf.core.exceptions.PDFSecurityException;
+import org.icepdf.core.pobjects.Page;
+import org.icepdf.core.util.GraphicsRenderingHints;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import javax.imageio.ImageIO;
+import java.awt.image.BufferedImage;
+import java.io.*;
 import java.nio.charset.Charset;
 import java.util.List;
 import java.util.*;
@@ -20,7 +26,7 @@ import java.util.*;
  **/
 
 public class PDFExportUtil {
-	private static Integer onepagerow = 15;
+	private static Integer onepagerow = 14;
 
 	private static Integer towpagerow = 22;
 	public static final String HTML = "E:\\模板\\test.html";
@@ -49,77 +55,98 @@ public class PDFExportUtil {
 		PdfStamper stamper;
 		// 计算表格总页数
 		int totalPages = 0;
+		// map 记录某一页是否有扩展
+		Map<Integer,Integer> pageExtensionMap = new HashMap<>();
+		// 新建文档
+		Document doc = new Document(PageSize.A4);
+		PDFPageHeadFootHelper pdfPageHeadFootHelper = new PDFPageHeadFootHelper(doc);
 		try {
 //			BaseFont bf = BaseFont.createFont();
 			BaseFont bf = BaseFont.createFont("STSong-Light", "UniGB-UCS2-H", BaseFont.NOT_EMBEDDED);
-//			BaseFont bf = BaseFont.createFont("c://windows//fonts//simsun.ttc,1" , BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-			Font FontChinese = new Font(bf, 5, Font.NORMAL);
+//			BaseFont bf = BaseFont.createFont("C:\\Windows\\Fonts\\simsunb.ttf" , BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+//			BaseFont bf = BaseFont.createFont("C:\\Windows\\Fonts\\simsun.ttc,1",  BaseFont.IDENTITY_H, 	BaseFont.NOT_EMBEDDED);
+//			BaseFont bf = BaseFont.createFont("fonts/simsun.ttc,1",  BaseFont.IDENTITY_H, 	BaseFont.NOT_EMBEDDED);
+			Font FontChinese = new Font(bf, 10, Font.NORMAL);
 			// 输出流
 			out = new FileOutputStream(newPDFPath);
 			// 读取pdf模板
 			reader = new PdfReader(templatePath);
 			int numberOfPages = reader.getNumberOfPages();
+			// 总页数包含表格扩展页
+			totalPages+= numberOfPages;
 //			reader.getPageSize()
 			// bos变更
 			bos = new ByteArrayOutputStream[numberOfPages];
 //			bos = new ByteArrayOutputStream();
 			for (int page = 0; page < numberOfPages; page++) {
+				// 初始化每一页都是无扩展
+				pageExtensionMap.put(page,1);
 				bos[page] = new ByteArrayOutputStream();
 				// 读取pdf模板
 				reader = new PdfReader(templatePath);
 				//生成输出流
 				stamper = new PdfStamper(reader, bos[page]);
+				// stamper添加特殊事件（AOP
+//				stamper.getWriter().setPageEvent(new PDFPageHeadFootHelper(doc));
 //				stamper = new PdfStamper(reader, bos);
 
 //				stamper.insertPage(2,);
 				//获取文本域
 				AcroFields form = stamper.getAcroFields();
+				// 获取特定的才放入
+				Map<String, AcroFields.Item> itemMap = form.getFields();
+//				form.addSubstitutionFont(bf);
 				//文字类的内容处理
 				Map<String,String> datemap = (Map<String,String>)o.get("datemap");
-				form.addSubstitutionFont(bf);
+//				form.addSubstitutionFont(bf);
 				for(String key : datemap.keySet()){
-					Object value = datemap.get(key);
-					if (value instanceof String){
-						form.setField(key, (String) value);
-					}
-					if (value instanceof List){
-						// 处理列表
-						List<String> stringList = (List<String>) value;
+					if (itemMap.containsKey(key)){
+						Object value = datemap.get(key);
+						if (value instanceof String){
+							form.setField(key, (String) value);
+						}
+						if (value instanceof List){
+							// 处理列表
+							List<String> stringList = (List<String>) value;
 //					form.setListSelection(key,stringList.toArray(new String[0]));
-						String[] values = stringList.toArray(new String[0]);
+							String[] values = stringList.toArray(new String[0]);
 //						if (Objects.nonNull(form.getListOptionExport(key))){
 //							form.setListSelection(key,values);
 //						}
-						form.setListOption(key,values,values);
-						form.setField(key,key);
-						form.setFieldProperty(key,"textcolor",BaseColor.BLUE,null);
+							form.setListOption(key,values,values);
+							form.setField(key,key);
+							form.setFieldProperty(key,"textcolor",BaseColor.BLUE,null);
 //						form.setFieldProperty(key,"flags",1,null);
 //					form.
 //					form.setListSelection()
+						}
 					}
+
 
 				}
 				//图片类的内容处理
 				Map<String,String> imgmap = (Map<String,String>)o.get("imgmap");
 				for(String key : imgmap.keySet()) {
-					String value = imgmap.get(key);
-					String imgpath = value;
+					if (itemMap.containsKey(key)){
+						String value = imgmap.get(key);
+						String imgpath = value;
 //				String imgpath = "https://img-blog.csdnimg.cn/07483d771bd14239bd41e1656e61636d.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA6aOe5buJ54Gs5bCR5bCG,size_20,color_FFFFFF,t_70,g_se,x_16";
-					int pageNo = form.getFieldPositions(key).get(0).page;
-					Rectangle signRect = form.getFieldPositions(key).get(0).position;
-					float x = signRect.getLeft();
-					float y = signRect.getBottom();
-					//根据路径读取图片
-					Image image = Image.getInstance(imgpath);
-					//获取图片页面
-					PdfContentByte under = stamper.getOverContent(pageNo);
+						int pageNo = form.getFieldPositions(key).get(0).page;
+						Rectangle signRect = form.getFieldPositions(key).get(0).position;
+						float x = signRect.getLeft();
+						float y = signRect.getBottom();
+						//根据路径读取图片
+						Image image = Image.getInstance(imgpath);
+						//获取图片页面
+						PdfContentByte under = stamper.getOverContent(pageNo);
 //					PdfContentByte under = stamper.getUnderContent(pageNo);
 
-					//图片大小自适应
-					image.scaleToFit(signRect.getWidth(), signRect.getHeight());
-					//添加图片
-					image.setAbsolutePosition(x, y);
-					under.addImage(image);
+						//图片大小自适应
+						image.scaleToFit(signRect.getWidth(), signRect.getHeight());
+						//添加图片
+						image.setAbsolutePosition(x, y);
+						under.addImage(image);
+					}
 				}
 				// 表格类处理
 				// 表格类
@@ -146,12 +173,18 @@ public class PDFExportUtil {
 					//表格位置
 					int column = lists.get(0).size();
 					int row = lists.size();
-					// 计算总页数
-					totalPages = calculatePageable(row);
+					// 计算总页数(这是表格的总页数计算 不管其他
+					// 表格扩展页第一页属于原先总页数
+					int tablePage = calculatePageable(row);
+					if (tablePage>1){
+						// 表格产生页扩展 扩展到tablePage页
+						pageExtensionMap.put(page,tablePage);
+					}
+					totalPages += tablePage - 1;
 					Document document = new Document();
 
 					PdfPTable table = new PdfPTable(column);
-					table.setLockedWidth(false);
+					table.setLockedWidth(true);
 					// 是否让表格强制保持在一页内
 					table.setKeepTogether(true);
 					table.setSplitLate(false);
@@ -178,11 +211,14 @@ public class PDFExportUtil {
 //				table.set(true);
 					// 表内元素的字体
 					Font FontProve = new Font(bf, 10, 0);
+//					Font FontProve = new Font(bf);
 					// 双重循环 填写数据 表格数据填写
 					for (int i = 0; i < row; i++) {
 						List<String> list = lists.get(i);
 						for (int j = 0; j < column; j++) {
 							Paragraph paragraph = new Paragraph(String.valueOf(list.get(j)), FontProve);
+//							Paragraph paragraph = new Paragraph(String.valueOf(list.get(j)));
+//							Paragraph paragraph = new Paragraph(String.valueOf(list.get(j)), bf);
 							PdfPCell cell = new PdfPCell(paragraph);
 							// 设置表格宽度
 							cell.setBorderWidth(1);
@@ -197,30 +233,53 @@ public class PDFExportUtil {
 //					table.writeSelectedRows(0, -1, signRect.getLeft(), signRect.getTop(), pcb);
 //					PdfContentByte mypcf = new PdfContentByte(null);
 					// 表格写入，signRect仅仅标记位置
-					table.writeSelectedRows(0, -1, signRect.getLeft(), signRect.getTop(), pcb);
+//					table.writeSelectedRows(0, -1, signRect.getLeft(), signRect.getTop(), pcb);
 					// 判断表格一页还是多页
-					if (totalPages == 1) {
-						//获table页面
+					if (tablePage == 1) {
+						//获table页面 一页直接写入
 						PdfContentByte under = stamper.getOverContent(1);
 						//添加table
 						table.writeSelectedRows(0, -1, signRect.getLeft(), signRect.getTop(), under);
 
 					} else {
 						//目前模板中暂时解决分页方案 （动态增加空白模板填充值初始化给9个空白模板不包含收尾两个）
-						for (int i = 1; i <= totalPages; i++) {
+//						for (int i = 1; i <= totalPages; i++) {
+////							document.newPage();
+//							stamper.insertPage(i+1,PageSize.A4);
+//							// stamperNPE
+//							PdfContentByte under = stamper.getOverContent(i);
+//							if (i == 1) {
+//								//第一页显示9+头尾4条[)
+//								table.writeSelectedRows(0, onepagerow, signRect.getLeft(), signRect.getTop(), under);
+////								table.writeSelectedRows(0, 2, 60, 800, under);
+//							}
+//							//空白模板每页显示22条
+//							else {
+//								table.writeSelectedRows(onepagerow + towpagerow * (i - 2), onepagerow + towpagerow * (i - 1), 60, 800, under);
+//							}
+//						}
+						// stamper与bos[i]绑定 bos[i]代表相对位置的第几页
+						// 超出一页在某个bos 写入表格页数的新页面
+						for (int i = 1; i <= tablePage; i++) {
 //							document.newPage();
+							// 新插入的页 计算页码的相对位置 页面从1 开始 page是0 因此+1 这里会多一页
+							// todo 从page开始计算插入多少页
 							stamper.insertPage(i+1,PageSize.A4);
 							// stamperNPE
 							PdfContentByte under = stamper.getOverContent(i);
 							if (i == 1) {
-								//第一页显示9+头尾4条
+								//第一页显示9+头尾4条[)
 								table.writeSelectedRows(0, onepagerow, signRect.getLeft(), signRect.getTop(), under);
+//								table.writeSelectedRows(0, 2, 60, 800, under);
 							}
 							//空白模板每页显示22条
 							else {
+								// 只有新增才需要计算页码
+								// xPos 与pdf 模板的点位置对应
 								table.writeSelectedRows(onepagerow + towpagerow * (i - 2), onepagerow + towpagerow * (i - 1), 60, 800, under);
 							}
 						}
+
 					}
 				}
 				stamper.setFormFlattening(true);// 如果为false，生成的PDF文件可以编辑，如果为true，生成的PDF文件不可以编辑
@@ -231,7 +290,7 @@ public class PDFExportUtil {
 
 
 			// 新建文档
-			Document doc = new Document(PageSize.A4);
+//			Document doc = new Document(PageSize.A4);
 //			doc.setPageCount(2);
 //			Font font = new Font(bf, 32);
 //			// 添加有序列表
@@ -244,6 +303,9 @@ public class PDFExportUtil {
 
 			//用于保存原页面内容,然后输出
 			PdfCopy copy = new PdfCopy(doc, out);
+			PdfCopy.PageStamp pageStamp;
+//			copy.setPageEvent(new PDFPageHeadFootHelper(doc));
+
 //			PdfObject
 //			copy.addToBody()
 			doc.open();
@@ -253,20 +315,68 @@ public class PDFExportUtil {
 //				PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[i].toByteArray()), i+1);
 //				copy.addPage(importPage);
 //			}
-			if (totalPages>1){
-				for (int i = 0; i < totalPages; i++) {
-					PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[0].toByteArray()), i+1);
+//			if (totalPages>1){
+////				for (int i = 0; i < totalPages; i++) {
+////					PdfReader pdfReader = new PdfReader(bos[0].toByteArray());
+////					PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[0].toByteArray()), i+1);
+//////					importPage.setPageReference();
+////					copy.addPage(importPage);
+////				}
+////				for (int i = 1; i < numberOfPages; i++) {
+////					PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[i].toByteArray()), i+1);
+////					copy.addPage(importPage);
+////				}
+//			}else {
+//				for (int i = 0; i < numberOfPages; i++) {
+//					PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[i].toByteArray()), i+1);
+//					copy.addPage(importPage);
+//				}
+//			}
+
+
+//			PdfWriter pdfWriter = PdfWriter.getInstance(doc, out);
+//			pdfWriter.setPageEvent(new PDFPageHeadFootHelper(doc));
+
+			// 分页写入 考虑相对页面和页扩展
+			int absolutePageNumber = 1;
+			for (int i = 0; i < numberOfPages; i++) {
+				PdfReader pdfReader = new PdfReader(bos[i].toByteArray());
+				Integer nowPages = pageExtensionMap.get(i);
+				if (nowPages>1){
+					// 某页有扩展
+					for (int j = 0; j < nowPages; j++) {
+						// 写入的绝对位置 = i+j+1
+						PdfImportedPage importPage = copy.getImportedPage(pdfReader, i+j+1);
+//						PdfImportedPage importPage = copy.getImportedPage(pdfReader, absolutePageNumber++);
+						pageStamp = copy.createPageStamp(importPage);
+						ColumnText.showTextAligned(pageStamp.getUnderContent(), Element.ALIGN_CENTER,new Phrase(addText(String.format("第%d页，共%d页", absolutePageNumber, totalPages),FontChinese)),300f,16f,0f);//插入页码所需  不要页码可删除
+						pageStamp.alterContents();
+						copy.addPage(importPage);
+						absolutePageNumber++;
+					}
+				}
+				if (nowPages == 1){
+					// 只有一页直接写入 写入位置统计的绝对位置即可
+//					PdfImportedPage importPage = copy.getImportedPage(pdfReader, absolutePageNumber++);
+					// 相对写入
+					PdfImportedPage importPage = copy.getImportedPage(pdfReader, i+1);
+					pageStamp = copy.createPageStamp(importPage);
+					ColumnText.showTextAligned(pageStamp.getUnderContent(), Element.ALIGN_CENTER,new Phrase(addText(String.format("第%d页，共%d页", absolutePageNumber, totalPages),FontChinese)),300f,16f,0f);//插入页码所需  不要页码可删除
+					pageStamp.alterContents();
+//					absolutePageNumber++;
 					copy.addPage(importPage);
+					absolutePageNumber++;
 				}
 			}
-			for (int i = 0; i < numberOfPages; i++) {
-				PdfImportedPage importPage = copy.getImportedPage(new PdfReader(bos[i].toByteArray()), i+1);
-				copy.addPage(importPage);
+
+			if (doc.isOpen()){
+				doc.close();
 			}
 
-
-			doc.close();
 			out.close();
+//			getPdfPic(doc);
+
+
 
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -276,6 +386,141 @@ public class PDFExportUtil {
 			System.out.println(e);
 		}
 
+	}
+
+	private static Paragraph addText(String content, Font font) {
+		Paragraph paragraph = new Paragraph(content, font);
+		paragraph.setAlignment(Element.ALIGN_LEFT);
+		return paragraph;
+	}
+
+
+	/**
+	 * @Description pdf转成一张图片
+	 * @created 2019年4月19日 下午1:54:13
+	 * @param pdfFile
+	 * @param outpath
+	 */
+	private static void pdf2multiImage(String pdfFile, String outpath) {
+		try {
+			InputStream is = new FileInputStream(pdfFile);
+			PDDocument pdf = PDDocument.load(is);
+			int actSize  = pdf.getNumberOfPages();
+			List<BufferedImage> piclist = new ArrayList<BufferedImage>();
+			for (int i = 0; i < actSize; i++) {
+				BufferedImage  image = new PDFRenderer(pdf).renderImageWithDPI(i,130, ImageType.RGB);
+				piclist.add(image);
+			}
+			yPic(piclist, outpath);
+			is.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	private static void pdf2multiImage1(String pdfFile, String outpath) {
+		try {
+			InputStream is = new FileInputStream(pdfFile);
+			List<BufferedImage> piclist = new ArrayList<BufferedImage>();
+//			Document document = new Document();
+			org.icepdf.core.pobjects.Document document = new org.icepdf.core.pobjects.Document();
+			try {
+				document.setFile(pdfFile);
+			} catch (Exception ex) {
+			}
+			float scale = 2.5f;  //缩放比例
+			float rotation = 0f;  //旋转角度
+			for (int i = 0; i < document.getNumberOfPages(); i++) {
+				BufferedImage image = (BufferedImage)
+						document.getPageImage(i,GraphicsRenderingHints.SCREEN, Page.BOUNDARY_CROPBOX, rotation, scale);
+				piclist.add(image);
+			}
+			document.dispose();
+			yPic(piclist, outpath);
+			is.close();
+		} catch (IOException | InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+	private static void getPdfPic() throws PDFSecurityException, PDFException, IOException, InterruptedException {
+		String newPicPath = "D:\\Learning\\export\\myPdfPic1";
+		String pdfFile = "D:\\Learning\\export\\test44.pdf";
+		InputStream is = new FileInputStream(pdfFile);
+		// 转图片
+		org.icepdf.core.pobjects.Document doc = new org.icepdf.core.pobjects.Document();
+		doc.setFile(pdfFile);
+
+		List<BufferedImage> piclist = new ArrayList<>();
+		//缩放比例
+		float scale = 2.5f;
+		//旋转角度
+		float rotation = 0f;
+		for (int i = 0; i < doc.getNumberOfPages(); i++) {
+//			doc.getp
+			BufferedImage image = (BufferedImage)
+					doc.getPageImage(i, GraphicsRenderingHints.SCREEN, org.icepdf.core.pobjects.Page.BOUNDARY_CROPBOX, rotation, scale);
+//			RenderedImage rendImage = image;
+//			try {
+//				File fileDir = new File(path);
+//				if (!fileDir.exists()) {
+//					fileDir.mkdirs();
+//				}
+//				String imgName = fileName + i + ".png";
+//				File file = new File(path + imgName);
+//				ImageIO.write(rendImage, "png", file);
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
+
+//			image.flush();
+			piclist.add(image);
+		}
+		yPic(piclist,newPicPath);
+		is.close();
+	}
+
+	public static void yPic(List<BufferedImage> piclist, String outPath) {// 纵向处理图片
+		if (piclist == null || piclist.size() <= 0) {
+			System.out.println("图片数组为空!");
+			return;
+		}
+		try {
+			int height = 0, // 总高度
+					width = 0, // 总宽度
+					_height = 0, // 临时的高度 , 或保存偏移高度
+					__height = 0, // 临时的高度，主要保存每个高度
+					picNum = piclist.size();// 图片的数量
+			File fileImg = null; // 保存读取出的图片
+			int[] heightArray = new int[picNum]; // 保存每个文件的高度
+			BufferedImage buffer = null; // 保存图片流
+			List<int[]> imgRGB = new ArrayList<int[]>(); // 保存所有的图片的RGB
+			int[] _imgRGB; // 保存一张图片中的RGB数据
+			for (int i = 0; i < picNum; i++) {
+				buffer = piclist.get(i);
+				heightArray[i] = _height = buffer.getHeight();// 图片高度
+				if (i == 0) {
+					width = buffer.getWidth();// 图片宽度
+				}
+				height += _height; // 获取总高度
+				_imgRGB = new int[width * _height];// 从图片中读取RGB
+				_imgRGB = buffer.getRGB(0, 0, width, _height, _imgRGB, 0, width);
+				imgRGB.add(_imgRGB);
+			}
+			_height = 0; // 设置偏移高度为0
+			// 生成新图片
+			BufferedImage imageResult = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+			for (int i = 0; i < picNum; i++) {
+				__height = heightArray[i];
+				if (i != 0) _height += __height; // 计算偏移高度
+				imageResult.setRGB(0, _height, width, __height, imgRGB.get(i), 0, width); // 写入流中
+			}
+			File outFile = new File(outPath);
+			ImageIO.write(imageResult, "jpg", outFile);// 写图片
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -371,8 +616,14 @@ public class PDFExportUtil {
 		o.put("imgmap",map2);
 		o.put("tableList", listMap);
 		pdfout(o);
+//		getPdfPic();
+
 //		exportPDF(o);
 
 //		createPdf("D:\\Learning\\export\\testHtml.pdf");
+		String newPicPath = "D:\\Learning\\export\\myPdfPic1.jpg";
+		String pdfFile = "D:\\Learning\\export\\test44.pdf";
+//		pdf2multiImage(pdfFile,newPicPath);
+//		pdf2multiImage1(pdfFile,newPicPath);
 	}
 }

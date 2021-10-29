@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <style>
+        body {
+            font-family: 微软雅黑, Arial, sans-serif
+        }
+
+        p {
+            word-break: break-all;
+            color: royalblue;
+        }
+    </style>
+</head>
+<body style="font-family: 微软雅黑, Arial, sans-serif">
+<p style="text-align: center">xxxhetong</p>
+<p>合同编号：【{{contractNum}}】</p>
+<p>本合同由以下双方签署：</p>
+<p>甲 方：【{{partyA}}】</p>
+<p>联系人：【{{partyAContacts}}】</p>
+<p>单位：【{{partyACompany}}】</p>
+<p>电话：【{{partyAPhone}}】</p>
+<p>邮箱：【{{partyAEmail}}】</p>
+（本行以下无正文）
+<div>
+    甲方：
+    签约时间： 年 月 日
+</div>
+<div>
+    乙方：xxxxx
+    签约时间：2021 年 3 月1 日
+</div>
+<div style="margin-right: 20px">
+    <p>附件一：《xxx数据清单》</p>
+    <table>
+        <tr>
+            <th>名称</th>
+            <th>备注</th>
+        </tr>
+        {{#dataList}}
+        <tr>
+            <td>{{name}}</td>
+            <td> {{remark}}</td>
+        </tr>
+        {{/dataList}}
+    </table>
+</div>
+<div>
+    xxxxxxx
+    xxxxxxxx
+    <p>xxx：</p>
+    <p>xxx：</p>
+    <img loading="lazy" src="{{img}}" alt="Smiley face" width="60px" height="60px"/>
+    <p>附件一：</p>
+</div>
+
+
+</body>
+</html>

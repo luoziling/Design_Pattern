@@ -1,5 +1,6 @@
 package priv.wzb.itext;
 
+import com.google.common.io.CharStreams;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import com.itextpdf.tool.xml.Pipeline;
@@ -26,6 +27,7 @@ import org.icepdf.core.exceptions.PDFException;
 import org.icepdf.core.exceptions.PDFSecurityException;
 import org.icepdf.core.pobjects.Page;
 import org.icepdf.core.util.GraphicsRenderingHints;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.ResourceUtils;
 import sun.misc.BASE64Encoder;
 
@@ -49,6 +51,85 @@ public class PDFExportUtil {
 
 	private static Integer towpagerow = 22;
 //	public static final String HTML = "E:\\模板\\test.html";
+
+	public static void main(String[] args) throws Exception {
+		Map<String,Object> map = new HashMap();
+		map.put("name","李四");
+		map.put("createDate","2018年1月1日");
+		map.put("n1","晴朗");
+		map.put("a1","打羽毛球");
+		List<String> l1List = new ArrayList<>();
+		l1List.add("l11测试");
+		l1List.add("l12");
+		l1List.add("l13");
+		l1List.add("l14");
+		l1List.add("l15");
+		l1List.add("l16");
+		l1List.add("l17");
+		map.put("list_1",l1List);
+
+		//表格 一行数据是一个list
+		List<String> list = new ArrayList<String>();
+		list.add("客户名称");
+		list.add("销售");
+		list.add("商机编号");
+		list.add("商机额（万元）");
+		list.add("预计落单时间");
+		list.add("防守投入");
+		list.add("产品");
+		list.add("服务");
+		List<List<String>> List = new ArrayList<List<String>>();
+		List.add(list);
+//		List<List<String>> temp = new ArrayList<List<String>>();
+		Random rand = new Random(10000);
+		for (int i = 0; i < 100; i++) {
+			List<String> tempList = new ArrayList<>();
+			tempList.add(i+ "测试数据1" + rand.nextInt());
+			tempList.add(i+ "测试数据2" + rand.nextInt());
+			tempList.add(i+ "测试数据3" + rand.nextInt());
+			tempList.add(i+ "测试数据4" + rand.nextInt());
+			tempList.add(i+ "测试数据5" + rand.nextInt());
+			tempList.add(i+ "测试数据6" + rand.nextInt());
+			tempList.add(i+ "测试数据7" + rand.nextInt());
+			tempList.add(i+ "测试数据8" + rand.nextInt());
+			List.add(tempList);
+		}
+		Map<String, List<List<String>>> listMap = new HashMap<String, List<List<String>>>();
+		listMap.put("table", List);
+
+//		List<String> list2 = new ArrayList<String>();
+//		list2.add("2021-08-27");
+//		list2.add("100000");
+
+
+//		List.add(list2);
+//		list.addAll(temp);
+
+		Map<String,String> map2 = new HashMap();
+//		map2.put("img","D:\\Learning\\export\\1.jpg");
+		map2.put("img","D:\\Learning\\export\\1.jpg");
+
+		Map<String,Object> o=new HashMap();
+		o.put("datemap",map);
+		o.put("imgmap",map2);
+		o.put("tableList", listMap);
+//		pdfout(o);
+//		getPdfPic();
+
+//		exportPDF(o);
+		pdfoutHtml(o);
+
+//		createPdf("D:\\Learning\\export\\testHtml.pdf");
+		String newPicPath = "D:\\Learning\\export\\myPdfPic1.jpg";
+		String pdfFile = "D:\\Learning\\export\\test44.pdf";
+		String pdfFile2 = "D:\\Learning\\export\\testM12.pdf";
+		String newPicPath2 = "D:\\Learning\\export\\myPdfPic2.jpg";
+//		pdf2multiImage(pdfFile,newPicPath);
+		pdf2multiImage(pdfFile2,newPicPath2);
+//		pdf2multiImage1(pdfFile,newPicPath);
+	}
+
+
 	public static void exportPDF(Map<String,Object> o) throws Exception {
 		String templatePath = "D:\\Learning\\export\\test3.pdf";
 		// 生成的新文件路径
@@ -58,7 +139,11 @@ public class PDFExportUtil {
 //		PdfExportUtil.exportPdf(templatePath,o,out);
 	}
 
-	// 利用模板生成pdf
+	/**
+	 * 利用模板生成pdf
+	 * @param o 传入的数据对象
+	 * @throws FileNotFoundException
+	 */
 	public static void pdfout(Map<String,Object> o) throws FileNotFoundException {
 
 		// 模板路径
@@ -426,21 +511,23 @@ public class PDFExportUtil {
 
 
 	/**
-	 * @Description pdf转成一张图片
-	 * @created 2019年4月19日 下午1:54:13
+	 * pdf转成一张图片
 	 * @param pdfFile
 	 * @param outpath
 	 */
 	private static void pdf2multiImage(String pdfFile, String outpath) {
 		try {
+			// 读取文件 可自己将file改为inputStream
 			InputStream is = new FileInputStream(pdfFile);
 			PDDocument pdf = PDDocument.load(is);
 			int actSize  = pdf.getNumberOfPages();
+			// 转为image对象
 			List<BufferedImage> piclist = new ArrayList<BufferedImage>();
 			for (int i = 0; i < actSize; i++) {
-				BufferedImage  image = new PDFRenderer(pdf).renderImageWithDPI(i,130, ImageType.RGB);
+				BufferedImage image = new PDFRenderer(pdf).renderImageWithDPI(i,130, ImageType.RGB);
 				piclist.add(image);
 			}
+			// 图片输出
 			yPic(piclist, outpath);
 			is.close();
 		} catch (IOException e) {
@@ -508,46 +595,67 @@ public class PDFExportUtil {
 			piclist.add(image);
 		}
 		yPic(piclist,newPicPath);
+//		MyImage.yPic(piclist,newPicPath);
 		is.close();
 	}
 
-	public static void yPic(List<BufferedImage> piclist, String outPath) {// 纵向处理图片
+	/**
+	 * 纵向处理图片
+	 * @param piclist
+	 * @param outPath
+	 */
+	public static void yPic(List<BufferedImage> piclist, String outPath) {
 		if (piclist == null || piclist.size() <= 0) {
 			System.out.println("图片数组为空!");
 			return;
 		}
 		try {
-			int height = 0, // 总高度
-					width = 0, // 总宽度
-					_height = 0, // 临时的高度 , 或保存偏移高度
-					__height = 0, // 临时的高度，主要保存每个高度
+			int totalHeight = 0, // 总高度
+					totalWidth = 0, // 总宽度
+					offsetHeight = 0, // 临时的高度 , 或保存偏移高度
+					eachPicHeight = 0, // 临时的高度，主要保存每个高度
 					picNum = piclist.size();// 图片的数量
-			File fileImg = null; // 保存读取出的图片
-			int[] heightArray = new int[picNum]; // 保存每个文件的高度
-			BufferedImage buffer = null; // 保存图片流
-			List<int[]> imgRGB = new ArrayList<int[]>(); // 保存所有的图片的RGB
-			int[] _imgRGB; // 保存一张图片中的RGB数据
+			// 保存读取出的图片
+			File fileImg = null;
+			// 保存每个文件的高度
+			int[] heightArray = new int[picNum];
+			// 保存图片流
+			BufferedImage buffer = null;
+			// 保存所有的图片的RGB
+			List<int[]> imgRGB = new ArrayList<int[]>();
+			// 保存一张图片中的RGB数据
+			int[] imgRGBArray;
 			for (int i = 0; i < picNum; i++) {
 				buffer = piclist.get(i);
-				heightArray[i] = _height = buffer.getHeight();// 图片高度
+				// 图片高度
+				heightArray[i] = offsetHeight = buffer.getHeight();
 				if (i == 0) {
-					width = buffer.getWidth();// 图片宽度
+					// 图片宽度
+					totalWidth = buffer.getWidth();
 				}
-				height += _height; // 获取总高度
-				_imgRGB = new int[width * _height];// 从图片中读取RGB
-				_imgRGB = buffer.getRGB(0, 0, width, _height, _imgRGB, 0, width);
-				imgRGB.add(_imgRGB);
+				// 获取总高度
+				totalHeight += offsetHeight;
+				// 从图片中读取RGB
+				imgRGBArray = new int[totalWidth * offsetHeight];
+				imgRGBArray = buffer.getRGB(0, 0, totalWidth, offsetHeight, imgRGBArray, 0, totalWidth);
+				imgRGB.add(imgRGBArray);
 			}
-			_height = 0; // 设置偏移高度为0
+			// 设置偏移高度为0
+			offsetHeight = 0;
 			// 生成新图片
-			BufferedImage imageResult = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+			BufferedImage imageResult = new BufferedImage(totalWidth, totalHeight, BufferedImage.TYPE_INT_RGB);
 			for (int i = 0; i < picNum; i++) {
-				__height = heightArray[i];
-				if (i != 0) _height += __height; // 计算偏移高度
-				imageResult.setRGB(0, _height, width, __height, imgRGB.get(i), 0, width); // 写入流中
+				eachPicHeight = heightArray[i];
+				// 计算偏移高度
+				if (i != 0) {
+					offsetHeight += eachPicHeight;
+				}
+				// 写入流中
+				imageResult.setRGB(0, offsetHeight, totalWidth, eachPicHeight, imgRGB.get(i), 0, totalWidth);
 			}
 			File outFile = new File(outPath);
-			ImageIO.write(imageResult, "jpg", outFile);// 写图片
+			// 写图片
+			ImageIO.write(imageResult, "jpg", outFile);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -585,82 +693,12 @@ public class PDFExportUtil {
 		document.close();
 	}
 
-	public static void main(String[] args) throws Exception {
-		Map<String,Object> map = new HashMap();
-		map.put("name","李四");
-		map.put("createDate","2018年1月1日");
-		map.put("n1","晴朗");
-		map.put("a1","打羽毛球");
-		List<String> l1List = new ArrayList<>();
-		l1List.add("l11测试");
-		l1List.add("l12");
-		l1List.add("l13");
-		l1List.add("l14");
-		l1List.add("l15");
-		l1List.add("l16");
-		l1List.add("l17");
-		map.put("list_1",l1List);
 
-		//表格 一行数据是一个list
-		List<String> list = new ArrayList<String>();
-		list.add("客户名称");
-		list.add("销售");
-		list.add("商机编号");
-		list.add("商机额（万元）");
-		list.add("预计落单时间");
-		list.add("防守投入");
-		list.add("产品");
-		list.add("服务");
-		List<List<String>> List = new ArrayList<List<String>>();
-		List.add(list);
-//		List<List<String>> temp = new ArrayList<List<String>>();
-		Random rand = new Random(10000);
-		for (int i = 0; i < 100; i++) {
-			List<String> tempList = new ArrayList<>();
-			tempList.add(i+ "测试数据1" + rand.nextInt());
-			tempList.add(i+ "测试数据2" + rand.nextInt());
-			tempList.add(i+ "测试数据3" + rand.nextInt());
-			tempList.add(i+ "测试数据4" + rand.nextInt());
-			tempList.add(i+ "测试数据5" + rand.nextInt());
-			tempList.add(i+ "测试数据6" + rand.nextInt());
-			tempList.add(i+ "测试数据7" + rand.nextInt());
-			tempList.add(i+ "测试数据8" + rand.nextInt());
-			List.add(tempList);
-		}
-		Map<String, List<List<String>>> listMap = new HashMap<String, List<List<String>>>();
-		listMap.put("table", List);
-
-//		List<String> list2 = new ArrayList<String>();
-//		list2.add("2021-08-27");
-//		list2.add("100000");
-
-
-//		List.add(list2);
-//		list.addAll(temp);
-
-		Map<String,String> map2 = new HashMap();
-//		map2.put("img","D:\\Learning\\export\\1.jpg");
-		map2.put("img","D:\\Learning\\export\\1.jpg");
-
-		Map<String,Object> o=new HashMap();
-		o.put("datemap",map);
-		o.put("imgmap",map2);
-		o.put("tableList", listMap);
-//		pdfout(o);
-//		getPdfPic();
-
-//		exportPDF(o);
-		pdfoutHtml(o);
-
-//		createPdf("D:\\Learning\\export\\testHtml.pdf");
-		String newPicPath = "D:\\Learning\\export\\myPdfPic1.jpg";
-		String pdfFile = "D:\\Learning\\export\\test44.pdf";
-//		pdf2multiImage(pdfFile,newPicPath);
-//		pdf2multiImage1(pdfFile,newPicPath);
-	}
 
 	public static void pdfoutHtml(Map<String,Object> o) throws IOException, DocumentException {
+		// html 模板
 		String template = "template/mustache_template.html";
+		// 随便构造数据
 		Map<String, Object> dataMap = new HashMap<>();
 		dataMap.put("contractNum","1");
 		dataMap.put("partyA","2");
@@ -675,33 +713,40 @@ public class PDFExportUtil {
 		}
 		MyTable element = new MyTable("xcxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" + "name", "i" + "remark");
 		MyTable element1 = new MyTable("a" + "name", "i" + "remark");
+		MyTable element2 = new MyTable("测试a" + "name", "i" + "随机数据remark");
 		dataList.add(element);
 		dataList.add(element1);
+		dataList.add(element2);
 		dataMap.put("dataList",dataList);
+		// 图片转换方案
 		String imgpath = "D:\\Learning\\export\\1.jpg";
 		Image image = Image.getInstance(imgpath);
 		BASE64Encoder encoder = new BASE64Encoder();
 		byte[] imgData = null;
-		InputStream in = new FileInputStream(imgpath);
+		ClassPathResource picResource = new ClassPathResource("template/1.jpg");
+//		InputStream in = new FileInputStream(imgpath);
+		InputStream in = picResource.getInputStream();
 		imgData = new byte[in.available()];
 		in.read(imgData);
 
 		String encoded = Base64.getEncoder().encodeToString(imgData);
 		dataMap.put("img","data:image/png;base64,"+encoded);
 
-
-//		dataMap.put("img","data:image/jpeg;base64,"+encoder.encode(Objects.requireNonNull(imgData)));
-		// com.samskivert.mustache.MustacheException$Context: No method or field with name 'img' on line 55 所有字段都需对齐
-//		dataMap.put("img",encoder.encode(Objects.requireNonNull(imgData)));
-//		dataMap.put("img","data:image/png;base64,"+encoded);
-//		dataMap.put("img",imgpath);
-//		Mustache.TemplateLoader
-//		File file = ResourceUtils.getFile(template);
-//		file.toString()
-		cn.hutool.core.io.file.FileReader fileReader = new cn.hutool.core.io.file.FileReader(template);
-//		FileReader fileReader = new FileReader(template);
-		String result = fileReader.readString();
-		String htmlContent = Mustache.compiler().compile(result).execute(dataMap);
+		// Mustache 静态模板内容替换
+		ClassPathResource classPathResource = new ClassPathResource(template);
+		String templateString = "";
+		try {
+			InputStream inputStream = classPathResource.getInputStream();
+			templateString = CharStreams.toString(new InputStreamReader(inputStream, StandardCharsets.UTF_8));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// 使用ResourceUtil/FileReader 在服务器上都会出现路径错误问题 使用ClassPathResource解决
+//		cn.hutool.core.io.file.FileReader fileReader = new cn.hutool.core.io.file.FileReader(template);
+////		FileReader fileReader = new FileReader(template);
+//		String result = fileReader.readString();
+		// 组件替换
+		String htmlContent = Mustache.compiler().compile(templateString).execute(dataMap);
 		ByteArrayInputStream byteArrayInputStream = new ByteArrayInputStream(htmlContent.getBytes(StandardCharsets.UTF_8));
 
 		String newPDFPath = "D:\\Learning\\export\\testM12.pdf";
@@ -709,14 +754,15 @@ public class PDFExportUtil {
 		FileOutputStream fileOutputStream = new FileOutputStream(newPDFPath);
 		Document document = new Document();
 
+		// 简化版可利用xmlWorkerHelper直接转换，但是有bug例如图片显示/table分页
 //		PdfWriter pdfWriter = PdfWriter.getInstance(document, fileOutputStream);
 //		document.open();
 //		XMLWorkerHelper xmlWorkerHelper = XMLWorkerHelper.getInstance();
-////		xmlWorkerHelper.
 //		xmlWorkerHelper.parseXHtml(pdfWriter,document,byteArrayInputStream, StandardCharsets.UTF_8);
 //		document.close();
 
 //		html2pdf(htmlContent, fileOutputStream);
+		// 自定义转换 修复base64图片转换 table分页出错
 		html2pdf1(htmlContent, fileOutputStream);
 
 		in.close();
@@ -728,20 +774,33 @@ public class PDFExportUtil {
 //		mustache.execute(mustache,dataMap);
 
 	}
+
+	/**
+	 * 自定义内容转换
+	 * @param html html模板替换后的文本
+	 * @param fileOutputStream 输出流
+	 * @throws RuntimeException
+	 * @throws DocumentException
+	 * @throws IOException
+	 */
 	public static void html2pdf1(String html, FileOutputStream fileOutputStream) throws RuntimeException, DocumentException, IOException {
 		Document doc = new Document();
 		PdfWriter writer = PdfWriter.getInstance(doc, fileOutputStream);
 		// 添加页眉/页脚
-		PDFPageHeadFootHelper headFooter = new PDFPageHeadFootHelper(doc);
-		writer.setPageEvent(headFooter);
+//		PDFPageHeadFootHelper headFooter = new PDFPageHeadFootHelper(doc);
+//		writer.setPageEvent(headFooter);
 		doc.open();
 
 		// 主要自定义img标签处理机制，html中的img标签图片存放分两种：uri/base64的
 		final TagProcessorFactory tagProcessorFactory = Tags.getHtmlTagProcessorFactory();
 		tagProcessorFactory.removeProcessor(HTML.Tag.IMG);
+		tagProcessorFactory.removeProcessor(HTML.Tag.TABLE);
 		tagProcessorFactory.addProcessor(new ImageTagProcessor(), HTML.Tag.IMG);
+		tagProcessorFactory.addProcessor(new TableTagProcessor(), HTML.Tag.TABLE);
 		// 自定义
 		InputStream cssInputStream = XMLWorkerHelper.class.getResourceAsStream("/default.css");
+		// 可通过ClassPathResource 加载资源路径下的文件
+//		ClassPathResource classPathResource = new ClassPathResource("template/my.css");
 		CssFile css = getCSS(cssInputStream);
 		XMLWorkerFontProvider xmlWorkerFontProvider = new XMLWorkerFontProvider();
 
@@ -749,6 +808,7 @@ public class PDFExportUtil {
 		cssFiles.add(css);
 		StyleAttrCSSResolver cssResolver = new StyleAttrCSSResolver(cssFiles);
 		HtmlPipelineContext hpc = new HtmlPipelineContext(new CssAppliersImpl(xmlWorkerFontProvider));
+		// 特殊tag处理工厂
 		hpc.setAcceptUnknown(true).autoBookmark(true).setTagFactory(tagProcessorFactory).setResourcesRootPath(null);
 		HtmlPipeline htmlPipeline = new HtmlPipeline(hpc, new PdfWriterPipeline(doc, writer));
 		Pipeline<?> pipeline = new CssResolverPipeline(cssResolver, htmlPipeline);

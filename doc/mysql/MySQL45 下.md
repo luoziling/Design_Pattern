@@ -1934,6 +1934,546 @@ join优化
 - 基于临时表的改进方案，对于能够提前过滤出小数据的 join 语句来说，效果还是很好的；
 - MySQL 目前的版本还不支持 hash join，但你可以配合应用端自己模拟出来，理论上效果要好于临时表的方案。
 
+### 三表JOIN
+
+```mysql
+
+select * 
+from t1 join t2 on(t1.a=t2.a) 
+join t3 on (t2.b=t3.b) 
+where t1.c>=X and t2.c>=Y and t3.c>=Z;
+```
+
+-  尽可能走Batch key access 也就是借助Multi Range Read 优化过的NLJ算法
+- 根据where后的条件考虑那张表的记录最少
+  - 若t1最少则t1 t2 t3这么join 并且在t2.a以及t3.b上加索引
+  - 若t3 最少则 t3 t2 t1这么join并且在t2.b以及t1.a上加索引
+  - 若t2 最少则 t2 t1 t3 这么join 并且在t1.a和t3.b上加索引
+- **同时，我们还需要在第一个驱动表的字段 c 上创建索引。**
+  - 第一个驱动表join没用索引所以可以使用where后的索引
+- 总之，整体的思路就是，尽量让每一次参与 join 的驱动表的数据集，越小越好，因为这样我们的驱动表就会越小。
+
+
+
+## 36 | 为什么临时表可以重名？
+
+- 优化join查询用了临时表，临时表和内存表的区别：
+  - 内存表特指使用memory引擎的表`create table … engine=memory`数据在内存 系统重启内存清空，但是表结构还在
+  - 临时表支持其他引擎，数据存储在磁盘
+
+### 临时表的特性
+
+![](https://static001.geekbang.org/resource/image/3c/e3/3cbb2843ef9a84ee582330fb1bd0d6e3.png)
+
+- 临时表的建表语法create temporary table …
+- 临时表只能被同一个session访问
+- 临时表和普通表可以桶名
+- 同时存在临时表+普通表 增删改查优先走临时表
+- show tables不显示临时表
+
+由于临时表的session隔离+随着session结束而释放。临时表就特别适合我们文章开头的 join 优化这种场景
+
+### 临时表的应用
+
+临时表经常会被用在复杂查询的优化过程中。例如：分库分表
+
+一般分库分表的场景，就是要把一个逻辑上的大表分散到不同的数据库实例上。比如。将一个大表 ht，按照字段 f，拆分成 1024 个分表，然后分布到 32 个数据库实例上。如下图所示：
+
+![](https://static001.geekbang.org/resource/image/dd/81/ddb9c43526dfd9b9a3e6f8c153478181.jpg)
+
+- 客户端proxy一层在客户端做逻辑处理，而非数据库
+- 也有一些方案直连数据库完全在数据库层做分库分表的CRUD操作
+
+两个场景
+
+1. 由f做分库分表以及按f查询
+   - `select v from ht where f=N;` 直接定位到具体分库去查询 简单高效
+2. 按另一个索引k做查询
+   - 相对的复杂查询
+
+场景2的两个实现思路
+
+- 查出在proxy层做数据聚合
+  - proxy层压力大 
+  - 不好实现，复杂条件要自己实现
+- 在数据库完成
+  - 创建临时表，在某个分库创建
+  - 分别查询所需字段
+  - 存入临时表
+  - 对临时表做select并返回
+
+
+
+### 为什么临时表可以重名？
+
+不同线程可以创建同名的临时表，这是怎么做到的呢？
+
+```mysql
+
+create temporary table temp_t(id int primary key)engine=innodb;
+```
+
+innodb会把临时表放在临时文件目录下创建一个.frm文件
+
+- 5.6及之前还会创建.idb保存数据
+- 5.7及之后直接都放在.frm
+
+**这个 frm 文件放在临时文件目录下，文件名的后缀是.frm，前缀是“#sql{进程 id}_{线程 id}_ 序列号”**
+
+- 通过进程+线程确定唯一 临时表从而可以多线程同名
+
+![](https://static001.geekbang.org/resource/image/22/1b/22078eab5c7688c9fbfd6185555bd91b.png)
+
+- 一个普通表的 table_def_key 的值是由“库名 + 表名”得到的，所以如果你要在同一个库下创建两个同名的普通表，创建第二个表的过程中就会发现 table_def_key 已经存在了。
+- 而对于临时表，table_def_key 在“库名 + 表名”基础上，又加入了“server_id+thread_id”。
+- 在实现上，每个线程都维护了自己的临时表链表。这样每次 session 内操作表的时候，先遍历链表，检查是否有这个名字的临时表，如果有就优先操作临时表，如果没有再操作普通表；在 session 结束的时候，对链表里的每个临时表，执行 “DROP TEMPORARY TABLE + 表名”操作。
+
+这时候你会发现，binlog 中也记录了 DROP TEMPORARY TABLE 这条命令。你一定会觉得奇怪，临时表只在线程内自己可以访问，为什么需要写到 binlog 里面？
+
+这，就需要说到主备复制了。
+
+### 临时表和主备复制
+
+```mysql
+
+create table t_normal(id int primary key, c int)engine=innodb;/*Q1*/
+create temporary table temp_t like t_normal;/*Q2*/
+insert into temp_t values(1,1);/*Q3*/
+insert into t_normal select * from temp_t;/*Q4*/
+```
+
+确实是这样。如果当前的 binlog_format=row，那么跟临时表有关的语句，就不会记录到 binlog 里。也就是说，只在 binlog_format=statment/mixed 的时候，binlog 中才会记录临时表的操作。
+
+- 若临时表创建不记录，那么insert在备库执行就出错
+
+
+
+说到主备复制，还有另外一个问题需要解决：主库上不同的线程创建同名的临时表是没关系的，但是传到备库执行是怎么处理的呢？
+
+![](https://static001.geekbang.org/resource/image/74/ba/74e789024f10bcde515f21c0368847ba.png)
+
+MySQL 在记录 binlog 的时候，会把主库执行这个语句的线程 id 写到 binlog 中。这样，在备库的应用线程就能够知道执行每个语句的主库线程 id，并利用这个线程 id 来构造临时表的 table_def_key：
+
+- 通过进程+线程构建table_def_key来规避多session相同临时表问题
+
+
+
+### 小结
+
+- 内存表use memory临时表跨引擎 且数据到磁盘
+- 临时表挂在session下 随着session结束自动drop 
+- 临时表常用于分库分表下的数据聚合
+- 重名是不同session的重名
+- 临时表在非rows级别会记录binlog避免主备同步导致备库对临时表其他操作出错
+
+在实际应用中，临时表一般用于处理比较复杂的计算逻辑。由于临时表是每个线程自己可见的，所以不需要考虑多个线程执行同一个处理逻辑时，临时表的重名问题。在线程退出的时候，临时表也能自动删除，省去了收尾和异常处理的工作。
+
+**在 binlog_format='row’的时候，临时表的操作不记录到 binlog 中，也省去了不少麻烦**，这也可以成为你选择 binlog_format 时的一个考虑因素。
+
+- ROW级别的优势
+  - 记录详细 函数之类的也记录变更
+  - 不记录临时表
+- 
+
+### 为什么不能用 rename 修改临时表的改名
+
+- rename table修改库名/表名.frm 而临时表不符合这个规则，找不到文件出错
+- 临时表文件名的规则是“#sql{进程 id}_{线程 id}_ 序列号.frm”，因此会报“找不到文件名”的错误。
+
+
+
+## 37 | 什么时候会使用内部临时表？
+
+- sort buffer
+  - 用于排序，排序数据多余sort buffer 借助磁盘 filesort
+- 内存临时表
+  - 用于分组
+- join buffer
+  - NLJ/BNL 都会用到BNL用于分批次载入内存后匹配，NLJ用于二次回表，随机IO改为顺序IO 磁盘磁头移动
+
+
+
+### union执行流程
+
+```mysql
+
+create table t1(id int primary key, a int, b int, index(a));
+delimiter ;;
+create procedure idata()
+begin
+  declare i int;
+
+  set i=1;
+  while(i<=1000)do
+    insert into t1 values(i, i, i);
+    set i=i+1;
+  end while;
+end;;
+delimiter ;
+call idata();
+
+(select 1000 as f) union (select id from t1 order by id desc limit 2);
+```
+
+这条语句用到了 **union，它的语义是，取这两个子查询结果的并集**。并集的意思就是这两个集合加起来，重复的行只保留一行。
+
+![](https://static001.geekbang.org/resource/image/40/4e/402cbdef84eef8f1b42201c6ec4bad4e.png)
+
+- 第三行表示用临时表聚合
+
+执行流程
+
+- 创建临时表 主键f
+- 取1000入临时表
+- 取第二个自查询
+  - 1000已存在 跳过
+  - 其他入临时表
+- 从临时表取数据返回 并删除
+
+![](https://static001.geekbang.org/resource/image/5d/0e/5d038c1366d375cc997005a5d65c600e.jpg)
+
+- 注意：union all用不到去重也就不用临时表
+
+![](https://static001.geekbang.org/resource/image/c1/6d/c1e90d1d7417b484d566b95720fe3f6d.png)
+
+
+
+### group by 执行流程
+
+```mysql
+
+select id%10 as m, count(*) as c from t1 group by m;
+```
+
+![](https://static001.geekbang.org/resource/image/3d/98/3d1cb94589b6b3c4bb57b0bdfa385d98.png)
+
+- 利用临时表存储分组结果 并按照m排序输出
+- 临时表+文件排序
+- id和a都可取 索引所需id
+- 流程
+  - 就是map统计的过程
+  - 创建内存临时表，表里有两个字段 m 和 c，主键是 m；
+  - 扫描表 t1 的索引 a，依次取出叶子节点上的 id 值，计算 id%10 的结果，记为 x；
+    - 如果临时表中没有主键为 x 的行，就插入一个记录 (x,1);
+    - 如果表中有主键为 x 的行，就将 x 这一行的 c 值加 1；
+  - 遍历完成后，再根据字段 m 做排序，得到结果集返回给客户端。
+
+![](https://static001.geekbang.org/resource/image/03/54/0399382169faf50fc1b354099af71954.jpg)
+
+
+
+![](https://static001.geekbang.org/resource/image/b5/68/b5168d201f5a89de3b424ede2ebf3d68.jpg)
+
+如果你的需求并不需要对结果进行排序，那你可以在 SQL 语句末尾增加 order by null，也就是改成：
+
+```mysql
+
+select id%10 as m, count(*) as c from t1 group by m order by null;
+```
+
+这个例子里由于临时表只有 10 行，内存可以放得下，因此全程只使用了内存临时表。但是，内存临时表的大小是有限制的，参数 tmp_table_size 就是控制这个内存大小的，默认是 16M。
+
+- 内存临时表有大小限制
+- 超出限制转为磁盘临时表
+
+### group by 优化方法 -- 索引
+
+要解决 group by 语句的优化问题，你可以先想一下这个问题：执行 group by 语句为什么需要临时表？
+
+group by 的语义逻辑，是统计不同的值出现的个数。但是，由于每一行的 id%100 的结果是无序的，所以我们就需要有一个临时表，来记录并统计结果。
+
+你一定想到了，InnoDB 的索引，就可以满足这个输入有序的条件。
+
+- 利用索引优化无序需借助临时表实现有序排列统计的group by
+
+在 MySQL 5.7 版本支持了 generated column 机制，用来实现列数据的关联更新。你可以用下面的方法创建一个列 z，然后在 z 列上创建一个索引（如果是 MySQL 5.6 及之前的版本，你也可以创建普通列和索引，来解决这个问题）。
+
+```mysql
+
+alter table t1 add column z int generated always as(id % 100), add index(z);
+
+select z, count(*) as c from t1 group by z;
+```
+
+![](https://static001.geekbang.org/resource/image/c9/b9/c9f88fa42d92cf7dde78fca26c4798b9.png)
+
+### group by 优化方法 -- 直接排序
+
+那么，我们就会想了，MySQL 有没有让我们直接走磁盘临时表的方法呢？
+
+- 在 group by 语句中加入 SQL_BIG_RESULT 这个提示（hint），就可以告诉优化器：这个语句涉及的数据量很大，请直接用磁盘临时表。
+
+```mysql
+
+select SQL_BIG_RESULT id%100 as m, count(*) as c from t1 group by m;
+```
+
+1. 初始化 sort_buffer，确定放入一个整型字段，记为 m；
+2. 扫描表 t1 的索引 a，依次取出里面的 id 值, 将 id%100 的值存入 sort_buffer 中；
+3. 扫描完成后，对 sort_buffer 的字段 m 做排序（如果 sort_buffer 内存不够用，就会利用磁盘临时文件辅助排序）；
+4. 排序完成后，就得到了一个有序数组。
+
+![](https://static001.geekbang.org/resource/image/82/6a/8269dc6206a7ef20cb515c23df0b846a.jpg)
+
+![](https://static001.geekbang.org/resource/image/83/ec/83b6cd6b3e37dfbf9699cf0ccc0f1bec.png)
+
+### 小结
+
+**MySQL为什么使用内存临时表**
+
+- union
+  - 内存临时表+临时表主键约束来实现union的去重语义
+- group by
+  - 临时表来实现group by的统计不重复出现次数的语义，用临时表排序加快map的统计
+- 如果语句执行过程可以一边读数据，一边直接得到结果，是不需要额外内存的，否则就需要额外的内存，来保存中间结果；
+- join_buffer 是无序数组，sort_buffer 是有序数组，临时表是二维表结构；
+- 如果执行逻辑需要用到二维表特性，就会优先考虑使用临时表。比如我们的例子中，union 需要用到唯一索引约束， group by 还需要用到另外一个字段来存累积计数。
+
+通过今天这篇文章，我重点和你讲了 group by 的几种实现算法，从中可以总结一些使用的指导原则：
+
+- 如果对 group by 语句的结果没有排序要求，要在语句后面加 order by null；
+- 尽量让 group by 过程用上表的索引，确认方法是 explain 结果里没有 Using temporary 和 Using filesort；
+- 如果 group by 需要统计的数据量不大，尽量只使用内存临时表；也可以通过适当调大 tmp_table_size 参数，来避免用到磁盘临时表；
+- 如果数据量实在太大，使用 SQL_BIG_RESULT 这个提示，来告诉优化器直接使用排序算法得到 group by 的结果。
+
+
+
+- group by无排序就order by null 取消排序 加快查询
+- group by后字段加索引避免using temporary/filesort 加快查询
+- 尽可能使用内存临时表提高tmp_table_size 大小
+- 若结果集过大就一开始指定SQL_BIG_RESULT  用磁盘临时表
+
+
+
+## 38 | 都说InnoDB好，那还要不要使用Memory引擎？
+
+> 我在上一篇文章末尾留给你的问题是：两个 group by 语句都用了 order by null，为什么使用内存临时表得到的语句结果里，0 这个值在最后一行；而使用磁盘临时表得到的结果里，0 这个值在第一行？
+
+### 内存表的数据组织结构
+
+创建两表，使用不同存储引擎分别构成普通表和内存表
+
+```mysql
+
+create table t1(id int primary key, c int) engine=Memory;
+create table t2(id int primary key, c int) engine=innodb;
+insert into t1 values(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(0,0);
+insert into t2 values(1,1),(2,2),(3,3),(4,4),(5,5),(6,6),(7,7),(8,8),(9,9),(0,0);
+```
+
+![](https://static001.geekbang.org/resource/image/3f/e6/3fb1100b6e3390357d4efff0ba4765e6.png?wh=599*330)
+
+**memory引擎和innodb引擎主键索引的区别**
+
+- innodb 引擎用的聚簇索引，数据在主键索引上
+- memory引擎主键是hash索引，主键存储数据的位置
+
+可见，InnoDB 和 Memory 引擎的数据组织方式是不同的：
+
+- InnoDB 引擎把数据放在主键索引上，其他索引上保存的是主键 id。这种方式，我们称之为索引组织表（Index Organizied Table）。
+- 而 Memory 引擎采用的是把数据单独存放，索引上保存数据位置的数据组织形式，我们称之为堆组织表（Heap Organizied Table）。
+
+**存储引擎的区别**
+
+- innodb有序存放 内存表按写入顺序
+- 数据空洞时 innodb会保证有序性在指定位置插入 而 内存表是有空位即可插入
+- 数据位置改变innodb改变主键，而内存表需要修改所有索引
+- innodb表用主键索引值走一次否则两次，内存表都是两次
+- innodb支持变长数据类型，memory即使varchar也是记录char 因此长度相等
+- 
+
+### hash 索引和 B-Tree 索引
+
+实际上，内存表也是支持 B-Tree 索引的。在 id 列上创建一个 B-Tree 索引，SQL 语句可以这么写：
+
+```mysql
+
+alter table t1 add index a_btree_index using btree (id);
+```
+
+![](https://static001.geekbang.org/resource/image/17/e3/1788deca56cb83c114d8353c92e3bde3.jpg?wh=1142*880)
+
+
+
+![](https://static001.geekbang.org/resource/image/a8/8a/a85808fcccab24911d257d720550328a.png?wh=641*540)
+
+- 根据索引选择不同导致结果不同
+
+但是，接下来我要跟你说明，为什么我不建议你在生产环境上使用内存表。这里的原因主要包括两个方面：
+
+- 锁粒度
+- 数据持久化
+
+### 内存表的锁
+
+内存表不支持行锁，只支持表锁。因此，一张表只要有更新，就会堵住其他所有在这个表上的读写操作。
+
+
+
+### 数据持久性问题
+
+内存表数据重启后就被清空
+
+但是，接下来内存表的这个特性就会让使用现象显得更“诡异”了。由于 MySQL 知道重启之后，内存表的数据会丢失。所以，担心主库重启之后，出现主备不一致，MySQL 在实现上做了这样一件事儿：在数据库重启之后，往 binlog 里面写入一行 DELETE FROM t1。
+
+数据持久化问题
+
+- 并发度考虑，行锁粒度更小 更应该考虑
+- 读性能问题，由于innodb buffer pool+特殊的LRU淘汰机制，正常的业务运行也不会慢
+
+**我建议你把普通内存表都用 InnoDB 表来代替**
+
+- 但是临时表场景可改为内存表 在数据量可控，不会耗费过多内存的情况下，你可以考虑使用内存表。
+- 临时表的优势
+  - 不会被其他线程访问，没有并发问题
+  - 临时表重启后也需要删除
+  - 备库临时表不影响主库用户线程
+- 
+
+### 小结
+
+- 由同一查询语句在不同存储引擎的表中查出数据不同引出两种引擎的区别
+- memory引擎默认hash索引，索引存储数据位置需要二次查找，不支持行锁，不支持范围查询 需手动更换为b-tree，从锁粒度和QPS考虑都可以使用innodb引擎
+- 内存表服务重启内存清空后数据就消失，没有持久化机制，在主从环境中还会同步到其他节点，不建议使用内存表，感觉可以使用redis代替
+
+可以看到，由于重启会丢数据，如果一个备库重启，会导致主备同步线程停止；如果主库跟这个备库是双 M 架构，还可能导致主库的内存表数据被删掉。
+
+如果你是 DBA，可以在建表的审核系统中增加这类规则，要求业务改用 InnoDB 表。我们在文中也分析了，其实 InnoDB 表性能还不错，而且数据安全也有保障。而内存表由于不支持行锁，更新语句会阻塞查询，性能也未必就如想象中那么好。
+
+### 维护的 MySQL 系统里有内存表，怎么避免内存表突然丢数据
+
+```mysql
+
+set sql_log_bin=off;
+alter table tbl_name engine=innodb;
+```
+
+所以，如果我们不能直接修改主库上的表引擎，可以配置一个自动巡检的工具，在备库上发现内存表就把引擎改了。
+
+- 自动切换导致数据丢失
+
+
+
+## 39 | 自增主键为什么不是连续的？
+
+> 在第 4 篇文章中，我们提到过自增主键，由于自增主键可以让主键索引尽量地保持递增顺序插入，避免了页分裂，因此索引更紧凑。
+>
+> 今天这篇文章，我们就来说说这个问题，看看什么情况下自增主键会出现 “空洞”？
+
+```mysql
+
+CREATE TABLE `t` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `c` int(11) DEFAULT NULL,
+  `d` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `c` (`c`)
+) ENGINE=InnoDB;
+
+```
+
+### 自增值保存在哪儿？
+
+在这个空表 t 里面执行 insert into t values(null, 1, 1); 插入一行数据，再执行 show create table 命令，就可以看到如下图所示的结果：
+
+![](https://static001.geekbang.org/resource/image/cb/ff/cb2637cada0201b18650f56875e94fff.png)
+
+其实，这个输出结果容易引起这样的误解：自增值是保存在表结构定义里的。**实际上，表的结构定义存放在后缀名为.frm 的文件中，但是并不会保存自增值。**
+
+- myisam引擎存储在数据文件
+- innodb存储在内存 重启后消失 8.0后支持持久化和重启恢复
+  - 5.7及之前重启后寻找max(id)+1作为当前自增值
+  - 8.0之后记录在redo log,以靠redo log实现自增值恢复，redo log 还用于常见的crash safe 若存在也损坏则与double write buffer配合先修复损坏的页再应用redo log完整恢复数据
+
+### 自增值修改机制
+
+在 MySQL 里面，如果字段 id 被定义为 AUTO_INCREMENT，在插入一行数据的时候，自增值的行为如下：
+
+- 如果插入数据时 id 字段指定为 0、null 或未指定值，那么就把这个表当前的 AUTO_INCREMENT 值填到自增字段；
+  - 必须结合sql_mode中一个值NO_AUTO_VALUE_ON_ZERO来判断，如果sql_mode中的有该值，则插入数据id=0时，就是0，而不是auto_increment的值了。具体的NO_AUTO_VALUE_ON_ZERO值介绍见官方文档：https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html
+  - 0在8.0之后的默认设置就是插入0不会应用自增
+- 如果插入数据时 id 字段指定了具体的值，就直接使用语句里指定的值。
+
+根据要插入的值和当前自增值的大小关系，自增值的变更结果也会有所不同。假设，某次要插入的值是 X，当前的自增值是 Y。
+
+- X<Y不更新自增值
+- X>=Y取Max(X,Y)
+
+新的自增值生成算法是：从 auto_increment_offset 开始，以 auto_increment_increment 为步长，持续叠加，直到找到第一个大于 X 的值，作为新的自增值。
+
+
+
+### 自增值的修改时机
+
+```mysql
+
+insert into t values(null, 1, 1); 
+```
+
+- 执行器调用innodb存储引擎写入一行
+- 发现没有id则获取自增值2
+- id传入完整insert语句
+- 修改自增值
+- 数据插入
+
+![](https://static001.geekbang.org/resource/image/f1/d3/f16d89a6e7ad6e2cde13b32bb2292dd3.jpg)
+
+![](https://static001.geekbang.org/resource/image/77/26/77b87820b649692a555f19b562d5d926.png)
+
+由于以下两种清空导致自增值不连续
+
+- 主键冲突
+- 事务回滚
+
+为什么MySQL插入失败不回滚
+
+- 自增值的申请也会加锁但是释放较快
+- 若多事务并行处理，其中一个回滚，导致自增值回滚，那么之后事务申请到的自增值与当前最大自增值就产生不一致，解决方案：其实就是多线程并发问题增多共享资源自增值，可通过CAS/加锁解决
+  - 每次申请判断表内是否存在自增值，存在则跳过 CAS
+  - 锁范围扩大，等待事务提交才执行下一个
+- 上述两个方案导致性能降低
+
+### 自增锁的优化
+
+可以看到，自增 id 锁并不是一个事务锁，而是每次申请完就马上释放，以便允许别的事务再申请。其实，在 MySQL 5.1 版本之前，并不是这样的。
+
+MySQL 5.1.22 版本引入了一个新策略，新增参数 innodb_autoinc_lock_mode，默认值是 1。
+
+- 这个参数的值被设置为 0 时，表示采用之前 MySQL 5.0 版本的策略，即语句执行结束后才释放锁；
+- 这个参数的值被设置为 1 时：
+  - 普通 insert 语句，自增锁在申请之后就马上释放；
+  - 类似 insert … select 这样的批量插入数据的语句，自增锁还是要等语句结束后才被释放；
+  - values多个会当做普通语句申请多个，若insert不确定才要加锁
+- 这个参数的值被设置为 2 时，所有的申请自增主键的动作都是申请后就释放锁。
+
+为什么默认设置下，insert … select 要使用语句级的锁？为什么这个参数的默认值不是 2？
+
+- insert … select 不使用语句级锁导致数据以statement的binlog同步后产生主键id不一致
+
+解决思路
+
+- 一种思路是，让原库的批量插入数据语句，固定生成连续的 id 值。所以，自增锁直到语句执行结束才释放，就是为了达到这个目的。
+- 另一种思路是，在 binlog 里面把插入数据的操作都如实记录进来，到备库执行的时候，不再依赖于自增主键去生成。这种情况，其实就是 innodb_autoinc_lock_mode 设置为 2，同时 binlog_format 设置为 row。
+
+**因此，在生产上，尤其是有 insert … select 这种批量插入数据的场景时，从并发插入数据性能的角度考虑，我建议你这样设置：innodb_autoinc_lock_mode=2 ，并且 binlog_format=row. 这样做，既能提升并发性，又不会出现数据一致性问题。**
+
+**主键 id 出现自增 id 不连续的三种原因。**
+
+- 主键冲突
+- 事务回滚
+- insert..select 分批次申请 申请过多后产生的间隙
+
+### 小结
+
+- innodb8.0之前保存在内存，8.0之后进入redo log方便重启恢复
+- 自增值在插入之前就会获取并修改，修改为当前自增值+步长，默认步长是1
+- 自增锁推荐使用2 即 批量插入才会加锁 减小锁粒度，每次申请自增值斗要获取锁，锁释放时机根据配置不同，设置为2+row级别可提高性能+保证数据同步数据一致性
+- id三种出现不一致的情况：主键冲突、事务回滚、批量插入申请过多浪费
+
+MySQL 5.1.22 版本开始引入的参数 innodb_autoinc_lock_mode，控制了自增值申请时的锁范围。从并发性能的角度考虑，我建议你将其设置为 2，同时将 binlog_format 设置为 row。我在前面的文章中其实多次提到，binlog_format 设置为 row，是很有必要的。今天的例子给这个结论多了一个理由。
+
+
+
 
 
 ## 40 | insert语句的锁为什么这么多？
@@ -2055,3 +2595,275 @@ insert into t(c,d)  (select c+1, d from t force index(c) order by c desc limit 1
 - insert循环写入 需要引入临时表来加快否则全表扫描加锁
 - insert唯一冲突会加共享的next-key lock 死锁检测后及时回滚事务
 
+
+
+
+
+
+
+## 41 | 怎么最快地复制一张表？
+
+我在上一篇文章最后，给你留下的问题是怎么在两张表中拷贝数据。如果可以控制对源表的扫描行数和加锁范围很小的话，我们简单地使用 insert … select 语句即可实现。
+
+```mysql
+
+create database db1;
+use db1;
+
+create table t(id int primary key, a int, b int, index(a))engine=innodb;
+delimiter ;;
+  create procedure idata()
+  begin
+    declare i int;
+    set i=1;
+    while(i<=1000)do
+      insert into t values(i,i,i);
+      set i=i+1;
+    end while;
+  end;;
+delimiter ;
+call idata();
+
+create database db2;
+create table db2.t like db1.t
+```
+
+假设，我们要把 db1.t 里面 a>900 的数据行导出来，插入到 db2.t 中。
+
+### mysqldump 方法
+
+```mysql
+
+mysqldump -h$host -P$port -u$user --add-locks=0 --no-create-info --single-transaction  --set-gtid-purged=OFF db1 t --where="a>900" --result-file=/client_tmp/t.sql
+```
+
+![](https://static001.geekbang.org/resource/image/8a/de/8acdcefcaf5c9940570bf7e8f73dbdde.png)
+
+
+
+- 支持where 导出部分数据 支持表结构导出
+- 可以看到，一条 INSERT 语句里面会包含多个 value 对，这是为了后续用这个文件来写入数据的时候，执行速度可以更快。
+
+```mysql
+
+mysql -h127.0.0.1 -P13000  -uroot db2 -e "source /client_tmp/t.sql"
+```
+
+复制数据
+
+- binlog记录insert
+
+### 导出 CSV 文件
+
+```mysql
+
+select * from db1.t where a>900 into outfile '/server_tmp/t.csv';
+```
+
+- 这条语句会将结果保存在服务端。如果你执行命令的客户端和 MySQL 服务端不在同一个机器上，客户端机器的临时目录下是不会生成 t.csv 文件的。
+- into outfile 指定了文件的生成位置（/server_tmp/），这个位置必须受参数 secure_file_priv 的限制。参数 secure_file_priv 的可选值和作用分别是：
+  - 如果设置为 empty，表示不限制文件生成的位置，这是不安全的设置；
+  - 如果设置为一个表示路径的字符串，就要求生成的文件只能放在这个指定的目录，或者它的子目录；
+  - 如果设置为 NULL，就表示禁止在这个 MySQL 实例上执行 select … into outfile 操作。
+- 这条命令不会帮你覆盖文件，因此你需要确保 /server_tmp/t.csv 这个文件不存在，否则执行语句时就会因为有同名文件的存在而报错。
+- 这条命令生成的文本文件中，原则上一个数据行对应文本文件的一行。但是，如果字段中包含换行符，在生成的文本中也会有换行符。不过类似换行符、制表符这类符号，前面都会跟上“\”这个转义符，这样就可以跟字段之间、数据行之间的分隔符区分开。
+
+**数据恢复**
+
+```mysql
+
+load data infile '/server_tmp/t.csv' into table db2.t;
+```
+
+- 打开文件 /server_tmp/t.csv，以制表符 (\t) 作为字段间的分隔符，以换行符（\n）作为记录之间的分隔符，进行数据读取；
+- 启动事务。
+- 判断每一行的字段数与表 db2.t 是否相同：
+  - 若不相同，则直接报错，事务回滚；
+  - 若相同，则构造成一行，调用 InnoDB 引擎接口，写入到表中。
+- 重复步骤 3，直到 /server_tmp/t.csv 整个文件读入完成，提交事务。
+
+如果 binlog_format=statement，这个 load 语句记录到 binlog 里以后，怎么在备库重放呢？
+
+- 将csv记录到binlog ，另一侧生成零时文件再重放
+
+![](https://static001.geekbang.org/resource/image/3a/fd/3a6790bc933af5ac45a75deba0f52cfd.jpg)
+
+注意，这里备库执行的 load data 语句里面，多了一个“local”。它的意思是“将执行这条命令的客户端所在机器的本地文件 /tmp/SQL_LOAD_MB-1-0 的内容，加载到目标表 db2.t 中”。
+
+load data 命令有两种用法
+
+- 不加“local”，是读取服务端的文件，这个文件必须在 secure_file_priv 指定的目录或子目录下；
+- 加上“local”，读取的是客户端的文件，只要 mysql 客户端有访问这个文件的权限即可。这时候，MySQL 客户端会先把本地文件传给服务端，然后执行上述的 load data 流程。
+
+另外需要注意的是，select …into outfile 方法不会生成表结构文件, 所以我们导数据时还需要单独的命令得到表结构定义。mysqldump 提供了一个–tab 参数，可以同时导出表结构定义文件和 csv 数据文件。这条命令的使用方法如下：
+
+```mysql
+
+mysqldump -h$host -P$port -u$user ---single-transaction  --set-gtid-purged=OFF db1 t --where="a>900" --tab=$secure_file_priv
+```
+
+### 物理拷贝方法
+
+前面我们提到的 mysqldump 方法和导出 CSV 文件的方法，都是逻辑导数据的方法，也就是将数据从表 db1.t 中读出来，生成文本，然后再写入目标表 db2.t 中。
+
+不过，在 MySQL 5.6 版本引入了可传输表空间(transportable tablespace) 的方法，可以通过导出 + 导入表空间的方式，实现物理拷贝表的功能。
+
+- 执行 create table r like t，创建一个相同表结构的空表；
+- 执行 alter table r discard tablespace，这时候 r.ibd 文件会被删除；
+- 执行 flush table t for export，这时候 db1 目录下会生成一个 t.cfg 文件；
+- 在 db1 目录下执行 cp t.cfg r.cfg; cp t.ibd r.ibd；这两个命令（这里需要注意的是，拷贝得到的两个文件，MySQL 进程要有读写权限）；
+- 执行 unlock tables，这时候 t.cfg 文件会被删除；
+- 执行 alter table r import tablespace，将这个 r.ibd 文件作为表 r 的新的表空间，由于这个文件的数据内容和 t.ibd 是相同的，所以表 r 中就有了和表 t 相同的数据。
+
+![](https://static001.geekbang.org/resource/image/ba/a7/ba1ced43eed4a55d49435c062fee21a7.jpg)
+
+- 在第 3 步执行完 flsuh table 命令之后，db1.t 整个表处于只读状态，直到执行 unlock tables 命令后才释放读锁；
+- 在执行 import tablespace 的时候，为了让文件里的表空间 id 和数据字典中的一致，会修改 r.ibd 的表空间 id。而这个表空间 id 存在于每一个数据页中。因此，如果是一个很大的文件（比如 TB 级别），每个数据页都需要修改，所以你会看到这个 import 语句的执行是需要一些时间的。当然，如果是相比于逻辑导入的方法，import 语句的耗时是非常短的。
+
+### 小结
+
+- dump支持表结构导出，无法用inner join binlog记录insert批量插入语句
+- csv 查询更灵活 无法导出结构，文件传输tmp load
+- 物理结构导出更快，但限制更多，单表、登录服务器、引擎一样
+
+物理拷贝的方式速度最快，尤其对于大表拷贝来说是最快的方法。如果出现误删表的情况，用备份恢复出误删之前的临时库，然后再把临时库中的表拷贝到生产库上，是恢复数据最快的方法。但是，这种方法的使用也有一定的局限性：
+
+- 必须是全表拷贝，不能只拷贝部分数据；
+- 需要到服务器上拷贝数据，在用户无法登录数据库主机的场景下无法使用；
+- 由于是通过拷贝物理文件实现的，源表和目标表都是使用 InnoDB 引擎时才能使用。
+
+用 mysqldump 生成包含 INSERT 语句文件的方法，可以在 where 参数增加过滤条件，来实现只导出部分数据。这个方式的不足之一是，不能使用 join 这种比较复杂的 where 条件写法。
+
+用 select … into outfile 的方法是最灵活的，支持所有的 SQL 写法。但，这个方法的缺点之一就是，每次只能导出一张表的数据，而且表结构也需要另外的语句单独备份。
+
+
+
+### 问题
+
+MySQL 解析 statement 格式的 binlog 的时候，对于 load data 命令，解析出来为什么用的是 load data local。
+
+- 为了从本地重新构建的临时文件获取数据
+
+- 这样做的一个原因是，为了确保备库应用 binlog 正常。因为备库可能配置了 secure_file_priv=null，所以如果不用 local 的话，可能会导入失败，造成主备同步延迟。
+
+- 另一种应用场景是使用 mysqlbinlog 工具解析 binlog 文件，并应用到目标库的情况。你可以使用下面这条命令 ：
+
+- ```mysql
+  
+  mysqlbinlog $binlog_file | mysql -h$host -P$port -u$user -p$pwd
+  ```
+
+- 把日志直接解析出来发给目标库执行。增加 local，就能让这个方法支持非本地的 $host。
+
+
+
+## 42 | grant之后要跟着flush privileges吗？
+
+> 在 MySQL 里面，grant 语句是用来给用户赋权的。不知道你有没有见过一些操作文档里面提到，grant 之后要马上跟着执行一个 flush privileges 命令，才能使赋权语句生效。我最开始使用 MySQL 的时候，就是照着一个操作文档的说明按照这个顺序操作的。
+
+```mysql
+
+create user 'ua'@'%' identified by 'pa';
+```
+
+- 创建用户ua host是`%` 密码是pa
+- 两步操作 磁盘录入+内存更新
+  - 磁盘上，往 mysql.user 表里插入一行，由于没有指定权限，所以这行数据上所有表示权限的字段的值都是 N；
+  - 内存里，往数组 acl_users 里插入一个 acl_user 对象，这个对象的 access 字段值为 0。
+- 
+
+![](https://static001.geekbang.org/resource/image/7e/35/7e75bbfbca0cb932e1256941c99d5f35.png)
+
+### 全局权限
+
+```mysql
+
+grant all privileges on *.* to 'ua'@'%' with grant option;
+```
+
+- `*.*`第一个代表数据库第二个代表 表
+- 给某个用户所有权限
+- 执行动作
+  - 磁盘上，将 mysql.user 表里，用户’ua’@’%'这一行的所有表示权限的字段的值都修改为‘Y’；
+  - 内存里，从数组 acl_users 中找到这个用户对应的对象，将 access 值（权限位）修改为二进制的“全 1”。
+- 用户登录拷贝全局权限到线程中，类似JMM 线程数据私有 
+- grant 命令对于全局权限，同时更新了磁盘和内存。命令完成后即时生效，接下来新创建的连接会使用新的权限。
+- 对于一个已经存在的连接，它的全局权限不受 grant 命令的影响。
+- 需要说明的是，一般在生产环境上要合理控制用户权限的范围。
+
+```mysql
+
+revoke all privileges on *.* from 'ua'@'%';
+```
+
+revoke的动作
+
+- 磁盘上，将 mysql.user 表里，用户’ua’@’%'这一行的所有表示权限的字段的值都修改为“N”；
+- 内存里，从数组 acl_users 中找到这个用户对应的对象，将 access 的值修改为 0。
+
+### db 权限
+
+```mysql
+
+grant all privileges on db1.* to 'ua'@'%' with grant option;
+```
+
+![](https://static001.geekbang.org/resource/image/32/2e/32cd61ee14ad2f370e1de0fb4e39bb2e.png)
+
+- Db标识出只有db1受ua控制
+
+![](https://static001.geekbang.org/resource/image/ae/c7/aea26807c8895961b666a5d96b081ac7.png)
+
+- T3回收后 t4仍可执行是因为线程问题，在连接时获取权限未被刷新
+- t6拒绝是因为没有选择特定db那么对库的操作需重新获取
+- t6 sessionC成功是因为 连接后马上选择了库获取了权限但未被刷新
+
+### 表权限和列权限
+
+除了 db 级别的权限外，MySQL 支持更细粒度的表权限和列权限。其中，表权限定义存放在表 mysql.tables_priv 中，列权限定义存放在表 mysql.columns_priv 中。这两类权限，组合起来存放在内存的 hash 结构 column_priv_hash 中。
+
+```mysql
+
+create table db1.t1(id int, a int);
+
+grant all privileges on db1.t1 to 'ua'@'%' with grant option;
+GRANT SELECT(id), INSERT (id,a) ON mydb.mytbl TO 'ua'@'%' with grant option;
+```
+
+跟 db 权限类似，这两个权限每次 grant 的时候都会修改数据表，也会同步修改内存中的 hash 结构。因此，对这两类权限的操作，也会马上影响到已经存在的连接。
+
+**正常情况下，grant 命令之后，没有必要跟着执行 flush privileges 命令。**
+
+### flush privileges 使用场景
+
+![](https://static001.geekbang.org/resource/image/90/ec/9031814361be42b7bc084ad2ab2aa3ec.png)
+
+- 直接使用DML更改系统表不会同步刷新到内存需要flush privileges
+
+直接操作系统表是不规范的操作，这个不一致状态也会导致一些更“诡异”的现象发生。比如，前面这个通过 delete 语句删除用户的例子，就会出现下面的情况：
+
+![](https://static001.geekbang.org/resource/image/dd/f1/dd625b6b4eb2dcbdaac73648a1af50f1.png)
+
+- T4由于直接删除导致找不到
+- t5由于内存中还有所以创建同样用户失败
+
+### 小结
+
+- MySQL grant后同时更新磁盘+内存 不需要flush privileges
+- mysql使用grant+revoke来赋予/回收权限
+- MySQL权限分为全局、库、表、字段
+- flush privileges 只有使用DML直接操作权限表才需使用刷新内存
+
+grant 语句会同时修改数据表和内存，判断权限的时候使用的是内存数据。因此，规范地使用 grant 和 revoke 语句，是不需要随后加上 flush privileges 语句的。
+
+flush privileges 语句本身会用数据表的数据重建一份内存权限数据，所以在权限数据可能存在不一致的情况下再使用。而这种不一致往往是由于直接用 DML 语句操作系统权限表导致的，所以我们尽量不要使用这类语句。
+
+```mysql
+
+grant super on *.* to 'ua'@'%' identified by 'pa';
+```
+
+这条命令加了 identified by ‘密码’， 语句的逻辑里面除了赋权外，还包含了：
+
+- 如果用户’ua’@’%'不存在，就创建这个用户，密码是 pa；
+- 如果用户 ua 已经存在，就将密码修改成 pa。

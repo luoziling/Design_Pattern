@@ -2867,3 +2867,363 @@ grant super on *.* to 'ua'@'%' identified by 'pa';
 
 - 如果用户’ua’@’%'不存在，就创建这个用户，密码是 pa；
 - 如果用户 ua 已经存在，就将密码修改成 pa。
+- @夹心面包 提到了在 grant 的时候是支持通配符的："_"表示一个任意字符，“%”表示任意字符串。这个技巧在一个分库分表方案里面，同一个分库上有多个 db 的时候，是挺方便的。不过我个人认为，权限赋值的时候，控制的精确性还是要优先考虑的。
+
+## 43 | 要不要使用分区表？
+
+> 我经常被问到这样一个问题：分区表有什么问题，为什么公司规范不让使用分区表呢？今天，我们就来聊聊分区表的使用行为，然后再一起回答这个问题。
+
+- 打开表多
+- 在引擎层按分区锁表
+
+### 分区表是什么
+
+```mysql
+
+CREATE TABLE `t` (
+  `ftime` datetime NOT NULL,
+  `c` int(11) DEFAULT NULL,
+  KEY (`ftime`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1
+PARTITION BY RANGE (YEAR(ftime))
+(PARTITION p_2017 VALUES LESS THAN (2017) ENGINE = InnoDB,
+ PARTITION p_2018 VALUES LESS THAN (2018) ENGINE = InnoDB,
+ PARTITION p_2019 VALUES LESS THAN (2019) ENGINE = InnoDB,
+PARTITION p_others VALUES LESS THAN MAXVALUE ENGINE = InnoDB);
+insert into t values('2017-4-1',1),('2018-4-1',1);
+```
+
+![](https://static001.geekbang.org/resource/image/06/f5/06f041129783533de9c75580f9decdf5.png)
+
+- 创建一个分区表以年份为单位分区
+- 引擎层四个ibd文件
+- server层一张表
+
+### 分区表的引擎层行为
+
+![](https://static001.geekbang.org/resource/image/d2/c7/d28d6ab873bd8337d88812d45b9266c7.png)
+
+![](https://static001.geekbang.org/resource/image/27/d2/273c9ca869f5b52621641d73eb6f72d2.jpg)
+
+- 理论上来说第一条语句也应该被阻塞
+
+![](https://static001.geekbang.org/resource/image/92/5c/92f63aba0b24adefac7316c75463b95c.jpg)
+
+- 实际上在存储引擎层按分区锁定 锁了2018 没锁2019 导致上述现象
+
+![](https://static001.geekbang.org/resource/image/e3/0f/e3d83d9ba89de9a6f541c9a2f24a3b0f.png)
+
+**MyISAM 分区表**
+
+![](https://static001.geekbang.org/resource/image/94/76/941306d4a7193455dcf1cfebf7678876.png)
+
+- 在 session A 里面，我用 sleep(100) 将这条语句的执行时间设置为 100 秒。由于 MyISAM 引擎只支持表锁，所以这条 update 语句会锁住整个表 t 上的读。
+- 这正是因为 MyISAM 的表锁是在引擎层实现的，session A 加的表锁，其实是锁在分区 p_2018 上。因此，只会堵住在这个分区上执行的查询，落到其他分区的查询是不受影响的。
+
+**手动分表和分区表有什么区别**
+
+- 比如，按照年份来划分，我们就分别创建普通表 t_2017、t_2018、t_2019 等等。手工分表的逻辑，也是找到需要更新的所有分表，然后依次执行更新。在性能上，这和分区表并没有实质的差别。
+
+### 分区策略
+
+每当第一次访问一个分区表的时候，MySQL 需要把所有的分区都访问一遍。一个典型的报错情况是这样的：如果一个分区表的分区很多，比如超过了 1000 个，而 MySQL 启动的时候，open_files_limit 参数使用的是默认值 1024，那么就会在访问这个表的时候，由于需要打开所有的文件，导致打开表文件的个数超过了上限而报错。
+
+- myisam是通用分区策略 一次打开表太多出错
+- innodb是本地分区策略 innodb内部管理打开分区的行为
+
+### 分区表的 server 层行为
+
+server层看分区表就是一张表
+
+![](https://static001.geekbang.org/resource/image/0e/81/0eca5a3190161e59ea58493915bd5e81.png)
+
+- sessionA加MDL读锁
+- sessionB更新失败
+- 这也是 DBA 同学经常说的，分区表，在做 DDL 的时候，影响会更大。如果你使用的是普通分表，那么当你在 truncate 一个分表的时候，肯定不会跟另外一个分表上的查询语句，出现 MDL 锁冲突。
+
+### 分区表的应用场景
+- 业务透明 代码简洁
+- 用于定期删除历史数据的常见，不要一次构建过多的分区表，定时构建合删除不必要的表
+
+
+### 小结
+- 分区表是存储引擎层面的分区分表，server层还是一张表
+- 分区表锁表分区锁定，不同存储引擎打开分区表策略不同，尽量使用innodb
+- server层看访问分区表加全局的MDL读锁
+- 引擎层则认为在不同表执行之后的逻辑
+
+### 怎么给分区表 t 创建自增主键。
+
+- 联合主键索引 
+
+- 这时候就有两种可选：一种是 (ftime, id)，另一种是 (id, ftime)。
+
+- 如果从利用率上来看，应该使用 (ftime, id) 这种模式。因为用 ftime 做分区 key，说明大多数语句都是包含 ftime 的，使用这种模式，可以利用前缀索引的规则，减少一个索引。
+
+  - 可当作ftime和主键两种模式使用
+
+- ```mysql
+  
+  CREATE TABLE `t` (
+    `id` int(11) NOT NULL AUTO_INCREMENT,
+    `ftime` datetime NOT NULL,
+    `c` int(11) DEFAULT NULL,
+    PRIMARY KEY (`ftime`,`id`)
+  ) ENGINE=MyISAM DEFAULT CHARSET=latin1
+  PARTITION BY RANGE (YEAR(ftime))
+  (PARTITION p_2017 VALUES LESS THAN (2017) ENGINE = MyISAM,
+   PARTITION p_2018 VALUES LESS THAN (2018) ENGINE = MyISAM,
+   PARTITION p_2019 VALUES LESS THAN (2019) ENGINE = MyISAM,
+   PARTITION p_others VALUES LESS THAN MAXVALUE ENGINE = MyISAM);
+  ```
+
+- 
+
+
+
+## 44 | 答疑文章（三）：说一说这些好问题
+
+> 在我看来，能够帮我们扩展一个逻辑的边界的问题，就是好问题。因为通过解决这样的问题，能够加深我们对这个逻辑的理解，或者帮我们关联到另外一个知识点，进而可以帮助我们建立起自己的知识网络。
+>
+> 在工作中会问好问题，是一个很重要的能力。
+
+### join 的写法
+
+- 如果用 left join 的话，左边的表一定是驱动表吗？
+  - 不一定，优化器可能将left 优化为 inner 在where后加连接条件时
+- 如果两个表的 join 包含多个条件的等值匹配，是都要写到 on 里面呢，还是只把一个条件写到 on 里面，其他条件写到 where 部分？
+  - 语义会不同，写道where后优化为inner
+
+```mysql
+
+create table a(f1 int, f2 int, index(f1))engine=innodb;
+create table b(f1 int, f2 int)engine=innodb;
+insert into a values(1,1),(2,2),(3,3),(4,4),(5,5),(6,6);
+insert into b values(3,3),(4,4),(5,5),(6,6),(7,7),(8,8);
+
+select * from a left join b on(a.f1=b.f1) and (a.f2=b.f2); /*Q1*/
+select * from a left join b on(a.f1=b.f1) where (a.f2=b.f2);/*Q2*/
+```
+
+执行结果
+
+![](https://static001.geekbang.org/resource/image/87/bd/871f890532349781fdc4a4287e9f91bd.png)
+
+- 语句 Q1 返回的数据集是 6 行，表 a 中即使没有满足匹配条件的记录，查询结果中也会返回一行，并将表 b 的各个字段值填成 NULL。
+- 语句 Q2 返回的是 4 行。从逻辑上可以这么理解，最后的两行，由于表 b 中没有匹配的字段，结果集里面 b.f2 的值是空，不满足 where 部分的条件判断，因此不能作为结果集的一部分。
+- join语句的on 会延申到where判断，成功才加入结果集（BNL算法
+
+![](https://static001.geekbang.org/resource/image/b7/17/b7f27917ceb0be90ef7b201f2794c817.png)
+
+![](https://static001.geekbang.org/resource/image/8f/d7/8fd4b4b179fb84caaecece84b6406ad7.jpg)
+
+- 把表 a 的内容读入 join_buffer 中。因为是 select * ，所以字段 f1 和 f2 都被放入 join_buffer 了。
+- 顺序扫描表 b，对于每一行数据，判断 join 条件（也就是 (a.f1=b.f1) and (a.f1=1)）是否满足，满足条件的记录, 作为结果集的一行返回。如果语句中有 where 子句，需要先判断 where 部分满足条件后，再返回。
+- 表 b 扫描完成后，对于没有被匹配的表 a 的行（在这个例子中就是 (1,1)、(2,2) 这两行），把剩余字段补上 NULL，再放入结果集中。
+- BNL还是循环但是内存集中数据少
+
+![](https://static001.geekbang.org/resource/image/f5/9c/f5712c56dc84d331990409a5c313ea9c.png)
+
+可以看到，这条语句是以表 b 为驱动表的。而如果一条 join 语句的 Extra 字段什么都没写的话，就表示使用的是 Index Nested-Loop Join（简称 NLJ）算法。
+
+那么，为什么语句 Q1 和 Q2 这两个查询的执行流程会差距这么大呢？其实，这是因为优化器基于 Q2 这个查询的语义做了优化。
+
+为了理解这个问题，我需要再和你交代一个背景知识点：在 MySQL 里，NULL 跟任何值执行等值判断和不等值判断的结果，都是 NULL。这里包括， select NULL = NULL 的结果，也是返回 NULL。
+
+因此，语句 Q2 里面 where a.f2=b.f2 就表示，查询结果里面不会包含 b.f2 是 NULL 的行，这样这个 left join 的语义就是“找到这两个表里面，f1、f2 对应相同的行。对于表 a 中存在，而表 b 中匹配不到的行，就放弃”。
+
+这样，这条语句虽然用的是 left join，但是语义跟 join 是一致的。
+
+因此，优化器就把这条语句的 left join 改写成了 join，然后因为表 a 的 f1 上有索引，就把表 b 作为驱动表，这样就可以用上 NLJ 算法。在执行 explain 之后，你再执行 show warnings，就能看到这个改写的结果，如图 5 所示。
+
+![](https://static001.geekbang.org/resource/image/d7/ab/d74878e7469edb8b713a18c6158530ab.png)
+
+这个例子说明，即使我们在 SQL 语句中写成 left join，执行过程还是有可能不是从左到右连接的。也就是说，使用 left join 时，左边的表不一定是驱动表。
+
+**这样看来，如果需要 left join 的语义，就不能把被驱动表的字段放在 where 条件里面做等值判断或不等值判断，必须都写在 on 里面。**
+
+**也就是说，在inner join的情况下，join 将判断条件是否全部放在 on 部分就没有区别了。**
+
+### Simple Nested Loop Join 的性能问题
+
+虽然 BNL 算法和 Simple Nested Loop Join 算法都是要判断 M*N 次（M 和 N 分别是 join 的两个表的行数），但是 Simple Nested Loop Join 算法的每轮判断都要走全表扫描，因此性能上 BNL 算法执行起来会快很多。
+
+BNL 算法的执行逻辑是：
+
+- 首先，将驱动表的数据全部读入内存 join_buffer 中，这里 join_buffer 是无序数组；
+- 然后，顺序遍历被驱动表的所有行，每一行数据都跟 join_buffer 中的数据进行匹配，匹配成功则作为结果集的一部分返回。
+
+Simple Nested Loop Join 算法的执行逻辑是：顺序取出驱动表中的每一行数据，到被驱动表去做全表扫描匹配，匹配成功则作为结果集的一部分返回。
+
+buffer pool
+
+- 在对被驱动表做全表扫描的时候，如果数据没有在 Buffer Pool 中，就需要等待这部分数据从磁盘读入；
+- 从磁盘读入数据到内存中，会影响正常业务的 Buffer Pool 命中率，而且这个算法天然会对被驱动表的数据做多次访问，更容易将这些数据页放到 Buffer Pool 的头部（请参考第 35 篇文章中的相关内容)；
+- 即使被驱动表数据都在内存中，每次查找“下一个记录的操作”，都是类似指针操作。而 join_buffer 中是数组，遍历的成本更低。
+
+### distinct 和 group by 的性能
+
+在第 37 篇文章《什么时候会使用内部临时表？》中，@老杨同志 提了一个好问题：如果只需要去重，不需要执行聚合函数，distinct 和 group by 哪种效率高一些呢？
+
+```mysql
+
+select a from t group by a order by null;
+select distinct a from t;
+```
+
+- 标准聚合写法需要加聚合函数
+- 没有了 count(*) 以后，也就是不再需要执行“计算总数”的逻辑时，第一条语句的逻辑就变成是：按照字段 a 做分组，相同的 a 的值只返回一行。而这就是 distinct 的语义，所以不需要执行聚合函数时，distinct 和 group by 这两条语句的语义和执行流程是相同的，因此执行性能也相同。
+
+这两条语句的执行流程是下面这样的。
+
+- 创建一个临时表，临时表有一个字段 a，并且在这个字段 a 上创建一个唯一索引；
+- 遍历表 t，依次取数据插入临时表中：
+  - 如果发现唯一键冲突，就跳过；
+  - 否则插入成功；
+- 遍历完成后，将临时表作为结果集返回给客户端。
+
+### 备库自增主键问题
+
+除了性能问题，大家对细节的追问也很到位。在第 39 篇文章《自增主键为什么不是连续的？》评论区，@帽子掉了 同学问到：在 binlog_format=statement 时，语句 A 先获取 id=1，然后语句 B 获取 id=2；接着语句 B 提交，写 binlog，然后语句 A 再写 binlog。这时候，如果 binlog 重放，是不是会发生语句 B 的 id 为 1，而语句 A 的 id 为 2 的不一致情况呢？
+
+首先，这个问题默认了“自增 id 的生成顺序，和 binlog 的写入顺序可能是不同的”，这个理解是正确的。
+
+其次，这个问题限定在 statement 格式下，也是对的。因为 row 格式的 binlog 就没有这个问题了，Write row event 里面直接写了每一行的所有字段的值。
+
+```mysql
+
+create table t(id int auto_increment primary key);
+insert into t values(null);
+```
+
+![](https://static001.geekbang.org/resource/image/b5/25/b55b2167aa301d899ccc86a00b496b25.png)
+
+- statement语句通过额外的id信息确保数据一致性
+
+### 小结
+
+- left join 的on条件放到where后 会被优化为inner join
+- SNLJ存在性能问题，多次扫描导致缓冲池命中率降低/指针合数据遍历
+- distinct 合group by在没有聚合函数前提下语义一致
+- statement下备库自增主键同步会通过binlog记录额外信息从而保证数据一致
+
+## 45 | 自增id用完怎么办？
+
+> MySQL 里有很多自增的 id，每个自增 id 都是定义了初始值，然后不停地往上加步长。虽然自然数是没有上限的，但是在计算机里，只要定义了表示这个数的字节长度，那它就有上限。比如，无符号整型 (unsigned int) 是 4 个字节，上限就是 232-1。
+
+既然自增 id 有上限，就有可能被用完。但是，自增 id 用完了会怎么样呢？
+
+今天这篇文章，我们就来看看 MySQL 里面的几种自增 id，一起分析一下它们的值达到上限以后，会出现什么情况。
+
+### 表定义自增值 id
+
+表定义的自增值达到上限后的逻辑是：再申请下一个 id 时，得到的值保持不变
+
+```mysql
+
+create table t(id int unsigned auto_increment primary key) auto_increment=4294967295;
+insert into t values(null);
+//成功插入一行 4294967295
+show create table t;
+/* CREATE TABLE `t` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4294967295;
+*/
+
+insert into t values(null);
+//Duplicate entry '4294967295' for key 'PRIMARY'
+```
+
+232-1（4294967295）不是一个特别大的数，对于一个频繁插入删除数据的表来说，是可能会被用完的。因此在建表的时候你需要考察你的表是否有可能达到这个上限，如果有可能，就应该创建成 8 个字节的 bigint unsigned。
+
+### InnoDB 系统自增 row_id
+
+如果你创建的 InnoDB 表没有指定主键，那么 InnoDB 会给你创建一个不可见的，长度为 6 个字节的 row_id。InnoDB 维护了一个全局的 dict_sys.row_id 值，所有无主键的 InnoDB 表，每插入一行数据，都将当前的 dict_sys.row_id 值作为要插入数据的 row_id，然后把 dict_sys.row_id 的值加 1。
+
+也就是说，写入表的 row_id 是从 0 开始到 248-1。达到上限后，下一个值就是 0，然后继续循环。
+
+![](https://static001.geekbang.org/resource/image/6a/9a/6a7bfd460f9e75afcfcfc4a963339a9a.png)
+
+![](https://static001.geekbang.org/resource/image/5a/5c/5ad1fff81bda3a6b00ec84e84753fa5c.png)
+
+毕竟覆盖数据，就意味着数据丢失，影响的是数据可靠性；报主键冲突，是插入失败，影响的是可用性。而一般情况下，可靠性优先于可用性。
+
+### Xid
+
+那么，Xid 在 MySQL 内部是怎么生成的呢？
+
+MySQL 内部维护了一个全局变量 global_query_id，每次执行语句的时候将它赋值给 Query_id，然后给这个变量加 1。如果当前语句是这个事务执行的第一条语句，那么 MySQL 还会同时把 Query_id 赋值给这个事务的 Xid。
+
+因为 global_query_id 定义的长度是 8 个字节，这个自增值的上限是 264-1。要出现这种情况，必须是下面这样的过程：
+
+- 执行一个事务，假设 Xid 是 A；
+- 接下来执行 264次查询语句，让 global_query_id 回到 A；
+- 再启动一个事务，这个事务的 Xid 也是 A。
+
+### Innodb trx_id
+
+Xid 是由 server 层维护的。InnoDB 内部使用 Xid，就是为了能够在 InnoDB 事务和 server 之间做关联。但是，InnoDB 自己的 trx_id，是另外维护的。
+
+InnoDB 内部维护了一个 max_trx_id 全局变量，每次需要申请一个新的 trx_id 时，就获得 max_trx_id 的当前值，然后并将 max_trx_id 加 1。
+
+InnoDB 数据可见性的核心思想是：每一行数据都记录了更新它的 trx_id，当一个事务读到一行数据的时候，判断这个数据是否可见的方法，就是通过事务的一致性视图与这行数据的 trx_id 做对比。对于正在执行的事务，你可以从 information_schema.innodb_trx 表中看到事务的 trx_id。
+
+![](https://static001.geekbang.org/resource/image/94/7c/94c704190f7609b3e6443688368cd97c.png)
+
+- 只读和写获取的trx_id方式不同
+- 在 T1 时刻，trx_id 的值其实就是 0。而这个很大的数，只是显示用的。一会儿我会再和你说说这个数据的生成逻辑。
+- 直到 session A 在 T3 时刻执行 insert 语句的时候，InnoDB 才真正分配了 trx_id。所以，T4 时刻，session B 查到的这个 trx_id 的值就是 1289。
+
+T2 时刻查到的这个很大的数字是怎么来的呢？
+
+其实，这个数字是每次查询的时候由系统临时计算出来的。它的算法是：把当前事务的 trx 变量的指针地址转成整数，再加上 248。使用这个算法，就可以保证以下两点：
+
+- 因为同一个只读事务在执行期间，它的指针地址是不会变的，所以不论是在 innodb_trx 还是在 innodb_locks 表里，同一个只读事务查出来的 trx_id 就会是一样的。
+- 如果有并行的多个只读事务，每个事务的 trx 变量的指针地址肯定不同。这样，不同的并发只读事务，查出来的 trx_id 就是不同的。
+
+只读事务不分配 trx_id，有什么好处呢？
+
+- 一个好处是，这样做可以减小事务视图里面活跃事务数组的大小。因为当前正在运行的只读事务，是不影响数据的可见性判断的。所以，在创建事务的一致性视图时，InnoDB 就只需要拷贝读写事务的 trx_id。
+- 另一个好处是，可以减少 trx_id 的申请次数。在 InnoDB 里，即使你只是执行一个普通的 select 语句，在执行过程中，也是要对应一个只读事务的。所以只读事务优化后，普通的查询语句不需要申请 trx_id，就大大减少了并发事务申请 trx_id 的锁冲突。
+
+但是，max_trx_id 会持久化存储，重启也不会重置为 0，那么从理论上讲，只要一个 MySQL 服务跑得足够久，就可能出现 max_trx_id 达到 248-1 的上限，然后从 0 开始的情况。
+
+![](https://static001.geekbang.org/resource/image/13/c0/13735f955a437a848895787bf9c723c0.png)
+
+由于低水位值会持续增加，而事务 id 从 0 开始计数，就导致了系统在这个时刻之后，所有的查询都会出现脏读的。并且，MySQL 重启时 max_trx_id 也不会清 0，也就是说重启 MySQL，这个 bug 仍然存在。
+
+那么，这个 bug 也是只存在于理论上吗？
+
+假设一个 MySQL 实例的 TPS 是每秒 50 万，持续这个压力的话，在 17.8 年后，就会出现这个情况。如果 TPS 更高，这个年限自然也就更短了。但是，从 MySQL 的真正开始流行到现在，恐怕都还没有实例跑到过这个上限。不过，这个 bug 是只要 MySQL 实例服务时间够长，就会必然出现的。
+
+### thread_id
+
+接下来，我们再看看线程 id（thread_id）。其实，线程 id 才是 MySQL 中最常见的一种自增 id。平时我们在查各种现场的时候，show processlist 里面的第一列，就是 thread_id。
+
+```mysql
+
+do {
+  new_id= thread_id_counter++;
+} while (!thread_ids.insert_unique(new_id).second);
+```
+
+
+
+### 小结
+
+- 自增id超出上限后返回同样最大值导致主键唯一性冲突报错 可改为bigint unsigned 解决
+- row_id 是没有主键是自动设定的，到达最大后会置0 所以建议手动设置主键
+- xid是server层的事务id，一个binlog中的xid是独立的，但是MySQL重启导致xid清零
+- trx_id是事务id 用于mvcc实现可重复读，但是到达最大后会清零 导致脏读
+- thread_id 通过唯一自增算法保证唯一
+
+每种自增 id 有各自的应用场景，在达到上限后的表现也不同：
+
+- 表的自增 id 达到上限后，再申请时它的值就不会改变，进而导致继续插入数据时报主键冲突的错误。
+- row_id 达到上限后，则会归 0 再重新递增，如果出现相同的 row_id，后写的数据会覆盖之前的数据。
+- Xid 只需要不在同一个 binlog 文件中出现重复值即可。虽然理论上会出现重复值，但是概率极小，可以忽略不计。
+- InnoDB 的 max_trx_id 递增值每次 MySQL 重启都会被保存起来，所以我们文章中提到的脏读的例子就是一个必现的 bug，好在留给我们的时间还很充裕。
+- thread_id 是我们使用中最常见的，而且也是处理得最好的一个自增 id 逻辑了。
+
+不同的自增 id 有不同的上限值，上限值的大小取决于声明的类型长度。

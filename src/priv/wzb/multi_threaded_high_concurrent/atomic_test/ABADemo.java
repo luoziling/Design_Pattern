@@ -3,6 +3,7 @@ package priv.wzb.multi_threaded_high_concurrent.atomic_test;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.atomic.AtomicStampedReference;
+import java.util.concurrent.locks.LockSupport;
 
 /**
  * @author Satsuki
@@ -73,7 +74,9 @@ public class ABADemo {
 
             System.out.println(Thread.currentThread().getName() + "\t当前的最新值：" + atomicStampedReference.getReference());
         },"t4").start();
-
-
+        Thread t11 = new Thread(() -> {
+        });
+        t11.interrupt();
+        LockSupport.park();
     }
 }

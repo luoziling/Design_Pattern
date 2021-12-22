@@ -259,3 +259,114 @@ RocketMQ中的消息消费者都是以消费者组（Consumer Group）的形式�
 消费者组的容错，只要一个存活就可以继续消费但压力增大/消费速度变慢
 
 topic queue的负载均衡，其实也可以看做消息的负载均衡
+
+
+
+#### 3 Name Server
+
+##### 功能介绍
+
+**NameServer是一个Broker与Topic路由的注册中心，支持Broker的动态注册与发现。**
+
+RocketMQ的思想来自于Kafka，而Kafka是依赖了Zookeeper的。所以，在RocketMQ的早期版本，即在 MetaQ v1.0与v2.0版本中，也是依赖于Zookeeper的。从MetaQ v3.0，即RocketMQ开始去掉了 Zookeeper依赖，使用了自己的NameServer。
+
+> rocketmq又是MQ又是name server? 
+>
+> 是的name server是其中一个组件
+
+
+
+name server 注册中心
+
+主要包括两个功能：
+
+- Broker管理：接受Broker集群的注册信息并且保存下来作为路由信息的基本数据；提供心跳检测 机制，检查Broker是否还存活。
+  - 物理集群存活
+- 路由信息管理：每个NameServer中都保存着Broker集群的整个路由信息和用于客户端查询的队列 信息。Producer和Conumser通过NameServer可以获取整个Broker集群的路由信息，从而进行消 息的投递和消费。
+  - 物理集群理由
+
+
+
+##### 路由注册
+
+NameServer通常也是以集群的方式部署，不过，NameServer是无状态的，即NameServer集群中的各 个节点间是无差异的，各节点间相互不进行信息通讯。那各节点中的数据是如何进行数据同步的呢？在 Broker节点启动时，轮询NameServer列表，与每个NameServer节点建立长连接，发起注册请求。在 NameServer内部维护着⼀个Broker列表，用来动态存储Broker的信息。
+
+> 注意，这是与其它像zk、Eureka、Nacos等注册中心不同的地方。
+>
+> 这种NameServer的无状态方式，有什么优缺点：
+>
+> 优点：NameServer集群搭建简单，扩容简单
+>
+> 缺点：对于Broker，必须明确指出所有NameServer地址。否则未指出的将不会去注册。也正因 为如此，NameServer并不能随便扩容。因为，若Broker不重新配置，新增的NameServer对于 Broker来说是不可见的，其不会向这个NameServer进行注册。
+
+- 多个name server的无状态 无通信 同步数据
+- 被动通信，与zk的不同：内部数据分享和外部录入数据
+- **broker必须明确指出所有nameserver** 复杂的broker配置更新
+
+
+
+Broker节点为了证明自己是活着的，为了维护与NameServer间的长连接，会将最新的信息以心跳包的 方式上报给NameServer，每30秒发送一次心跳。心跳包中包含 BrokerId、Broker地址(IP+Port)、 Broker名称、Broker所属集群名称等等。NameServer在接收到心跳包后，会更新心跳时间戳，记录这 个Broker的最新存活时间。
+
+##### 路由剔除
+
+由于Broker关机、宕机或网络抖动等原因，NameServer没有收到Broker的心跳，NameServer可能会将 其从Broker列表中剔除。
+
+NameServer中有⼀个定时任务，每隔10秒就会扫描⼀次Broker表，查看每一个Broker的最新心跳时间 戳距离当前时间是否超过120秒，如果超过，则会判定Broker失效，然后将其从Broker列表中剔除。
+
+> 扩展：对于RocketMQ日常运维工作，例如Broker升级，需要停掉Broker的工作。OP需要怎么 做？
+>
+> OP需要将Broker的读写权限禁掉。一旦client(Consumer或Producer)向broker发送请求，都会收 到broker的NO_PERMISSION响应，然后client会进行对其它Broker的重试。
+>
+> 当OP观察到这个Broker没有流量后，再关闭它，实现Broker从NameServer的移除
+>
+> OP：运维工程师
+>
+> SRE：Site Reliability Engineer，现场可靠性工程师
+
+- 运维的优雅停服，先关读写再去掉节点
+
+##### 路由发现
+
+RocketMQ的路由发现采用的是Pull模型。当Topic路由信息出现变化时，NameServer不会主动推送给 客户端，而是客户端定时拉取主题最新的路由。默认客户端每30秒会拉取一次最新的路由。
+
+> 扩展：
+>
+> 1）Push模型：推送模型。其实时性较好，是一个“发布-订阅”模型，需要维护一个长连接。而 长连接的维护是需要资源成本的。该模型适合于的场景：
+>
+> - 实时性要求较高
+> - Client数量不多，Server数据变化较频繁，数量太多消耗服务器性能
+>
+> 2）Pull模型：拉取模型。存在的问题是，实时性较差。
+>
+> 3）Long Polling模型：长轮询模型。其是对Push与Pull模型的整合，充分利用了这两种模型的优 势，屏蔽了它们的劣势。
+
+站在客户端角度的pull/push
+
+long polling 客户端pull后服务端hold住链接让其变为长连接，30s有变化就立即回应，兼容了pull 消耗低和push时效高的特点
+
+
+
+
+
+
+
+##### 客户端NameServer选择策略
+
+> 这里的客户端指的是Producer与Consumer选择nameserver
+
+
+
+客户端在配置时必须要写上NameServer集群的地址，那么客户端到底连接的是哪个NameServer节点 呢？客户端首先会生产一个随机数，然后再与NameServer节点数量取模，此时得到的就是所要连接的 节点索引，然后就会进行连接。如果连接失败，则会采用round-robin策略，逐个尝试着去连接其它节 点。
+
+**首先采用的是随机策略进行的选择，失败后采用的是轮询策略。**
+
+> 扩展：Zookeeper Client是如何选择Zookeeper Server的？
+>
+> 简单来说就是，经过两次Shufæe，然后选择第一台Zookeeper Server。
+>
+> 详细说就是，将配置文件中的zk server地址进行第一次shufæe，然后随机选择一个。这个选择出 的一般都是一个hostname。然后获取到该hostname对应的所有ip，再对这些ip进行第二次 shufæe，从shufæe过的结果中取第一个server地址进行连接。
+
+
+
+- nameserver随机+轮询,随机失败采用轮询
+- zk两次shuffle再选取第一台zk，第一次找到hostname第二次找到具体ip
